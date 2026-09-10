@@ -1,0 +1,16 @@
+// CampusLens · Prisma schema
+//
+// Phase 0 establishes the client, adapter and configuration architecture only.
+// Domain models (College, Course, User, SavedCollege, ...) are introduced with
+// the features that need them, starting in Phase 1.
+//
+// Connection URL: prisma.config.ts (CLI) and src/lib/db.ts (runtime adapter).
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}

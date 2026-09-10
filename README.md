@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CampusLens
 
-## Getting Started
+> **See your options clearly.**
 
-First, run the development server:
+A college discovery platform built for the AI Software Engineer Internship technical assignment
+(**Full Stack Engineer · Track A — College Discovery Platform**).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```text
+DISCOVER → UNDERSTAND → COMPARE → SHORTLIST
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The four features are:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. College listing and search
+2. College detail page
+3. Compare colleges
+4. Authentication and saved items
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Status: Phase 0 — foundation
 
-## Learn More
+Phase 0 delivers the architecture, the **PRISM** design system, liquid-glass primitives, the motion
+architecture, a homepage visual prototype, the `/design-system` lab, and the Prisma and environment
+foundation.
 
-To learn more about Next.js, take a look at the following resources:
+College data, search, detail, compare, authentication and saving come in later phases. The pages
+`/discover`, `/compare`, `/saved` and `/sign-in` are honest placeholders.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Quick start
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Requires Node.js ≥ 20.12.
 
-## Deploy on Vercel
+```bash
+npm install          # also runs `prisma generate`
+cp .env.example .env.local
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Homepage: <http://localhost:3000>
+- Design lab: <http://localhost:3000/design-system>
+- Health check: <http://localhost:3000/api/health>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`DATABASE_URL` is not required in Phase 0.
+
+## Scripts
+
+| Script | Purpose |
+|---|---|
+| `npm run dev` | Development server (Turbopack) |
+| `npm run build` | Production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | ESLint (Next core-web-vitals, TypeScript, React Compiler hook rules) |
+| `npm run typecheck` | `tsc --noEmit` (run `npx next typegen` first on a fresh clone) |
+| `npm run db:generate` | Regenerate the Prisma client |
+
+## Stack
+
+Next.js 16 (App Router) · React 19 · TypeScript (strict) · Tailwind CSS 4 · GSAP + ScrollTrigger ·
+Lenis · Framer Motion · Radix Dialog · Zod 4 · Prisma 7 (pg adapter) · PostgreSQL on Neon · Vercel
+
+## Documentation
+
+| Doc | Contents |
+|---|---|
+| [docs/product-scope.md](docs/product-scope.md) | Journey, the four features, exclusions, data-honesty rules |
+| [docs/architecture.md](docs/architecture.md) | Modular monolith, server/client boundaries, env and database foundation |
+| [docs/design-system.md](docs/design-system.md) | PRISM: regimes, lighting, colour, glass, bezels, type, depth, components |
+| [docs/motion-system.md](docs/motion-system.md) | Library ownership, easing vocabulary, animation inventory, reduced motion, performance |
+| [docs/decisions.md](docs/decisions.md) | ADR-001 to ADR-007 |
+| [docs/visual-reference.md](docs/visual-reference.md) | Inspiration and what is original |
+
+## Deploying to Vercel
+
+1. Import the repository. Framework preset: Next.js.
+2. Optional: set `NEXT_PUBLIC_SITE_URL` to the production origin.
+3. From the data phase onward, set `DATABASE_URL` to Neon's **pooled** connection string.
+
+`postinstall` generates the Prisma client during install, before `next build`.

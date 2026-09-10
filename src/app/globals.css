@@ -1,26 +1,832 @@
 @import "tailwindcss";
 
+/* Markdown docs mention class names; keep them out of the generated CSS. */
+@source not "../../docs";
+
+/* ==========================================================================
+   PRISM · Premium Responsive Interface System for Modern discovery
+   --------------------------------------------------------------------------
+   Token categories, in order:
+     COLOR · SURFACE · GLASS · SHADOW · RADIUS · SPACING · TYPOGRAPHY · MOTION · DEPTH
+
+   Components consume tokens through Tailwind utilities (bg-ink, rounded-card,
+   shadow-glass-2, ease-standard, z-nav) or the component classes below.
+   Raw colour values belong in this file and nowhere else.
+
+   Lighting model: one virtual light source, top-left and in front of the
+   screen. Every specular edge is brightest at the top-left; every shadow
+   falls down and slightly right.
+   ========================================================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ---------- COLOR · palette ---------- */
+  --canvas: #f4f7fb;
+  --canvas-deep: #eaf0f7;
+  --canvas-lift: #fbfdff;
+
+  --ink: #09111f;
+  --ink-secondary: #455468;
+  /* Refined from #718096 (3.7:1, fails AA) to 5.1:1 on canvas. */
+  --ink-tertiary: #5b6a80;
+
+  --ice: #86ddf1;
+  --azure: #4d8dff;
+  --indigo-mist: #a6a3e8;
+
+  --positive: #16a36a;
+  --warning: #d88a24;
+  --danger: #df5b5b;
+
+  /* Text-safe variants. The base accents are for fills, rings and large marks;
+     as small text on canvas they fall below 4.5:1. */
+  --azure-ink: #2459c9;
+  --positive-ink: #0e7a4e;
+  --warning-ink: #9a5b0e;
+  --danger-ink: #b83b3b;
+
+  /* ---------- SURFACE ---------- */
+  --surface: #ffffff;
+  --surface-solid: rgb(255 255 255 / 0.92);
+  --line: rgb(9 17 31 / 0.08);
+  --line-strong: rgb(9 17 31 / 0.16);
+  --focus: var(--azure-ink);
+
+  /* ---------- GLASS ---------- */
+  --glass-white: rgb(255 255 255 / 0.58);
+  --glass-white-strong: rgb(255 255 255 / 0.78);
+  --glass-border: rgb(255 255 255 / 0.72);
+  --glass-border-dark: rgb(15 23 42 / 0.08);
+
+  --glass-quiet: rgb(255 255 255 / 0.46);
+  --glass-elevated: rgb(255 255 255 / 0.56);
+  --glass-hero: rgb(255 255 255 / 0.4);
+  --glass-ink: rgb(9 17 31 / 0.8);
+
+  --glass-blur-quiet: 14px;
+  --glass-blur-elevated: 24px;
+  --glass-blur-hero: 36px;
+
+  --glass-saturate-quiet: 115%;
+  --glass-saturate-elevated: 140%;
+  --glass-saturate-hero: 175%;
+
+  /* Optical edges: reflected environment light, brightest top-left. */
+  --specular: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 0.98) 0%,
+    rgb(255 255 255 / 0.55) 16%,
+    rgb(134 221 241 / 0.34) 36%,
+    rgb(255 255 255 / 0.06) 56%,
+    rgb(166 163 232 / 0.28) 80%,
+    rgb(255 255 255 / 0.5) 100%
+  );
+  --specular-quiet: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 0.92) 0%,
+    rgb(255 255 255 / 0.3) 35%,
+    rgb(9 17 31 / 0.07) 70%,
+    rgb(255 255 255 / 0.45) 100%
+  );
+  --specular-ink: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 0.42) 0%,
+    rgb(134 221 241 / 0.18) 35%,
+    rgb(255 255 255 / 0.02) 65%,
+    rgb(166 163 232 / 0.2) 100%
+  );
+  --specular-button: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 0.4) 0%,
+    rgb(255 255 255 / 0) 45%,
+    rgb(134 221 241 / 0.32) 100%
+  );
+  --sheen: linear-gradient(
+    172deg,
+    rgb(255 255 255 / 0.62) 0%,
+    rgb(255 255 255 / 0.14) 34%,
+    rgb(255 255 255 / 0) 58%
+  );
+  --glare: radial-gradient(
+    closest-side,
+    rgb(255 255 255 / 0.78),
+    rgb(255 255 255 / 0.22) 55%,
+    rgb(255 255 255 / 0)
+  );
+
+  --ambient-cyan: rgb(134 221 241 / 0.62);
+  --ambient-indigo: rgb(166 163 232 / 0.5);
+  --ambient-white: rgb(255 255 255 / 0.95);
+  --ambient-aqua: rgb(158 232 220 / 0.42);
+  --ambient-azure: rgb(77 141 255 / 0.2);
+
+  /* ---------- SPACING ---------- */
+  --space-section-cinematic: clamp(6rem, 12vw, 10rem);
+  --space-section-standard: clamp(4rem, 8vw, 6rem);
+  --space-section-compact: clamp(2.5rem, 5vw, 4rem);
+
+  --bezel-gap-card: 4px;
+  --bezel-gap-island: 5px;
+  --bezel-gap-panel: 6px;
+
+  --nav-height: 56px;
+  --nav-offset: 18px;
+  --nav-offset-scrolled: 10px;
+
+  /* ---------- MOTION (mirrors DURATION in src/config/design.ts) ---------- */
+  --duration-instant: 120ms;
+  --duration-fast: 200ms;
+  --duration-base: 360ms;
+  --duration-slow: 640ms;
+  --duration-cinematic: 1100ms;
+
+  /* ---------- DEPTH ---------- */
+  --z-canvas: 0;
+  --z-ambient: 10;
+  --z-grid: 20;
+  --z-content: 30;
+  --z-float: 40;
+  --z-nav: 50;
+  --z-overlay: 60;
+  --z-grain: 70;
+}
+
+/* Remove Tailwind's default palettes and scales so only PRISM tokens exist.
+   A stray `bg-blue-500` or `rounded-md` now produces no CSS at all. */
+@theme {
+  --color-*: initial;
+  --shadow-*: initial;
+  --inset-shadow-*: initial;
+  --drop-shadow-*: initial;
+  --radius-*: initial;
+  --ease-*: initial;
+  --font-*: initial;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-canvas: var(--canvas);
+  --color-canvas-deep: var(--canvas-deep);
+  --color-ink: var(--ink);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-ink-tertiary: var(--ink-tertiary);
+  --color-ice: var(--ice);
+  --color-azure: var(--azure);
+  --color-azure-ink: var(--azure-ink);
+  --color-indigo-mist: var(--indigo-mist);
+  --color-positive: var(--positive);
+  --color-positive-ink: var(--positive-ink);
+  --color-warning: var(--warning);
+  --color-warning-ink: var(--warning-ink);
+  --color-danger: var(--danger);
+  --color-danger-ink: var(--danger-ink);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-focus: var(--focus);
+  --color-white: var(--surface);
+
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* `static` guarantees these are emitted as :root variables even when no utility
+   uses them, so CSS below and the design lab can read them. */
+@theme static {
+  /* ---------- RADIUS ---------- */
+  --radius-mark: 6px;
+  --radius-control: 12px;
+  --radius-tile: 16px;
+  --radius-card: 22px;
+  --radius-island: 28px;
+  --radius-panel: 32px;
+
+  /* ---------- SHADOW ----------
+     Broad soft ambient shadow + contact shadow + top inset highlight.
+     Elevated levels add an environmental colour bounce. */
+  --shadow-control:
+    0 1px 1px rgb(9 17 31 / 0.04), 1px 3px 8px -3px rgb(9 17 31 / 0.1),
+    inset 0 1px 0 rgb(255 255 255 / 0.7);
+  --shadow-glass-1:
+    0 1px 1px rgb(9 17 31 / 0.03), 2px 10px 24px -14px rgb(9 17 31 / 0.16),
+    inset 0 1px 0 rgb(255 255 255 / 0.65);
+  --shadow-glass-2:
+    0 1px 2px rgb(9 17 31 / 0.04), 4px 22px 44px -22px rgb(9 17 31 / 0.24),
+    8px 44px 80px -44px rgb(77 141 255 / 0.2), inset 0 1px 0 rgb(255 255 255 / 0.8);
+  --shadow-floating:
+    0 2px 4px rgb(9 17 31 / 0.04), 6px 30px 60px -26px rgb(9 17 31 / 0.28),
+    12px 60px 120px -50px rgb(134 221 241 / 0.45), inset 0 1px 0 rgb(255 255 255 / 0.9);
+  --shadow-modal:
+    0 4px 10px rgb(9 17 31 / 0.05), 10px 50px 100px -30px rgb(9 17 31 / 0.36),
+    inset 0 1px 0 rgb(255 255 255 / 0.9);
+
+  /* ---------- TYPOGRAPHY ---------- */
+  --text-display-hero: clamp(3.5rem, 8vw, 8.5rem);
+  --text-display-hero--line-height: 0.9;
+  --text-display-hero--letter-spacing: -0.055em;
+  --text-display-section: clamp(2.6rem, 5vw, 5.5rem);
+  --text-display-section--line-height: 0.98;
+  --text-display-section--letter-spacing: -0.045em;
+  --text-display-page: clamp(2rem, 3.8vw, 4rem);
+  --text-display-page--line-height: 1.02;
+  --text-display-page--letter-spacing: -0.035em;
+  --text-body-lg: clamp(1.125rem, 0.35vw + 1.03rem, 1.3125rem);
+  --text-body-lg--line-height: 1.5;
+  --text-body: clamp(0.9375rem, 0.15vw + 0.9rem, 1.0625rem);
+  --text-body--line-height: 1.6;
+  --text-control: 0.9375rem;
+  --text-control--line-height: 1.2;
+  --text-label: 0.8125rem;
+  --text-label--line-height: 1.35;
+  --text-micro: 0.75rem;
+  --text-micro--line-height: 1.3;
+
+  --tracking-display: -0.045em;
+  --tracking-heading: -0.025em;
+  --tracking-label: 0.08em;
+
+  /* ---------- LAYOUT ---------- */
+  --container-measure: 46ch;
+  --container-narrow: 56rem;
+  --container-content: 80rem;
+  --container-wide: 90rem;
+  --container-nav: 47.5rem;
+  --breakpoint-3xl: 108rem;
+
+  /* ---------- MOTION · easing vocabulary (mirrors EASE in design.ts) ---------- */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-exit: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-spring: cubic-bezier(0.3, 1.15, 0.5, 1);
+  --ease-cinematic: cubic-bezier(0.65, 0.05, 0.1, 1);
+
+  --animate-shimmer: prism-shimmer 1.9s cubic-bezier(0.2, 0, 0, 1) infinite;
+  --animate-float: prism-float 9s ease-in-out infinite alternate;
+  --animate-drift: prism-drift 64s ease-in-out infinite alternate;
+  --animate-press: prism-press 420ms cubic-bezier(0.3, 1.15, 0.5, 1);
+
+  @keyframes prism-press {
+    0% {
+      transform: scale(1);
+    }
+    35% {
+      transform: scale(0.78);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes prism-shimmer {
+    from {
+      transform: translate3d(-100%, 0, 0);
+    }
+    to {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  @keyframes prism-float {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(0, -10px, 0);
+    }
+  }
+
+  @keyframes prism-drift {
+    0% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      transform: translate3d(3vw, 2vh, 0) scale(1.06);
+    }
+    100% {
+      transform: translate3d(-2vw, 4vh, 0) scale(0.97);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---------- DEPTH utilities: the only z-index values in the codebase ---------- */
+@utility z-canvas {
+  z-index: var(--z-canvas);
+}
+@utility z-ambient {
+  z-index: var(--z-ambient);
+}
+@utility z-grid {
+  z-index: var(--z-grid);
+}
+@utility z-content {
+  z-index: var(--z-content);
+}
+@utility z-float {
+  z-index: var(--z-float);
+}
+@utility z-nav {
+  z-index: var(--z-nav);
+}
+@utility z-overlay {
+  z-index: var(--z-overlay);
+}
+@utility z-grain {
+  z-index: var(--z-grain);
+}
+
+/* Inline editorial accent inside Geist text. Instrument Serif has a smaller
+   x-height, so it is scaled up slightly to sit on the same optical size. */
+@utility type-serif-accent {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.12em;
+  letter-spacing: -0.01em;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    background-color: var(--canvas);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+    scroll-padding-top: calc(var(--nav-height) + var(--nav-offset) + 24px);
+  }
+
+  body {
+    display: flex;
+    min-height: 100dvh;
+    flex-direction: column;
+    /* clip, not hidden: overflow hidden creates a scroll container and breaks position: sticky. */
+    overflow-x: clip;
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+  }
+
+  ::selection {
+    background-color: rgb(134 221 241 / 0.5);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button {
+    appearance: none;
+  }
+}
+
+/* Lenis (mirrors lenis/dist/lenis.css). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+  overflow: clip;
+}
+.lenis [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+@layer components {
+  .skip-link {
+    position: fixed;
+    top: 12px;
+    left: 16px;
+    z-index: var(--z-overlay);
+    border-radius: 9999px;
+    background-color: var(--ink);
+    padding: 10px 18px;
+    color: var(--surface);
+    font-size: var(--text-label);
+    transform: translate3d(0, -160%, 0);
+    transition: transform var(--duration-fast) var(--ease-standard);
+  }
+  .skip-link:focus-visible {
+    transform: none;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-micro);
+    line-height: var(--text-micro--line-height);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    color: var(--ink-tertiary);
+  }
+
+  /* ------------------------------------------------------------------------
+     OPTICAL EDGE — shared by glass surfaces and premium buttons.
+     A 1px gradient ring cut out with a mask. The familiar
+     padding-box/border-box gradient trick needs an opaque fill, which glass
+     does not have. z-index -1 inside an isolated element paints above the
+     element's own background but below its content.
+     ------------------------------------------------------------------------ */
+  .edge-light {
+    --edge-opacity: 0.6;
+    position: relative;
+    isolation: isolate;
+  }
+  .glass::before,
+  .edge-light::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--edge, var(--specular));
+    opacity: var(--edge-opacity, 0.9);
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box exclude,
+      linear-gradient(#000 0 0);
+    pointer-events: none;
+    transition: opacity var(--duration-base) var(--ease-standard);
+  }
+  .edge-light:where(:hover, :focus-visible) {
+    --edge-opacity: 1;
+  }
+
+  /* ------------------------------------------------------------------------
+     LIQUID GLASS
+       environment → optical shell → translucent fill → backdrop blur
+       → sheen (::after) → specular edge (::before) → glare → content
+     ------------------------------------------------------------------------ */
+  .glass {
+    --glass-fill: var(--glass-elevated);
+    --glass-blur: var(--glass-blur-elevated);
+    --glass-saturate: var(--glass-saturate-elevated);
+    position: relative;
+    isolation: isolate;
+    background-color: var(--glass-fill);
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate));
+    transition: background-color var(--duration-base) var(--ease-standard);
+  }
+
+  /* Broad top-down reflection. */
+  .glass::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: var(--sheen);
+    opacity: var(--sheen-opacity, 0.65);
+    pointer-events: none;
+  }
+
+  .glass-quiet {
+    --glass-fill: var(--glass-quiet);
+    --glass-blur: var(--glass-blur-quiet);
+    --glass-saturate: var(--glass-saturate-quiet);
+    --edge: var(--specular-quiet);
+    --edge-opacity: 0.85;
+    --sheen-opacity: 0.4;
+    box-shadow: var(--shadow-glass-1);
+  }
+
+  .glass-elevated {
+    --edge-opacity: 0.9;
+    --sheen-opacity: 0.65;
+    box-shadow: var(--shadow-glass-2);
+  }
+
+  .glass-hero {
+    --glass-fill: var(--glass-hero);
+    --glass-blur: var(--glass-blur-hero);
+    --glass-saturate: var(--glass-saturate-hero);
+    --edge-opacity: 1;
+    --sheen-opacity: 0.9;
+    /* Ambient reflection: white pooling top-left, cyan bounce bottom-right. */
+    background-image:
+      radial-gradient(120% 130% at 0% 0%, rgb(255 255 255 / 0.55), rgb(255 255 255 / 0) 48%),
+      radial-gradient(90% 120% at 100% 100%, rgb(134 221 241 / 0.2), rgb(134 221 241 / 0) 60%);
+    box-shadow: var(--shadow-floating);
+  }
+
+  .glass-ink {
+    --glass-fill: var(--glass-ink);
+    --glass-saturate: var(--glass-saturate-hero);
+    --edge: var(--specular-ink);
+    --edge-opacity: 1;
+    --sheen-opacity: 0.1;
+    color: var(--surface);
+    box-shadow: var(--shadow-floating);
+  }
+
+  .glass:where(.glass-responsive):is(:hover, :focus-within) {
+    --edge-opacity: 1;
+  }
+
+  /* Specular glare. Moved only with transform; see InteractiveGlass. */
+  .glass-glare-layer {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .glass-glare {
+    position: absolute;
+    top: -40%;
+    left: -10%;
+    width: 62%;
+    aspect-ratio: 1.6;
+    background: var(--glare);
+    opacity: 0.75;
+    transition:
+      transform var(--duration-slow) var(--ease-entrance),
+      opacity var(--duration-base) var(--ease-standard);
+  }
+  .glass:focus-within .glass-glare {
+    opacity: 1;
+  }
+  .glass-tilt {
+    transition:
+      transform var(--duration-slow) var(--ease-entrance),
+      background-color var(--duration-base) var(--ease-standard);
+  }
+
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .glass {
+      --glass-fill: var(--surface-solid);
+    }
+    .glass-ink {
+      --glass-fill: var(--ink);
+    }
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    .glass {
+      --glass-fill: var(--surface-solid);
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+    .glass-ink {
+      --glass-fill: var(--ink);
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     DOUBLE BEZEL — outer optical shell, a small gap, an inner core.
+     Radii stay concentric: inner radius = outer radius − gap.
+     ------------------------------------------------------------------------ */
+  .bezel {
+    --bezel-radius: var(--radius-island);
+    --bezel-gap: var(--bezel-gap-island);
+    border-radius: var(--bezel-radius);
+    padding: var(--bezel-gap);
+  }
+  .bezel-card {
+    --bezel-radius: var(--radius-card);
+    --bezel-gap: var(--bezel-gap-card);
+  }
+  .bezel-panel {
+    --bezel-radius: var(--radius-panel);
+    --bezel-gap: var(--bezel-gap-panel);
+  }
+  .bezel-core {
+    position: relative;
+    border-radius: calc(var(--bezel-radius) - var(--bezel-gap));
+    background-color: var(--glass-white-strong);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.95),
+      inset 0 0 0 1px rgb(255 255 255 / 0.5),
+      0 1px 1px rgb(9 17 31 / 0.04),
+      1px 8px 18px -12px rgb(9 17 31 / 0.2);
+    transition: background-color var(--duration-base) var(--ease-standard);
+  }
+  .glass-ink .bezel-core {
+    background-color: rgb(255 255 255 / 0.06);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.14),
+      inset 0 0 0 1px rgb(255 255 255 / 0.06);
+  }
+  .bezel:focus-within .bezel-core {
+    background-color: rgb(255 255 255 / 0.9);
+  }
+  /* The inner input hides its own outline; the core carries the focus ring,
+     drawn inside the bezel gap so it reads as part of the object. */
+  .bezel-core:has(input:focus-visible) {
+    outline: 2px solid var(--focus);
+    outline-offset: 1px;
+  }
+
+  /* Intelligence-mode surface: opaque, crisp, built for dense data. */
+  .surface-solid {
+    position: relative;
+    background-color: var(--surface);
+    box-shadow:
+      var(--shadow-control),
+      inset 0 0 0 1px var(--line);
+  }
+
+  .card-interactive {
+    transition: transform var(--duration-base) var(--ease-entrance);
+  }
+  .card-interactive:is(:hover, :focus-within) {
+    --edge-opacity: 1;
+  }
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .card-interactive:hover {
+      transform: translate3d(0, -2px, 0);
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     NAVIGATION — transform-only morph from open bar to compact island.
+     Brand and actions slide inward by --nav-shift; the glass plate fades in
+     at the compact width. No width, padding or layout is animated.
+     ------------------------------------------------------------------------ */
+  .nav-frame {
+    container-type: inline-size;
+  }
+  .nav-bar {
+    --nav-shift: max(0px, (min(100cqw, var(--container-content)) - var(--container-nav)) / 2);
+    transform: translate3d(0, var(--nav-offset), 0);
+    transition: transform var(--duration-slow) var(--ease-cinematic);
+  }
+  .nav-plate {
+    left: 50%;
+    width: min(100%, var(--container-nav));
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0) scale(1.04, 1.12);
+    transition:
+      opacity var(--duration-base) var(--ease-standard),
+      transform var(--duration-slow) var(--ease-cinematic);
+  }
+  .nav-brand,
+  .nav-actions {
+    transition: transform var(--duration-slow) var(--ease-cinematic);
+  }
+  [data-scrolled] .nav-bar {
+    transform: translate3d(0, var(--nav-offset-scrolled), 0);
+  }
+  [data-scrolled] .nav-plate {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+  }
+  @media (min-width: 768px) {
+    [data-scrolled] .nav-brand {
+      transform: translate3d(var(--nav-shift), 0, 0);
+    }
+    [data-scrolled] .nav-actions {
+      transform: translate3d(calc(var(--nav-shift) * -1), 0, 0);
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     AMBIENT SCENE — fixed, decorative, never interactive.
+     ------------------------------------------------------------------------ */
+  .ambient-canvas {
+    background: radial-gradient(
+      140% 90% at 50% -10%,
+      var(--canvas-lift) 0%,
+      var(--canvas) 45%,
+      var(--canvas-deep) 100%
+    );
+  }
+
+  .ambient-refraction {
+    background: linear-gradient(
+      112deg,
+      rgb(255 255 255 / 0) 22%,
+      rgb(255 255 255 / 0.38) 38%,
+      rgb(134 221 241 / 0.08) 44%,
+      rgb(255 255 255 / 0.2) 50%,
+      rgb(255 255 255 / 0) 62%
+    );
+  }
+
+  .ambient-grid {
+    background-image:
+      linear-gradient(to right, var(--line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+    background-size: 72px 72px;
+    background-position: calc(50% + 36px) -1px;
+    opacity: 0.35;
+    -webkit-mask-image: radial-gradient(ellipse 72% 58% at 50% 26%, #000 0%, rgb(0 0 0 / 0.45) 45%, transparent 76%);
+    mask-image: radial-gradient(ellipse 72% 58% at 50% 26%, #000 0%, rgb(0 0 0 / 0.45) 45%, transparent 76%);
+  }
+
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    opacity: 0.03;
+  }
+
+  /* Anchor positions the orb with `translate`, leaving `transform` free for drift. */
+  .light-orb-anchor {
+    position: absolute;
+    translate: -50% -50%;
+  }
+  .light-orb-drift {
+    will-change: transform;
+    animation: var(--animate-drift);
+  }
+  .light-orb {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 9999px;
+    background: radial-gradient(closest-side, var(--orb-color), transparent 72%);
+    filter: blur(calc(var(--orb-blur) * var(--orb-blur-scale, 1)));
+  }
+  @media (max-width: 767px) {
+    .light-orb {
+      --orb-blur-scale: 0.55;
+    }
+  }
+
+  /* ------------------------------------------------------------------------
+     KINETIC TYPE & MOTION HELPERS
+     ------------------------------------------------------------------------ */
+  .mask-line {
+    display: block;
+    overflow: clip;
+    /* Room for descenders and italic overhang inside the clip. */
+    padding-block: 0.06em 0.14em;
+    margin-block: -0.06em -0.14em;
+    padding-inline-end: 0.08em;
+  }
+  .mask-line > span {
+    display: block;
+  }
+
+  .float-slow {
+    animation: var(--animate-float);
+    animation-delay: var(--float-delay, 1.6s);
+  }
+
+  .skeleton {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-control);
+    background-color: rgb(9 17 31 / 0.06);
+  }
+  .skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translate3d(-100%, 0, 0);
+    background: linear-gradient(
+      100deg,
+      rgb(255 255 255 / 0) 20%,
+      rgb(255 255 255 / 0.75) 50%,
+      rgb(255 255 255 / 0) 80%
+    );
+    animation: var(--animate-shimmer);
+  }
+}
+
+/* ==========================================================================
+   MOTION GUARDS
+   ========================================================================== */
+
+/* Hero entrance: hide staged elements before first paint so there is no flash
+   of final-state content before GSAP takes over. Only applies when JS has
+   booted (data-js is set by an inline script) and motion is welcome. An
+   inline failsafe sets data-hero-ready if the choreography never runs. */
+@media (prefers-reduced-motion: no-preference) {
+  html[data-js]:not([data-hero-ready]) [data-hero] {
+    opacity: 0;
+  }
+  html[data-js]:not([data-hero-ready]) [data-hero-line] > span {
+    transform: translate3d(0, 110%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Ambient loops stop entirely. State changes (colour, fill, opacity
+     transitions) are left intact — they carry meaning. */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+  }
+  .light-orb-drift,
+  .float-slow {
+    animation: none !important;
+    will-change: auto;
+  }
+  .skeleton::after {
+    animation: none !important;
+    opacity: 0;
+  }
 }
