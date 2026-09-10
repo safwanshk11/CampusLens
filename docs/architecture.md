@@ -67,7 +67,7 @@ src/
 │   └── utils.ts      # cn() with PRISM-aware tailwind-merge
 ├── types/
 └── generated/prisma/ # Prisma client output (git-ignored, built by postinstall)
-prisma/schema.prisma  # Generator + datasource only; no models yet
+prisma/schema.prisma  # College, courses, placements, reviews and saved-item models
 prisma.config.ts      # Prisma CLI config
 ```
 
@@ -128,7 +128,7 @@ Everything else is server-rendered, including `GlassSurface`, `GlassBezel`, `But
   on Node 20.
 - `getDb()` creates the client on first use and caches it on `globalThis`, so dev hot reloads don't
   open a new pool each time.
-- `prisma/schema.prisma` has **no models** in Phase 0.
+- Phase 1 domain models, migration and seed are documented in [database.md](./database.md).
 
 ### Route Handlers
 
@@ -136,7 +136,7 @@ Everything else is server-rendered, including `GlassSurface`, `GlassBezel`, `But
 connects to the database and never reveals the URL. It is `force-dynamic` with `Cache-Control:
 no-store`.
 
-Future handlers follow this pattern:
+The college search handler follows this pattern (see [search-api.md](./search-api.md)):
 
 ```text
 Route Handler

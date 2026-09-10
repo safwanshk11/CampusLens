@@ -49,8 +49,10 @@ Not planned for this submission. Adding any of these needs an explicit scope cha
 
 | Phase | Focus | Status |
 |-------|-------|--------|
-| **0** | Architecture, PRISM design system, liquid-glass primitives, motion architecture, homepage visual prototype, `/design-system` lab, Prisma and environment foundation, documentation | **This phase** |
-| Later | College data model and seed, search API, filters, detail page, compare, authentication, saved items | Deferred |
+| **0** | Architecture, PRISM design system, liquid-glass primitives, motion architecture, homepage visual prototype, `/design-system` lab, Prisma and environment foundation, documentation | Complete |
+| **1** | College data model, migration, seed and database verification | Complete locally |
+| **2** | Search API, validation, filters, sorting and pagination | Complete locally |
+| Later | Discovery UI, detail page, compare, authentication, saved items | Deferred |
 
 ## Data honesty
 

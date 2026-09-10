@@ -1,11 +1,3 @@
-// CampusLens · Prisma schema
-//
-// Phase 0 establishes the client, adapter and configuration architecture only.
-// Domain models (College, Course, User, SavedCollege, ...) are introduced with
-// the features that need them, starting in Phase 1.
-//
-// Connection URL: prisma.config.ts (CLI) and src/lib/db.ts (runtime adapter).
-
 generator client {
   provider = "prisma-client"
   output   = "../src/generated/prisma"
@@ -13,4 +5,139 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+}
+
+enum Ownership {
+  PUBLIC
+  PRIVATE
+  DEEMED
+}
+
+enum DegreeLevel {
+  UNDERGRADUATE
+  POSTGRADUATE
+  DIPLOMA
+}
+
+model College {
+  id          String              @id @default(cuid())
+  slug        String              @unique
+  name        String
+  city        String
+  state       String
+  ownership   Ownership
+  established Int
+  overview    String
+  websiteUrl  String?
+  imageUrl    String?
+  isDemo      Boolean             @default(false)
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+  courses     Course[]
+  placements  Placement[]
+  reviews     Review[]
+  savedBy     SavedCollege[]
+  comparisons ComparisonCollege[]
+
+  @@index([state, city])
+  @@index([ownership])
+  @@index([name])
+}
+
+model Course {
+  id             String      @id @default(cuid())
+  collegeId      String
+  slug           String
+  name           String
+  discipline     String
+  degreeLevel    DegreeLevel
+  durationMonths Int
+  // INR for one academic year, excluding hostel and living expenses.
+  annualFeeInr   Int
+  eligibility    String
+  college        College     @relation(fields: [collegeId], references: [id], onDelete: Cascade)
+
+  @@unique([collegeId, slug])
+  @@index([annualFeeInr])
+  @@index([discipline, degreeLevel])
+}
+
+model Placement {
+  id               String  @id @default(cuid())
+  collegeId        String
+  year             Int
+  // Annual compensation in INR. Null means unavailable, never zero.
+  medianSalaryInr  Int?
+  averageSalaryInr Int?
+  highestSalaryInr Int?
+  eligibleStudents Int?
+  placedStudents   Int?
+  sourceUrl        String?
+  college          College @relation(fields: [collegeId], references: [id], onDelete: Cascade)
+
+  @@unique([collegeId, year])
+}
+
+model User {
+  id               String            @id @default(cuid())
+  // Authentication must trim and lowercase email before writes and lookups.
+  email            String            @unique
+  name             String?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  reviews          Review[]
+  savedColleges    SavedCollege[]
+  savedComparisons SavedComparison[]
+}
+
+model Review {
+  id        String   @id @default(cuid())
+  collegeId String
+  userId    String
+  rating    Int
+  title     String
+  body      String
+  isDemo    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  college   College  @relation(fields: [collegeId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, collegeId])
+  @@index([collegeId])
+}
+
+model SavedCollege {
+  userId    String
+  collegeId String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  college   College  @relation(fields: [collegeId], references: [id], onDelete: Cascade)
+
+  @@id([userId, collegeId])
+  @@index([collegeId])
+}
+
+model SavedComparison {
+  id        String              @id @default(cuid())
+  userId    String
+  name      String
+  createdAt DateTime            @default(now())
+  updatedAt DateTime            @updatedAt
+  user      User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  colleges  ComparisonCollege[]
+
+  @@index([userId, createdAt])
+}
+
+model ComparisonCollege {
+  comparisonId String
+  collegeId    String
+  position     Int
+  comparison   SavedComparison @relation(fields: [comparisonId], references: [id], onDelete: Cascade)
+  college      College         @relation(fields: [collegeId], references: [id], onDelete: Restrict)
+
+  @@id([comparisonId, collegeId])
+  @@unique([comparisonId, position])
+  @@index([collegeId])
 }

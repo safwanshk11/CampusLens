@@ -13,7 +13,8 @@ function createPrismaClient(): PrismaClient {
 
   return new PrismaClient({
     adapter,
-    log: env.NODE_ENV === "development" ? ["warn", "error"] : ["error"],
+    // Route handlers own error reporting; raw Prisma errors may expose connection details.
+    log: env.NODE_ENV === "development" ? ["warn"] : [],
   });
 }
 
@@ -27,7 +28,7 @@ function createPrismaClient(): PrismaClient {
  * - `server-only`: importing this from a Client Component fails the build instead
  *   of leaking database code to the browser.
  *
- * Phase 0 defines no models, so nothing calls this yet.
+ * Phase 1 supplies the domain models; UI integration starts in Phase 2.
  */
 export function getDb(): PrismaClient {
   globalForPrisma.__campuslensPrisma ??= createPrismaClient();

@@ -75,3 +75,14 @@ Lenis · Framer Motion · Radix Dialog · Zod 4 · Prisma 7 (pg adapter) · Post
 3. From the data phase onward, set `DATABASE_URL` to Neon's **pooled** connection string.
 
 `postinstall` generates the Prisma client during install, before `next build`.
+
+## Phase 1 — Database
+
+The database schema, migration and repeatable illustrative seed are implemented.
+See [the database guide](docs/database.md) for setup, model explanations and verification.
+The existing homepage remains unchanged; database-backed discovery UI begins in Phase 3.
+
+## Phase 2 — Search API
+
+`GET /api/colleges` supports validated search, filters, aggregate sorting and pagination.
+See [the API guide](docs/search-api.md) for parameters, examples and test commands.

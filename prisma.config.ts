@@ -7,8 +7,8 @@ import { defineConfig } from "prisma/config";
 for (const file of [".env.local", ".env"]) {
   try {
     process.loadEnvFile(file);
-  } catch {
-    // File not present — nothing to load.
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
   }
 }
 
@@ -16,8 +16,9 @@ export default defineConfig({
   schema: "prisma/schema.prisma",
   migrations: {
     path: "prisma/migrations",
+    seed: "tsx prisma/seed.ts",
   },
   datasource: {
-    url: process.env.DATABASE_URL,
+    url: process.env.DIRECT_URL || process.env.DATABASE_URL,
   },
 });
