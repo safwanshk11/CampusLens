@@ -86,3 +86,8 @@ The existing homepage remains unchanged; database-backed discovery UI begins in 
 
 `GET /api/colleges` supports validated search, filters, aggregate sorting and pagination.
 See [the API guide](docs/search-api.md) for parameters, examples and test commands.
+
+## Phase 3 — Discovery UI
+
+Open `/discover` for working college search, filters and pagination with the PRISM
+result cards. See [the discovery guide](docs/discovery-ui.md) for behaviour and phase boundaries.

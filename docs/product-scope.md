@@ -52,7 +52,8 @@ Not planned for this submission. Adding any of these needs an explicit scope cha
 | **0** | Architecture, PRISM design system, liquid-glass primitives, motion architecture, homepage visual prototype, `/design-system` lab, Prisma and environment foundation, documentation | Complete |
 | **1** | College data model, migration, seed and database verification | Complete locally |
 | **2** | Search API, validation, filters, sorting and pagination | Complete locally |
-| Later | Discovery UI, detail page, compare, authentication, saved items | Deferred |
+| **3** | Discovery UI, URL-based search/filter state, result cards and pagination | Complete locally |
+| Later | Detail page, compare, authentication, saved items | Deferred |
 
 ## Data honesty
 
@@ -62,6 +63,5 @@ These rules apply in every phase.
 - **Illustrative content is labelled.** Phase 0 previews use fictional college names and are marked
   *Illustrative*, *Specimen data* or *Illustrative values*. Preview illustrations are exposed to
   assistive technology as images with a description, so invented values are never read out as facts.
-- **No fake behaviour.** Placeholder routes (`/discover`, `/compare`, `/saved`, `/sign-in`) state
-  plainly that the feature is not built yet. The hero search form really submits to `/discover`,
-  which echoes the query and explains that results arrive later.
+- **No fake behaviour.** Placeholder routes (`/compare`, `/saved`, `/sign-in`) state
+  plainly that the feature is not built yet. The hero search form submits to `/discover`, which now displays database-backed illustrative results.

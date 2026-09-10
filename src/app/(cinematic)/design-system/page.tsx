@@ -1,3 +1,4 @@
+import { CollegeCard } from "@/components/discover/college-card";
 import type { Metadata } from "next";
 import { CardsLab } from "@/components/design-lab/cards-lab";
 import { ControlsLab } from "@/components/design-lab/controls-lab";
@@ -10,7 +11,8 @@ import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
   title: "PRISM design system",
-  description: "The visual contract for CampusLens: tokens, liquid glass, controls, cards, motion and states.",
+  description:
+    "The visual contract for CampusLens: tokens, liquid glass, controls, cards, motion and states.",
   robots: { index: false },
 };
 
@@ -19,6 +21,7 @@ const SECTIONS = [
   { id: "glass", label: "Glass lab" },
   { id: "controls", label: "Controls" },
   { id: "cards", label: "Cards" },
+  { id: "discovery-card", label: "Discovery card" },
   { id: "motion", label: "Motion" },
   { id: "states", label: "States" },
 ] as const;
@@ -38,12 +41,17 @@ export default function DesignSystemPage() {
           PRISM<span className="type-serif-accent">.</span>
         </h1>
         <p className="max-w-2xl text-body-lg text-pretty text-ink-secondary">
-          <span className="font-medium text-ink">Premium Responsive Interface System for Modern discovery.</span> The
-          internal studio where CampusLens&apos; tokens, glass, controls and motion are defined. Later phases build only
-          from what is on this page.
+          <span className="font-medium text-ink">
+            Premium Responsive Interface System for Modern discovery.
+          </span>{" "}
+          The internal studio where CampusLens&apos; tokens, glass, controls and
+          motion are defined. Later phases build only from what is on this page.
         </p>
 
-        <nav aria-label="Design system sections" className="-mx-5 overflow-x-auto px-5 lg:hidden">
+        <nav
+          aria-label="Design system sections"
+          className="-mx-5 overflow-x-auto px-5 lg:hidden"
+        >
           <ul className="flex gap-2">
             {SECTIONS.map((section) => (
               <li key={section.id}>
@@ -85,6 +93,34 @@ export default function DesignSystemPage() {
           <GlassLab />
           <ControlsLab />
           <CardsLab />
+          <section id="discovery-card" className="scroll-mt-32 py-12">
+            <h2 className="mb-3 text-2xl font-medium">Discovery card</h2>
+            <p className="mb-6 text-body text-ink-secondary">
+              Solid intelligence surface. Illustrative fixture; missing data
+              remains explicit.
+            </p>
+            <div className="max-w-lg">
+              <CollegeCard
+                college={{
+                  id: "lab-discovery",
+                  slug: "specimen",
+                  name: "Aurora Institute of Technology",
+                  city: "Bengaluru",
+                  state: "Karnataka",
+                  ownership: "PUBLIC",
+                  isDemo: true,
+                  imageUrl: null,
+                  minAnnualFeeInr: 40000,
+                  maxAnnualFeeInr: 64000,
+                  matchingCourseCount: 3,
+                  averageRating: null,
+                  reviewCount: 0,
+                  placementYear: null,
+                  medianSalaryInr: null,
+                }}
+              />
+            </div>
+          </section>
           <MotionLab />
           <StatesLab />
         </div>

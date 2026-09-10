@@ -401,3 +401,10 @@ and only on the glass variant.
    `backdrop-filter`.
 3. Need motion? Pick the owner from `motion-system.md` and a curve from the five-ease vocabulary.
 4. Add the new piece to `/design-system` before using it in a feature.
+
+## Phase 3 implementation
+
+`CollegeCard` is the solid discovery result component, exhibited under Discovery card
+in the lab. It composes existing Card and Badge primitives and uses native details
+for fee context. `SearchForm` owns URL navigation; `FilterPanel` owns responsive disclosure.
+Detail/save/compare actions are deferred to their functional phases.
