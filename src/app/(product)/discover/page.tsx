@@ -334,7 +334,11 @@ export default async function DiscoverPage({
             ) : (
               <div className="grid gap-5 md:grid-cols-2">
                 {results?.data.map((college) => (
-                  <CollegeCard key={college.id} college={college} />
+                  <CollegeCard
+                    key={college.id}
+                    college={college}
+                    returnTo={`/discover?${params.toString()}`}
+                  />
                 ))}
               </div>
             )}

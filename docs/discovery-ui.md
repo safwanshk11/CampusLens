@@ -40,9 +40,9 @@ the fee range, consistent with the API.
 
 ## Phase boundary
 
-College detail navigation is Phase 4; compare is Phase 5; authentication and persisted
-saved items are Phase 6. Cards intentionally have no nonfunctional save, compare or
-view-detail buttons. The expandable figure explanation works now.
+College detail navigation was connected in Phase 4. Compare is Phase 5; authentication
+and persisted saved items are Phase 6. Cards have no nonfunctional save or compare
+buttons. View college preserves applied filters for the return journey.
 
 ## Verification
 

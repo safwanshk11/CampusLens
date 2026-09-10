@@ -1,3 +1,4 @@
+import { ButtonLink } from "@/components/ui/button";
 import { GraduationCap, MapPin, Star, ArrowUpRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,7 +18,13 @@ const money = (value: number | null) =>
         maximumFractionDigits: 0,
       }).format(value);
 
-export function CollegeCard({ college }: { college: CollegeSearchItem }) {
+export function CollegeCard({
+  college,
+  returnTo,
+}: {
+  college: CollegeSearchItem;
+  returnTo?: string;
+}) {
   return (
     <article aria-labelledby={`college-${college.id}`}>
       <Card surface="solid" className="flex h-full flex-col overflow-hidden">
@@ -93,6 +100,17 @@ export function CollegeCard({ college }: { college: CollegeSearchItem }) {
               : "Confirm fees and admission requirements with the institution."}
           </p>
         </details>
+        {college.slug !== "specimen" && (
+          <ButtonLink
+            className="mt-5"
+            variant="secondary"
+            href={`/colleges/${college.slug}${returnTo ? `?from=${encodeURIComponent(returnTo)}` : ""}`}
+            aria-label={`View ${college.name}`}
+          >
+            View college
+            <ArrowUpRight aria-hidden className="size-4" />
+          </ButtonLink>
+        )}
       </Card>
     </article>
   );

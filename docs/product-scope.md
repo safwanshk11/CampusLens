@@ -53,7 +53,8 @@ Not planned for this submission. Adding any of these needs an explicit scope cha
 | **1** | College data model, migration, seed and database verification | Complete locally |
 | **2** | Search API, validation, filters, sorting and pagination | Complete locally |
 | **3** | Discovery UI, URL-based search/filter state, result cards and pagination | Complete locally |
-| Later | Detail page, compare, authentication, saved items | Deferred |
+| **4** | College details, public detail API, courses, placements and reviews | Complete locally |
+| Later | Compare, authentication, saved items | Deferred |
 
 ## Data honesty
 

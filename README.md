@@ -91,3 +91,8 @@ See [the API guide](docs/search-api.md) for parameters, examples and test comman
 
 Open `/discover` for working college search, filters and pagination with the PRISM
 result cards. See [the discovery guide](docs/discovery-ui.md) for behaviour and phase boundaries.
+
+## Phase 4 — College details
+
+Discovery cards now open `/colleges/<slug>` for overview, courses, fees, placements and
+reviews. See [the detail guide](docs/college-detail.md) for data semantics and checks.
