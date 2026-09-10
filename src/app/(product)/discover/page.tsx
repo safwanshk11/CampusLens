@@ -9,6 +9,7 @@ import { EmptyState } from "@/components/ui/empty-state";
 import { FilterPanel } from "@/components/discover/filter-panel";
 import { SearchForm } from "@/components/discover/search-form";
 import { CollegeCard } from "@/components/discover/college-card";
+import { CompareTray } from "@/components/discover/compare-toggle";
 import { parseCollegeQuery } from "@/server/colleges/query";
 import {
   searchColleges,
@@ -37,7 +38,9 @@ export default async function DiscoverPage({
     }
   }
   if (!params.has("pageSize")) params.set("pageSize", "6");
-  const parsed = parseCollegeQuery(params);
+  const searchParamsOnly = new URLSearchParams(params);
+  searchParamsOnly.delete("compare");
+  const parsed = parseCollegeQuery(searchParamsOnly);
   let results: CollegeSearchResponse | undefined;
   let unavailable = false;
   if (parsed.success) {
@@ -68,7 +71,7 @@ export default async function DiscoverPage({
     minRating: "Min rating",
   };
   const active = [...params].filter(
-    ([key]) => !["page", "pageSize", "sort"].includes(key),
+    ([key]) => !["page", "pageSize", "sort", "compare"].includes(key),
   );
   const select = (
     name: string,
@@ -383,6 +386,7 @@ export default async function DiscoverPage({
           </section>
         </div>
       </SearchForm>
+      <CompareTray />
     </Container>
   );
 }

@@ -1,8 +1,9 @@
-import { ButtonLink } from "@/components/ui/button";
+import Link from "next/link";
 import { GraduationCap, MapPin, Star, ArrowUpRight } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { CollegeSearchItem } from "@/server/colleges/search";
+import { CompareToggle } from "./compare-toggle";
 
 const ownership = {
   PUBLIC: "Public",
@@ -27,15 +28,32 @@ export function CollegeCard({
 }) {
   return (
     <article aria-labelledby={`college-${college.id}`}>
-      <Card surface="solid" className="flex h-full flex-col overflow-hidden">
-        <div className="mb-5 flex items-center justify-between gap-3">
+      <Card
+        surface="solid"
+        interactive={college.slug !== "specimen"}
+        className="group/card relative flex h-full cursor-pointer flex-col overflow-hidden transition-shadow duration-(--duration-base) hover:shadow-glass-2"
+      >
+        <div className="relative z-float mb-5 flex items-center justify-between gap-3">
           <span
             aria-hidden
             className="grid size-12 place-items-center rounded-tile bg-azure/10 text-azure-ink"
           >
             <GraduationCap className="size-5" strokeWidth={1.75} />
           </span>
-          <Badge tone="neutral">{ownership[college.ownership]}</Badge>
+          <div className="flex items-center gap-2">
+            <Badge tone="neutral">{ownership[college.ownership]}</Badge>
+            {college.slug !== "specimen" && (
+              <CompareToggle slug={college.slug} name={college.name} />
+            )}
+            {college.slug !== "specimen" && (
+              <span
+                aria-hidden
+                className="grid size-8 place-items-center rounded-full bg-ink/5 text-ink-secondary transition-transform duration-(--duration-base) ease-spring group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5"
+              >
+                <ArrowUpRight className="size-4" />
+              </span>
+            )}
+          </div>
         </div>
         <h3
           id={`college-${college.id}`}
@@ -86,30 +104,12 @@ export function CollegeCard({
               : "No placement report"}
           </span>
         </div>
-        <details className="mt-5 border-t border-line pt-4 text-label text-ink-secondary">
-          <summary className="flex min-h-11 cursor-pointer items-center justify-between gap-3 font-medium text-ink">
-            About these figures
-            <ArrowUpRight aria-hidden className="size-4" />
-          </summary>
-          <p className="mt-2 leading-relaxed">
-            Tuition spans {money(college.minAnnualFeeInr)} to{" "}
-            {money(college.maxAnnualFeeInr)} per year across programmes matching
-            your course filters. Living expenses are excluded.{" "}
-            {college.isDemo
-              ? "This college and its figures are fictional demonstration data."
-              : "Confirm fees and admission requirements with the institution."}
-          </p>
-        </details>
         {college.slug !== "specimen" && (
-          <ButtonLink
-            className="mt-5"
-            variant="secondary"
+          <Link
+            className="absolute inset-0 rounded-card focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-focus"
             href={`/colleges/${college.slug}${returnTo ? `?from=${encodeURIComponent(returnTo)}` : ""}`}
-            aria-label={`View ${college.name}`}
-          >
-            View college
-            <ArrowUpRight aria-hidden className="size-4" />
-          </ButtonLink>
+            aria-labelledby={`college-${college.id}`}
+          />
         )}
       </Card>
     </article>
