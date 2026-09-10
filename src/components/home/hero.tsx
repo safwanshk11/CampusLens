@@ -15,15 +15,24 @@ type FloatingChip = {
   /** Desktop placement around the search island, clear of the headline and copy. */
   position: string;
   floatDelay: string;
+  /** A small, deliberate touch of colour — one semantic accent per meaning, not decoration. */
+  tone: "azure-ink" | "warning-ink" | "positive-ink" | "ink";
 };
 
 /** Illustrative values only — labelled as such beneath the island. */
 const CHIPS: readonly FloatingChip[] = [
-  { id: "fees", icon: Wallet, value: "₹2.4L", unit: "/ year", position: "lg:-top-16 lg:right-8", floatDelay: "1.8s" },
-  { id: "rating", icon: Star, value: "4.6", unit: "rating", position: "lg:-bottom-16 lg:left-10", floatDelay: "2.6s" },
-  { id: "placed", icon: TrendingUp, value: "93%", unit: "placed", position: "lg:-bottom-9 lg:right-16", floatDelay: "3s" },
-  { id: "city", icon: MapPin, value: "Bengaluru", position: "lg:hidden", floatDelay: "2.2s" },
+  { id: "fees", icon: Wallet, value: "₹2.4L", unit: "/ year", position: "lg:-top-16 lg:right-8", floatDelay: "1.8s", tone: "azure-ink" },
+  { id: "rating", icon: Star, value: "4.6", unit: "rating", position: "lg:-bottom-16 lg:left-10", floatDelay: "2.6s", tone: "warning-ink" },
+  { id: "placed", icon: TrendingUp, value: "93%", unit: "placed", position: "lg:-bottom-9 lg:right-16", floatDelay: "3s", tone: "positive-ink" },
+  { id: "city", icon: MapPin, value: "Bengaluru", position: "lg:hidden", floatDelay: "2.2s", tone: "ink" },
 ];
+
+const CHIP_TONE: Record<FloatingChip["tone"], string> = {
+  "azure-ink": "bg-azure-ink",
+  "warning-ink": "bg-warning-ink",
+  "positive-ink": "bg-positive-ink",
+  ink: "bg-ink",
+};
 
 const PROMISES = [
   { index: "01", title: "Structured profiles", detail: "Fees, courses, placements and ratings in one consistent format." },
@@ -65,7 +74,7 @@ function DataChip({ chip }: { chip: FloatingChip }) {
           data-hero="chip"
           className="glass glass-elevated flex h-11 items-center gap-2.5 rounded-full pl-1.5 pr-4 text-label"
         >
-          <span className="grid size-8 place-items-center rounded-full bg-ink text-white">
+          <span className={cn("grid size-8 place-items-center rounded-full text-white", CHIP_TONE[chip.tone])}>
             <Icon aria-hidden className="size-3.5" strokeWidth={2} />
           </span>
           <span className="font-semibold text-ink tabular-nums">{chip.value}</span>
@@ -92,7 +101,12 @@ export function Hero() {
           Don’t just pick a college.
         </p>
 
-        <h1 id="hero-title" className="mt-8 text-display-hero font-medium text-ink">
+        {/*
+          Positioned + z-10 so the headline paints above the search island where the
+          "clearly." tail overlaps it. `pointer-events-none` keeps the (mostly empty)
+          text block from intercepting clicks meant for the search input/button beneath.
+        */}
+        <h1 id="hero-title" className="relative z-10 mt-8 text-display-hero font-medium text-ink pointer-events-none">
           <span data-hero-line className="mask-line">
             <span>See your</span>
           </span>

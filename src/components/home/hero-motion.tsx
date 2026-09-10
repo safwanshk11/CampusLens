@@ -38,8 +38,14 @@ export function HeroMotion({ className, children, ...props }: ComponentPropsWith
         tl.fromTo("[data-hero='badge']", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: DURATION.slow }, t.badge)
           .fromTo(
             "[data-hero-line] > span",
-            { yPercent: 110 },
-            { yPercent: 0, duration: DURATION.cinematic, ease: gsapEase("cinematic"), stagger: 0.11 },
+            // `y: 0` pins GSAP's own pixel-offset baseline to zero. Without it, GSAP
+            // parses the CSS pre-paint guard's `translate3d(0, 110%, 0)` — already a
+            // resolved pixel matrix by the time GSAP reads it — as a separate, untouched
+            // `y` offset layered under the `yPercent` tween. `yPercent` then animates
+            // 110% → 0% correctly, but that inherited pixel offset never moves, so the
+            // line settles a fixed distance short of home instead of fully at rest.
+            { yPercent: 110, y: 0 },
+            { yPercent: 0, y: 0, duration: DURATION.cinematic, ease: gsapEase("cinematic"), stagger: 0.11 },
             t.headline,
           )
           .fromTo(

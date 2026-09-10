@@ -50,7 +50,7 @@ export function NavFrame({ primary, saved, signIn }: NavFrameProps) {
       <div className="nav-bar relative mx-auto flex h-(--nav-height) w-full max-w-content items-center justify-between">
         <span aria-hidden className="nav-plate glass glass-elevated absolute inset-y-0 rounded-full" />
 
-        <div className="nav-brand pointer-events-auto relative pl-1.5">
+        <div className="nav-brand pointer-events-auto relative pl-2.5">
           <Link href="/" aria-label="CampusLens home" className="flex h-11 items-center rounded-full px-2">
             <Wordmark />
           </Link>
@@ -78,7 +78,10 @@ export function NavFrame({ primary, saved, signIn }: NavFrameProps) {
           </ul>
         </nav>
 
-        <div className="nav-actions pointer-events-auto relative flex items-center gap-1 pr-1.5">
+        {/* Extra trailing room (pr-3, vs pl-2.5 on the brand): the primary CTA is a
+            filled pill shape and needs clearance from the island's own curve to read
+            as a distinct button, not just text sitting near an edge. */}
+        <div className="nav-actions pointer-events-auto relative flex items-center gap-1 pr-3">
           <Link
             href={saved.href}
             aria-current={isActive(pathname, saved.href) ? "page" : undefined}

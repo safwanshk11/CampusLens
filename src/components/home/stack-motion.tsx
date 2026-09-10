@@ -9,12 +9,16 @@ import { MEDIA } from "@/lib/motion";
  * Sticky glass-sheet stack (desktop + motion only).
  *
  * Pinning is plain CSS `position: sticky`. GSAP only scrubs the *covered* sheet:
- * as sheet N+1 slides up to its sticky offset, sheet N settles back (scale) and
- * its content fades out.
+ * as sheet N+1 slides up to its sticky offset, sheet N settles back (scale),
+ * blurs via `filter`, and its content fades out — receding out of focus like a
+ * physical sheet of glass sliding away.
  *
- * The glass surface itself is never faded. A semi-transparent backdrop-filter
- * element lets the *unblurred* backdrop leak through in proportion to its
- * transparency, so a fading sheet would show the sheet beneath it sharply.
+ * The glass surface's own opacity is never touched. A semi-transparent
+ * backdrop-filter element lets the *unblurred* backdrop leak through in
+ * proportion to its transparency, so fading the sheet's opacity would show the
+ * sheet beneath it sharply. `filter: blur()` has no such problem — it blurs the
+ * sheet's own already-composited pixels as a post-process — so it's safe to
+ * combine with the sheet's `backdrop-filter` glass.
  */
 export function StackMotion({ className, children, ...props }: ComponentPropsWithoutRef<"div">) {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -35,18 +39,23 @@ export function StackMotion({ className, children, ...props }: ComponentPropsWit
           const content = card.querySelector<HTMLElement>("[data-stack-content]");
           if (!next || !sheet || !content) return;
 
+          // The sticky offset is a static value we set ourselves (never changes on
+          // resize or refresh), so it's read once, synchronously, as a plain number —
+          // not via a lazily-evaluated function, which left `end` unresolved (`start: 0,
+          // end: undefined`) for the whole scroll range in testing.
+          const stickyTop = parseFloat(getComputedStyle(next).top) || 0;
+
           gsap
             .timeline({
               scrollTrigger: {
                 trigger: next,
                 start: "top 85%",
                 // Finish exactly when the next sheet reaches its own sticky offset.
-                end: () => `top ${parseFloat(getComputedStyle(next).top) || 0}px`,
+                end: `top ${stickyTop}px`,
                 scrub: true,
-                invalidateOnRefresh: true,
               },
             })
-            .to(sheet, { scale: STACK.scaleTo, transformOrigin: "50% 0%", ease: "none" }, 0)
+            .to(sheet, { scale: STACK.scaleTo, filter: `blur(${STACK.sheetBlurTo}px)`, transformOrigin: "50% 0%", ease: "none" }, 0)
             .to(content, { opacity: STACK.contentOpacityTo, ease: "none" }, 0);
         });
 

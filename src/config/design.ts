@@ -86,9 +86,16 @@ export const STACK = {
   scaleTo: 0.95,
   /**
    * The covered sheet's *content* fades out. The glass surface itself stays opaque:
-   * fading a backdrop-filter element leaks the unblurred backdrop through it.
+   * fading a backdrop-filter element's opacity leaks the unblurred backdrop through it.
    */
   contentOpacityTo: 0,
+  /**
+   * The covered sheet itself gains a CSS `filter: blur()`, in px, as it recedes.
+   * This is a different operation from the opacity rule above — `filter` blurs the
+   * sheet's own already-composited pixels as a post-process, it doesn't touch alpha,
+   * so it never leaks the sharp backdrop through. Safe to combine with `backdrop-filter`.
+   */
+  sheetBlurTo: 8,
 } as const;
 
 export const REVEAL = {

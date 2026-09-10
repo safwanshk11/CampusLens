@@ -2,15 +2,17 @@ import { Bookmark, GitCompareArrows, Layers, Search, type LucideIcon } from "luc
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { cn } from "@/lib/utils";
 import { FlowMotion } from "./flow-motion";
 
-type FlowNode = { icon: LucideIcon; label: string; detail: string };
+type FlowNode = { icon: LucideIcon; label: string; detail: string; tone: string };
 
+/** Icon tone: one accent per step, "Save" matching the danger-ink heart used elsewhere. */
 const NODES: readonly FlowNode[] = [
-  { icon: Search, label: "Search", detail: "Find colleges by name, course or city." },
-  { icon: Layers, label: "Inspect", detail: "Read fees, courses and placements in one structure." },
-  { icon: GitCompareArrows, label: "Compare", detail: "Line up the finalists field by field." },
-  { icon: Bookmark, label: "Save", detail: "Keep your shortlist and return to it later." },
+  { icon: Search, label: "Search", detail: "Find colleges by name, course or city.", tone: "text-azure-ink" },
+  { icon: Layers, label: "Inspect", detail: "Read fees, courses and placements in one structure.", tone: "text-positive-ink" },
+  { icon: GitCompareArrows, label: "Compare", detail: "Line up the finalists field by field.", tone: "text-warning-ink" },
+  { icon: Bookmark, label: "Save", detail: "Keep your shortlist and return to it later.", tone: "text-danger-ink" },
 ];
 
 /** A gentle wave through the four node centres (x = 125, 375, 625, 875). */
@@ -66,7 +68,10 @@ export function FlowSection() {
                 <li key={node.label} className="flex gap-5 lg:flex-col lg:items-center lg:gap-6 lg:text-center">
                   <span
                     data-flow-reveal
-                    className="glass glass-elevated grid size-16 shrink-0 place-items-center rounded-full text-ink"
+                    className={cn(
+                      "glass glass-elevated grid size-16 shrink-0 place-items-center rounded-full",
+                      node.tone,
+                    )}
                   >
                     <Icon aria-hidden className="size-5" strokeWidth={1.75} />
                   </span>
