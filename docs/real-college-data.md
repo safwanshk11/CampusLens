@@ -1,6 +1,6 @@
 # Real college catalogue — initial batch
 
-Run `npm run db:deploy`, then `npm run db:import-real`. The importer upserts 93 directory records atomically by stable name-derived slug. It preserves existing courses, reviews, saves and placements and refuses collisions with fictional records. Renames need an explicit identity migration.
+Run `npm run db:deploy`, then `npm run db:import-real`. The importer upserts 93 directory records atomically by stable name-derived slug and one sourced programme record per institution. It preserves existing courses, reviews, saves and placements and refuses collisions with fictional records. Renames need an explicit identity migration.
 
 Coverage: 23 IITs and 31 NITs from the JoSAA 2026 institution directory; AIIMS Delhi from its official website and 22 AIIMS project identities from the July 2023 PIB PMSSY list; 16 independent universities from NIRF 2025. Private university coverage is an initial selection, not every state. AIIMS inclusion is not confirmation of operational status or current admission availability.
 
