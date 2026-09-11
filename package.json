@@ -21,7 +21,8 @@
     "db:verify": "tsx prisma/verify.ts",
     "test": "tsx --test tests/*.test.ts",
     "test:api": "tsx tests/college-api.ts",
-    "test:detail": "tsx tests/college-detail-api.ts"
+    "test:detail": "tsx tests/college-detail-api.ts",
+    "test:gemini": "node --conditions=react-server --import tsx --test tests/gemini.integration.ts"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

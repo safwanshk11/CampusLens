@@ -1,10 +1,11 @@
 import { getCollegeDetail } from "@/server/colleges/detail";
 import { comparisonSlugs, explainComparison } from "@/lib/comparison-insights";
+import { generateGeminiInsights, GeminiError } from "@/server/colleges/gemini";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 const headers = { "Cache-Control": "no-store" };
-export async function GET(request: Request) {
+export async function POST(request: Request) {
   const params = new URL(request.url).searchParams;
   const parsed = comparisonSlugs.safeParse(params.get("colleges"));
   if (!parsed.success || params.getAll("colleges").length !== 1)
@@ -31,8 +32,23 @@ export async function GET(request: Request) {
         placementYear: record!.placements[0]?.year ?? null,
       })),
     );
-    return Response.json({ data }, { headers });
-  } catch {
+    return Response.json(
+      { data: await generateGeminiInsights(data) },
+      { headers },
+    );
+  } catch (error) {
+    if (error instanceof GeminiError) {
+      const message =
+        error.code === "NOT_CONFIGURED"
+          ? "Gemini analysis is not configured yet. The comparison table is still available."
+          : error.code === "RATE_LIMITED"
+            ? "Gemini’s request limit has been reached. Please try again later."
+            : "Gemini could not complete this analysis. Please try again.";
+      return Response.json(
+        { error: message },
+        { status: error.code === "RATE_LIMITED" ? 429 : 503, headers },
+      );
+    }
     console.error("Comparison analysis unavailable.");
     return Response.json(
       { error: "Analysis is temporarily unavailable. Please try again." },

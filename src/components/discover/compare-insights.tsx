@@ -11,15 +11,17 @@ export function CompareInsights({ slugs }: { slugs: string[] }) {
   async function analyze() {
     setPending(true);
     setError("");
+    setResult(null);
     try {
       const response = await fetch(
         `/api/compare/insights?colleges=${encodeURIComponent(slugs.join(","))}`,
+        { method: "POST" },
       );
-      if (!response.ok)
-        throw new Error(
-          "Analysis is temporarily unavailable. Please try again.",
-        );
       const body = await response.json();
+      if (!response.ok) {
+        setError(body.error || "Analysis is unavailable. Please try again.");
+        return;
+      }
       setResult(body.data);
     } catch {
       setError("Analysis is temporarily unavailable. Please try again.");
@@ -33,16 +35,16 @@ export function CompareInsights({ slugs }: { slugs: string[] }) {
         <div>
           <h2 className="text-xl font-medium">Which fits you better?</h2>
           <p className="mt-2 max-w-2xl text-label text-ink-secondary">
-            See who leads on cost, placement salary and reviews. Your priorities
-            decide the trade-off.
+            Ask Gemini to explain cost, placement salary and review trade-offs
+            using the figures in this comparison.
           </p>
         </div>
         <Button onClick={analyze} disabled={pending}>
           {pending
-            ? "Analyzing…"
+            ? "Asking Gemini…"
             : result
               ? "Refresh analysis"
-              : "Explain the trade-offs"}
+              : "Ask Gemini"}
         </Button>
       </div>
       <div aria-live="polite" aria-busy={pending}>
@@ -53,7 +55,15 @@ export function CompareInsights({ slugs }: { slugs: string[] }) {
         )}
         {result && (
           <div className="mt-6 border-t border-line pt-5">
+            <p className="mb-3 text-label font-medium">
+              Gemini analysis · Based on stored college figures
+            </p>
             <p className="mb-5 text-label text-azure-ink">{result.notice}</p>
+            {result.summary && (
+              <p className="mb-6 text-body text-ink-secondary">
+                {result.summary}
+              </p>
+            )}
             <dl className="grid gap-6 lg:grid-cols-3">
               {result.insights.map((insight) => (
                 <div key={insight.title}>

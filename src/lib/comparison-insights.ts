@@ -37,6 +37,8 @@ export type ComparisonInsight = {
   explanation: string;
 };
 export type ComparisonInsights = {
+  provider?: "gemini";
+  summary?: string;
   notice: string;
   insights: ComparisonInsight[];
 };

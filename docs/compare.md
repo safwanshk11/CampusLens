@@ -23,16 +23,33 @@ values remain unavailable. The existing Phase 1 illustrative-data labels stay vi
 
 ## Explain the trade-offs
 
-The comparison page calls `GET /api/compare/insights?colleges=slug-a,slug-b` on demand.
-This is a CampusLens API backed by the stored database, not an external AI or live
-college-ranking service. It returns separate leaders for starting tuition, median
-salary and average rating, including ties. It does not produce an overall winner.
-Missing values suppress a category's leader. Salary leaders require the same report
-year across all selected colleges. Tuition may represent different programmes, and
-review sample counts are disclosed. Fictional data produces an illustrative notice.
+The comparison page calls `POST /api/compare/insights?colleges=slug-a,slug-b` when
+the user clicks Ask Gemini. GET no longer triggers generation. The server builds
+public aggregate facts from PostgreSQL and sends those to Google's Gemini REST API.
+No user identities, raw review text or credentials enter the prompt.
+
+Gemini returns a conditional recommendation and three category explanations in
+structured JSON. The server validates the response shape and lengths. Category labels,
+leader IDs and the illustrative notice stay controlled by CampusLens. Missing values
+suppress a category's leader; salary leaders require matching report years. The prompt
+requires the generated prose to respect those constraints, but prose remains AI-generated
+and is not independently fact-checked. This is not web research or a live ranking feed.
+
+Set `GEMINI_API_KEY` in ignored `.env.local`. `GEMINI_MODEL` optionally overrides the
+default `gemini-3.5-flash`. Restart the dev server if environment changes do not reload.
+The key is sent only in the server's `x-goog-api-key` header. There is a 25-second timeout
+and no automatic retries. Missing configuration returns an explicit 503, provider quota
+limits return 429, and invalid/blocked/truncated responses return a sanitized 503.
+There is no silent rule-based fallback labelled as Gemini.
+
+See [Google's API reference](https://ai.google.dev/api) and
+[structured-output documentation](https://ai.google.dev/gemini-api/docs/generate-content/structured-output).
+`npm run test:gemini` uses mocked provider responses to verify the request, validation,
+missing keys, rate limits, network errors and malformed output. The integration was
+built and tested without a configured key; a live provider response remains unverified.
 
 Input requires two to four distinct slugs (400 for invalid input, 404 for missing
 colleges, sanitized 503 for data failures). Responses are not cached. Unit tests cover
 ties, opposing strengths, missing metrics, mismatched years, zero fees and validation.
-Browser checks exercised the compact controls, comparison navigation and actual API call.
+Browser checks previously exercised the compact controls and comparison navigation.
 Selections now survive search submissions and selecting a card preserves the current page.
