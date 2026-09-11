@@ -244,7 +244,7 @@ export default async function DiscoverPage({
                 {profile.data.stream === "Engineering" && <div>JEE percentile: {profile.data.jeePercentile ?? "Not entered"}</div>}
                 {profile.data.stream === "Medical" && <div>NEET marks: {profile.data.neetScore ?? "Not entered"}</div>}
               </div>
-              <p className="mt-4 text-label text-ink-secondary">{academic ? "Showing real institutions by study area, alongside any demo matches. Your scores cannot establish real eligibility until verified course requirements and cutoffs are added." : "Your profile is saved. Browse without academic restrictions."}</p>
+              <p className="mt-4 text-label text-ink-secondary">{academic ? "Showing fictional colleges meeting demo criteria only. Real institution cutoffs are pending; clear this filter to explore the real directory." : "Your profile is saved. Browse without academic restrictions."} Demo rules are illustrative, not real admission eligibility.</p>
               <ButtonLink href={href("academic", academic ? "off" : "on")} variant="secondary" className="mt-4 w-full">{academic ? "Clear academic filter" : "Apply academic filter"}</ButtonLink>
               <Link href="/account" className="mt-3 block text-center text-label text-azure-ink underline">Edit academic details</Link>
             </Card>}
@@ -309,7 +309,7 @@ export default async function DiscoverPage({
                 ))}
               </div>
             )}
-            {results && <p className="mb-5 text-label text-ink-secondary">Real institution directory · Unverified course, fee and admissions data stays unavailable. Study-area suggestions are not confirmed admission matches.</p>}
+            {results && <p className="mb-5 text-label text-ink-secondary">Real institution directory · Unverified course, fee and admissions data stays unavailable. Academic matching currently covers demo records only.</p>}
             {results?.meta.demoDataNotice && (
               <p className="mb-6 border-l-2 border-azure pl-3 text-label text-ink-secondary">
                 Entries marked Illustrative are fictional demonstration records.
@@ -349,7 +349,7 @@ export default async function DiscoverPage({
                 description={
                   results.pagination.total
                     ? "There are no results on this page. Return to the first page to see your matches."
-                    : academic ? "No institutions match this study area and these filters. Entries without verified fees or courses may be excluded by regular filters. Clear filters to explore more." : "Try a different city, widen your fee range, or remove a filter."
+                    : academic ? "No colleges meet the demo criteria and these filters. Check your scores, or clear the academic filter to explore all colleges." : "Try a different city, widen your fee range, or remove a filter."
                 }
                 action={
                   <ButtonLink
@@ -366,7 +366,6 @@ export default async function DiscoverPage({
                 {results?.data.map((college) => (
                   <CollegeCard
                     key={college.id}
-                    academic={Boolean(academic)}
                       college={college}
                       saved={savedIds.includes(college.id)}
                     returnTo={`/discover?${params.toString()}`}
