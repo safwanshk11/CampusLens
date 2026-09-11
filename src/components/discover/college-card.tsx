@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GraduationCap, MapPin, Star, ArrowUpRight } from "lucide-react";
+import { GraduationCap, MapPin, Star } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { CollegeSearchItem } from "@/server/colleges/search";
@@ -44,14 +44,6 @@ export function CollegeCard({
             <Badge tone="neutral">{ownership[college.ownership]}</Badge>
             {college.slug !== "specimen" && (
               <CompareToggle slug={college.slug} name={college.name} />
-            )}
-            {college.slug !== "specimen" && (
-              <span
-                aria-hidden
-                className="grid size-8 place-items-center rounded-full bg-ink/5 text-ink-secondary transition-transform duration-(--duration-base) ease-spring group-hover/card:translate-x-0.5 group-hover/card:-translate-y-0.5"
-              >
-                <ArrowUpRight className="size-4" />
-              </span>
             )}
           </div>
         </div>
