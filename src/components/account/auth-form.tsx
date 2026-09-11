@@ -16,7 +16,7 @@ export function AuthForm({ mode, next }: { mode: "login" | "register"; next: str
       const response = await fetch(`/api/auth/${mode}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(values) });
       const body = await response.json();
       if (!response.ok) { setError(body.error || "Could not sign in."); return; }
-      router.replace(next); router.refresh();
+      router.replace(mode === "register" ? "/account?onboarding=1" : next); router.refresh();
     } catch { setError("Couldn’t connect. Please try again."); }
     finally { setPending(false); }
   }

@@ -11,7 +11,7 @@ export function safeReturnTo(value: unknown): string {
   try {
     const url = new URL(value, "https://campuslens.invalid");
     if (url.origin !== "https://campuslens.invalid" || !value.startsWith("/")) return "/saved";
-    if (!["/discover", "/compare", "/saved"].includes(url.pathname) && !/^\/colleges\/[a-z0-9-]+$/.test(url.pathname)) return "/saved";
+    if (!["/discover", "/compare", "/saved", "/account", "/matches"].includes(url.pathname) && !/^\/colleges\/[a-z0-9-]+$/.test(url.pathname)) return "/saved";
     return `${url.pathname}${url.search}`;
   } catch { return "/saved"; }
 }
