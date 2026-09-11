@@ -34,12 +34,12 @@ export function CollegeCard({
       <Card
         surface="solid"
         interactive={college.slug !== "specimen"}
-        className="group/card relative flex h-full cursor-pointer flex-col overflow-hidden transition-shadow duration-(--duration-base) hover:shadow-glass-2"
+        className="group/card relative flex h-full cursor-pointer flex-col overflow-hidden bg-gradient-to-br from-white via-white/95 to-azure/5 transition-shadow duration-(--duration-base) hover:shadow-glass-2"
       >
         <div className="mb-5 flex items-center justify-between gap-3">
           <span
             aria-hidden
-            className="grid size-12 place-items-center rounded-tile bg-azure/10 text-azure-ink"
+            className="grid size-12 place-items-center rounded-tile bg-azure/10 text-azure-ink ring-1 ring-inset ring-azure/10 transition-colors group-hover/card:bg-azure/15"
           >
             <GraduationCap className="size-5" strokeWidth={1.75} />
           </span>
@@ -53,7 +53,7 @@ export function CollegeCard({
         </div>
         <h3
           id={`college-${college.id}`}
-          className="text-xl font-medium tracking-heading text-ink"
+          className="text-xl font-medium leading-snug tracking-heading text-ink transition-colors group-hover/card:text-azure-ink"
         >
           {college.name}
         </h3>
@@ -74,7 +74,7 @@ export function CollegeCard({
           </span>
           {college.isDemo && <Badge tone="accent">Illustrative</Badge>}
         </div>
-        <dl className="mt-6 grid grid-cols-2 gap-4 border-y border-line py-5">
+        <dl className="mt-6 grid grid-cols-2 gap-4 rounded-tile border border-line bg-azure/[0.025] p-4">
           <div>
             <dt className="text-label text-ink-secondary">
               Annual tuition from

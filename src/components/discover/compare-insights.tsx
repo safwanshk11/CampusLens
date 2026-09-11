@@ -30,10 +30,11 @@ export function CompareInsights({ slugs }: { slugs: string[] }) {
     }
   }
   return (
-    <Card surface="quiet" className="mb-8">
+    <Card surface="quiet" className="mb-8 border border-azure/15 bg-gradient-to-br from-white/80 to-azure/5">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-medium">Which fits you better?</h2>
+          <p className="eyebrow mb-3 text-azure-ink">A closer look</p>
+          <h2 className="text-2xl tracking-heading font-medium">Which fits you better?</h2>
           <p className="mt-2 max-w-2xl text-label text-ink-secondary">
             Ask Gemini to explain cost, placement salary and review trade-offs
             using the figures in this comparison.

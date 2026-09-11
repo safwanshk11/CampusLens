@@ -85,7 +85,7 @@ export default async function ComparePage({ searchParams }: Props) {
     label: string,
     get: (college: (typeof values)[number]) => React.ReactNode,
   ) => (
-    <div className="grid min-w-[44rem] grid-cols-[12rem_repeat(var(--compare-columns),minmax(11rem,1fr))] border-b border-line last:border-b-0">
+    <div className="grid min-w-[44rem] grid-cols-[12rem_repeat(var(--compare-columns),minmax(11rem,1fr))] border-b border-line transition-colors even:bg-azure/[0.025] hover:bg-azure/5 last:border-b-0">
       <div className="sticky left-0 bg-white/95 px-4 py-5 text-label font-medium text-ink-secondary backdrop-blur-sm sm:px-5">
         {label}
       </div>
@@ -105,9 +105,9 @@ export default async function ComparePage({ searchParams }: Props) {
         <ArrowLeft aria-hidden className="size-4" />
         Back to discover
       </ButtonLink>
-      <header className="mb-10">
+      <header className="mb-10 rounded-panel border border-line bg-gradient-to-br from-white/90 to-azure/5 p-6 shadow-glass-1 sm:p-10">
         <p className="eyebrow mb-4 text-azure-ink">CampusLens / Compare</p>
-        <h1 className="text-display-page">See the differences clearly.</h1>
+        <h1 className="max-w-3xl text-display-page leading-[1.08] tracking-tight text-balance">See the differences <span className="text-azure-ink">clearly.</span></h1>
         <p className="mt-4 max-w-2xl text-body text-ink-secondary">
           Aligned facts for the colleges you selected. Fees are annual tuition
           in INR; missing figures stay unavailable.
@@ -121,7 +121,7 @@ export default async function ComparePage({ searchParams }: Props) {
         className="overflow-x-auto rounded-panel border border-line bg-white/55 shadow-glass-1"
         style={{ "--compare-columns": values.length } as React.CSSProperties}
       >
-        <div className="grid min-w-[44rem] grid-cols-[12rem_repeat(var(--compare-columns),minmax(11rem,1fr))] border-b border-line bg-white/65">
+        <div className="grid min-w-[44rem] grid-cols-[12rem_repeat(var(--compare-columns),minmax(11rem,1fr))] border-b border-line bg-gradient-to-b from-azure/5 to-white/80">
           <div className="px-4 py-5 text-label text-ink-tertiary">
             Comparison
           </div>
@@ -135,7 +135,7 @@ export default async function ComparePage({ searchParams }: Props) {
               </div>
               <Link
                 href={`/colleges/${college.slug}`}
-                className="mt-3 block text-lg font-medium tracking-heading text-ink hover:text-azure-ink"
+                className="mt-4 block text-xl leading-snug font-medium tracking-heading text-ink hover:text-azure-ink"
               >
                 {college.name}
               </Link>

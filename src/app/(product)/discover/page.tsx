@@ -112,16 +112,16 @@ export default async function DiscoverPage({
   );
   return (
     <Container className="pb-20 pt-36 sm:pt-40">
-      <header className="mb-10 flex flex-wrap items-end justify-between gap-6">
+      <header className="relative mb-10 flex flex-wrap items-end justify-between gap-6 border-b border-line pb-8 sm:pb-10">
         <div>
           <p className="eyebrow mb-4 text-azure-ink">CampusLens / Discover</p>
-          <h1 className="text-display-page text-ink">
+          <h1 className="text-display-page leading-[1.08] tracking-tight text-ink">
             A clearer view of
             <br />
-            your next chapter.
+            <span className="text-azure-ink">your next chapter.</span>
           </h1>
         </div>
-        <p className="max-w-sm text-body text-ink-secondary">
+        <p className="max-w-sm border-l-2 border-azure/25 pl-5 text-body leading-relaxed text-ink-secondary">
           Find the courses, cities and fees that fit. Start broad, then make the
           choice yours.
         </p>
