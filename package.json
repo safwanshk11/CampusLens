@@ -16,6 +16,7 @@
     "db:validate": "prisma validate",
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
+    "db:import-real": "tsx prisma/import-real.ts",
     "db:seed": "prisma db seed",
     "db:studio": "prisma studio",
     "db:verify": "tsx prisma/verify.ts",
