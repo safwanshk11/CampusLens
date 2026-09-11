@@ -1,6 +1,6 @@
 # Phase 8 — Deployment runbook
 
-Status: local production build verified; public deployment pending Vercel/Neon setup.
+Status: deployed and verified at https://campuslens-tan.vercel.app.
 
 ## Database
 
@@ -22,7 +22,7 @@ institution statistics. Do not run them over a curated production catalogue.
 
 ## Hosting
 
-Import `safwanshk11/CampusLens` into Vercel with the Next.js preset and repository
+The project imports `safwanshk11/CampusLens` into Vercel with the Next.js preset and repository
 root as the project root. Use `npm run build`; `postinstall` generates Prisma.
 Add the production pooled `DATABASE_URL`, public `NEXT_PUBLIC_SITE_URL`, and
 optional server-only `GEMINI_API_KEY`/`GEMINI_MODEL` in project environment settings.
@@ -35,6 +35,8 @@ The app is usable without Gemini; its comparison feature has deterministic insig
 ## Release verification
 
 After deployment, require `/api/health` to return HTTP 200 with database `connected`.
+The current deployment passes this check and `/api/colleges?pageSize=1` returns the
+57-profile catalogue.
 Check discovery, a college detail, comparison, new-account registration, optional
 academic profile, clear-filter action, saving and logout over HTTPS. Check the
 session cookie is Secure and HttpOnly. Check narrow-screen layouts and keyboard

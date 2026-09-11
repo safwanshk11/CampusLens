@@ -18,9 +18,9 @@ The four features are:
 
 ## Current status
 
-Phases 0–7 are implemented: PRISM, discovery, details, comparison, authentication,
+Phases 0–8 are implemented: PRISM, discovery, details, comparison, authentication,
 saved items and optional academic profiles. Phase 8 code preparation is ready;
-public deployment is pending. Phase 9 documentation is prepared; recording and
+public deployment is live. Phase 9 documentation is prepared; recording and
 final submission are pending.
 
 The catalogue contains 12 fictional demo colleges and 45 IIT/AIIMS profiles with
@@ -82,7 +82,8 @@ Lenis · Framer Motion · Radix Dialog · Zod 4 · Prisma 7 (pg adapter) · Post
 
 ## Deploying to Vercel
 
-Public deployment has not been verified. Follow [the deployment runbook](docs/deployment.md).
+The verified public deployment is [campuslens-tan.vercel.app](https://campuslens-tan.vercel.app).
+Follow [the deployment runbook](docs/deployment.md).
 
 1. Import the repository. Framework preset: Next.js.
 2. Optional: set `NEXT_PUBLIC_SITE_URL` to the production origin.
