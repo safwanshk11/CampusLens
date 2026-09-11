@@ -11,6 +11,9 @@ import { SearchForm } from "@/components/discover/search-form";
 import { CollegeCard } from "@/components/discover/college-card";
 import { CompareTray } from "@/components/discover/compare-toggle";
 import { savedCollegeIds } from "@/server/saved/items";
+import { currentUser } from "@/server/auth/session";
+import { getDb } from "@/lib/db";
+import { studentProfileSchema } from "@/lib/student-profile";
 import { parseCollegeQuery } from "@/server/colleges/query";
 import {
   searchColleges,
@@ -28,6 +31,10 @@ export default async function DiscoverPage({
 }: PageProps<"/discover">) {
   const raw = await searchParams;
   const savedIds = await savedCollegeIds().catch(() => [] as string[]);
+  const user = await currentUser().catch(() => null);
+  const record = user ? await getDb().user.findUnique({ where: { id: user.id }, select: { studentProfile: true } }).catch(() => null) : null;
+  const profile = studentProfileSchema.safeParse(record?.studentProfile);
+  const academic = profile.success && raw.academic !== "off" ? profile.data : undefined;
   const params = new URLSearchParams();
   for (const [key, value] of Object.entries(raw)) {
     for (const item of Array.isArray(value)
@@ -42,12 +49,13 @@ export default async function DiscoverPage({
   if (!params.has("pageSize")) params.set("pageSize", "6");
   const searchParamsOnly = new URLSearchParams(params);
   searchParamsOnly.delete("compare");
+  searchParamsOnly.delete("academic");
   const parsed = parseCollegeQuery(searchParamsOnly);
   let results: CollegeSearchResponse | undefined;
   let unavailable = false;
   if (parsed.success) {
     try {
-      results = await searchColleges(parsed.data);
+      results = await searchColleges(parsed.data, academic);
     } catch {
       unavailable = true;
       console.error("Discovery data unavailable.");
@@ -73,7 +81,7 @@ export default async function DiscoverPage({
     minRating: "Min rating",
   };
   const active = [...params].filter(
-    ([key]) => !["page", "pageSize", "sort", "compare"].includes(key),
+    ([key]) => !["page", "pageSize", "sort", "compare", "academic"].includes(key),
   );
   const select = (
     name: string,
@@ -119,6 +127,7 @@ export default async function DiscoverPage({
         </p>
       </header>
       <SearchForm key={params.toString()}>
+        <input type="hidden" name="academic" value={academic ? "on" : "off"} />
         {value("compare") && (
           <input type="hidden" name="compare" value={value("compare")} />
         )}
@@ -220,12 +229,26 @@ export default async function DiscoverPage({
                     placeholder="Any · out of 5"
                   />
                   <Button type="submit">Apply filters</Button>
-                  <ButtonLink href="/discover" variant="ghost">
+                  <ButtonLink href="/discover?academic=off" variant="ghost">
                     Reset all
                   </ButtonLink>
                 </div>
               </FilterPanel>
             </Card>
+            {profile.success && <Card surface="quiet" padding="sm" className="mt-5">
+              <p className="eyebrow text-azure-ink">Academic filter · {academic ? "On" : "Off"}</p>
+              <h2 className="mt-3 text-lg font-medium">Your academic profile</h2>
+              <div className="mt-4 space-y-2 text-label text-ink-secondary">
+                <div>Stream: {profile.data.stream}</div>
+                <div>Class 12: {profile.data.twelfth === null ? "Not entered" : `${profile.data.twelfth}%`}</div>
+                {profile.data.stream === "Engineering" && <div>JEE percentile: {profile.data.jeePercentile ?? "Not entered"}</div>}
+                {profile.data.stream === "Medical" && <div>NEET marks: {profile.data.neetScore ?? "Not entered"}</div>}
+                {profile.data.budget !== null && <div>Budget: ₹{profile.data.budget.toLocaleString("en-IN")} / year</div>}
+              </div>
+              <p className="mt-4 text-label text-ink-secondary">{academic ? "Showing colleges meeting demo academic criteria and your budget. Missing scores cannot establish a match." : "Your profile is saved. Browse without academic restrictions."} Demo rules are illustrative, not real admission eligibility.</p>
+              <ButtonLink href={href("academic", academic ? "off" : "on")} variant="secondary" className="mt-4 w-full">{academic ? "Clear academic filter" : "Apply academic filter"}</ButtonLink>
+              <Link href="/account" className="mt-3 block text-center text-label text-azure-ink underline">Edit academic details</Link>
+            </Card>}
           </aside>
           <section
             aria-labelledby="results-heading"
@@ -327,12 +350,12 @@ export default async function DiscoverPage({
                 description={
                   results.pagination.total
                     ? "There are no results on this page. Return to the first page to see your matches."
-                    : "Try a different city, widen your fee range, or remove a filter."
+                    : academic ? "No colleges meet the demo criteria and these filters. Check your scores, or clear the academic filter to explore all colleges." : "Try a different city, widen your fee range, or remove a filter."
                 }
                 action={
                   <ButtonLink
                     href={
-                      results.pagination.total ? href("page", "1") : "/discover"
+                      results.pagination.total ? href("page", "1") : "/discover?academic=off"
                     }
                   >
                     {results.pagination.total ? "First page" : "Clear filters"}

@@ -2,6 +2,7 @@ import "server-only";
 import { Prisma } from "@/generated/prisma/client";
 import { getDb } from "@/lib/db";
 import type { CollegeQuery } from "./query";
+import { matchDemoCourse, type StudentProfile } from "@/lib/student-profile";
 
 export type CollegeSearchItem = {
   id: string;
@@ -31,13 +32,19 @@ export type CollegeSearchResponse = {
 // LIKE wildcards are treated as literal search characters, not query syntax.
 const contains = (value: string) => `%${value.replace(/[\\%_]/g, "\\$&")}%`;
 
-export async function searchColleges(query: CollegeQuery): Promise<CollegeSearchResponse> {
+export async function searchColleges(query: CollegeQuery, academic?: StudentProfile): Promise<CollegeSearchResponse> {
   const courseConditions: Prisma.Sql[] = [Prisma.sql`co."collegeId" = c.id`];
   if (query.discipline) courseConditions.push(Prisma.sql`lower(co.discipline) = lower(${query.discipline})`);
   if (query.degreeLevel) courseConditions.push(Prisma.sql`co."degreeLevel"::text = ${query.degreeLevel}`);
   if (query.minFee !== undefined) courseConditions.push(Prisma.sql`co."annualFeeInr" >= ${query.minFee}`);
   if (query.maxFee !== undefined) courseConditions.push(Prisma.sql`co."annualFeeInr" <= ${query.maxFee}`);
   const filters: Prisma.Sql[] = [Prisma.sql`TRUE`];
+  if (academic) {
+    courseConditions.push(Prisma.sql`co.discipline = ${academic.stream} AND co."degreeLevel"::text = 'UNDERGRADUATE'`);
+    if (academic.budget !== null) courseConditions.push(Prisma.sql`co."annualFeeInr" <= ${academic.budget}`);
+    const match = matchDemoCourse(academic, { discipline: academic.stream, degreeLevel: "UNDERGRADUATE", annualFeeInr: 0 }, true);
+    filters.push(match?.status === "Meets demo criteria" ? Prisma.sql`c."isDemo" = TRUE AND f."matchingCourseCount" > 0` : Prisma.sql`FALSE`);
+  }
   if (query.city) filters.push(Prisma.sql`lower(c.city) = lower(${query.city})`);
   if (query.state) filters.push(Prisma.sql`lower(c.state) = lower(${query.state})`);
   if (query.ownership) filters.push(Prisma.sql`c.ownership::text = ${query.ownership}`);

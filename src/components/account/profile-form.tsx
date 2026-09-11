@@ -17,7 +17,7 @@ export function ProfileForm({ profile }: { profile?: StudentProfile }) {
     try {
       const response = await fetch("/api/account/profile", { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(data) });
       if (!response.ok) { const body = await response.json(); setError(body.error || "Could not save your profile."); return; }
-      router.push("/matches"); router.refresh();
+      router.push("/discover?academic=on"); router.refresh();
     } catch { setError("Could not connect. Your entries are still here; try again."); }
     finally { setPending(false); }
   }
@@ -44,6 +44,6 @@ export function ProfileForm({ profile }: { profile?: StudentProfile }) {
       <Input id="profile-interests" name="interests" label="Preferred courses or cities" maxLength={200} defaultValue={profile?.interests || ""} className="sm:col-span-2" />
     </fieldset>
     {error && <p role="alert" className="text-danger-ink">{error}</p>}
-    <div className="flex flex-wrap gap-3"><Button type="submit" disabled={pending}>{pending ? "Saving…" : "Save and see matches"}</Button><ButtonLink href="/discover" variant="ghost">Skip and explore colleges</ButtonLink></div>
+    <div className="flex flex-wrap gap-3"><Button type="submit" disabled={pending}>{pending ? "Saving…" : "Save and see matches"}</Button><ButtonLink href="/discover?academic=off" variant="ghost">Skip and explore colleges</ButtonLink></div>
   </form>;
 }

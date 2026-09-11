@@ -21,7 +21,7 @@ export default async function AccountPage() {
       <p className="mt-5 text-body text-ink-secondary">{user.email}</p>
       <div className="mt-10 flex flex-wrap gap-3">
         <ButtonLink href="/saved">View saved colleges</ButtonLink>
-        <ButtonLink href="/matches" variant="secondary">Your matches</ButtonLink>
+        <ButtonLink href="/discover?academic=on" variant="secondary">Your matches</ButtonLink>
         <ButtonLink href="/discover" variant="secondary">Discover colleges</ButtonLink>
         <SignOut />
       </div>
