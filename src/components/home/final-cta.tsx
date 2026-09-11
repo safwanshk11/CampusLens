@@ -7,7 +7,9 @@ import { GlassBezel } from "@/components/ui/glass-surface";
 import { Magnetic } from "@/components/visual/magnetic";
 import { BrandMark } from "@/components/visual/brand-mark";
 
-export function FinalCta() {
+export function FinalCta({ signedIn = false }: { signedIn?: boolean }) {
+  const exploreHref = signedIn ? "/discover" : "/sign-in?next=%2Fdiscover";
+  const compareHref = signedIn ? "/compare" : "/sign-in?next=%2Fcompare";
   return (
     <Section spacing="cinematic" aria-labelledby="cta-title">
       <Container>
@@ -33,11 +35,11 @@ export function FinalCta() {
 
               <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center lg:col-span-4 lg:flex-col lg:items-end">
                 <Magnetic>
-                  <ButtonLink href="/discover" size="lg" icon={ArrowUpRight}>
+                  <ButtonLink href={exploreHref} size="lg" icon={ArrowUpRight}>
                     Explore colleges
                   </ButtonLink>
                 </Magnetic>
-                <ButtonLink href="/compare" variant="ghost" size="lg">
+                <ButtonLink href={compareHref} variant="ghost" size="lg">
                   Compare colleges
                 </ButtonLink>
               </div>

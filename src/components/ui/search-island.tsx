@@ -7,6 +7,7 @@ type SearchIslandProps = {
   className?: string;
   /** Extra attributes for the glass shell (e.g. choreography hooks). */
   shellProps?: Record<`data-${string}`, string>;
+  action?: string;
 };
 
 /**
@@ -17,9 +18,9 @@ type SearchIslandProps = {
  * brightens and follows the pointer, and the action shifts forward.
  * In Phase 0 it submits to the /discover placeholder.
  */
-export function SearchIsland({ id = "campus-search", className, shellProps }: SearchIslandProps) {
+export function SearchIsland({ id = "campus-search", className, shellProps, action = "/discover" }: SearchIslandProps) {
   return (
-    <form action="/discover" method="get" role="search" aria-label="Search colleges" className={cn("w-full", className)}>
+    <form action={action} method="get" role="search" aria-label="Search colleges" className={cn("w-full", className)}>
       <GlassBezel
         level="hero"
         radius="island"

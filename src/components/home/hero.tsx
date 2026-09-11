@@ -85,7 +85,8 @@ function DataChip({ chip }: { chip: FloatingChip }) {
   );
 }
 
-export function Hero() {
+export function Hero({ signedIn = false }: { signedIn?: boolean }) {
+  const exploreHref = signedIn ? "/discover" : "/sign-in?next=%2Fdiscover";
   return (
     <HeroMotion aria-labelledby="hero-title" className="relative isolate overflow-x-clip">
       <HeroLens />
@@ -125,7 +126,7 @@ export function Hero() {
             </p>
             <div data-hero="copy" className="flex flex-wrap items-center gap-3">
               <Magnetic>
-                <ButtonLink href="/discover" size="lg" icon={ArrowUpRight}>
+                <ButtonLink href={exploreHref} size="lg" icon={ArrowUpRight}>
                   Explore colleges
                 </ButtonLink>
               </Magnetic>
@@ -139,7 +140,7 @@ export function Hero() {
           <div className="lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:-mt-8">
             {/* The island overlaps only the descender of the headline's last line. */}
             <div className="relative">
-              <SearchIsland id="hero-search" shellProps={{ "data-hero": "island" }} />
+              <SearchIsland id="hero-search" action={exploreHref} shellProps={{ "data-hero": "island" }} />
               <div className="mt-5 flex flex-wrap gap-2 lg:contents">
                 {CHIPS.map((chip) => (
                   <DataChip key={chip.id} chip={chip} />
