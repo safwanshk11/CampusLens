@@ -9,10 +9,12 @@ import { currentUser } from "@/server/auth/session";
 export async function Navigation() {
   // Public browsing stays available during a database outage.
   const user = await currentUser().catch(() => null);
+  const primary = user ? siteConfig.primaryNav : siteConfig.primaryNav.map(item => ({ ...item, href: `/sign-in?next=${encodeURIComponent(item.href)}` }));
+  const saved = user ? siteConfig.accountNav.saved : { ...siteConfig.accountNav.saved, href: "/sign-in?next=%2Fsaved" };
   return (
     <NavFrame
-      primary={siteConfig.primaryNav}
-      saved={siteConfig.accountNav.saved}
+      primary={primary}
+      saved={saved}
       signIn={user ? { href: "/account", label: "My account" } : siteConfig.accountNav.signIn}
     />
   );

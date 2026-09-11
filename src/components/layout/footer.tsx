@@ -2,10 +2,13 @@ import Link from "next/link";
 import { Wordmark } from "@/components/visual/brand-mark";
 import { siteConfig } from "@/config/site";
 import { Container } from "./container";
+import { currentUser } from "@/server/auth/session";
 
 const YEAR = new Date().getFullYear();
 
-export function Footer() {
+export async function Footer() {
+  const user = await currentUser().catch(() => null);
+  const footerNav = user ? siteConfig.footerNav : siteConfig.footerNav.map(group => ({ ...group, items: group.items.map(item => ["/discover", "/compare", "/saved"].includes(item.href) ? { ...item, href: `/sign-in?next=${encodeURIComponent(item.href)}` } : item) }));
   return (
     <footer className="relative z-content">
       <Container className="pb-10 pt-(--space-section-compact)">
@@ -17,7 +20,7 @@ export function Footer() {
             </p>
           </div>
 
-          {siteConfig.footerNav.map((group) => (
+          {footerNav.map((group) => (
             <nav key={group.title} aria-label={group.title} className="md:col-span-3">
               <h2 className="eyebrow">{group.title}</h2>
               <ul className="mt-3">
