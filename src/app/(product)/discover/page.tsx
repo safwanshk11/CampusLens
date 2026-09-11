@@ -117,6 +117,9 @@ export default async function DiscoverPage({
         </p>
       </header>
       <SearchForm key={params.toString()}>
+        {value("compare") && (
+          <input type="hidden" name="compare" value={value("compare")} />
+        )}
         <div className="mb-8 flex flex-col gap-3 rounded-card glass glass-quiet p-4 sm:flex-row sm:items-end sm:p-5">
           <Input
             id="college-search"

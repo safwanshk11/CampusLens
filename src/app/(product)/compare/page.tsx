@@ -7,6 +7,7 @@ import { ButtonLink } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
 import { getDb } from "@/lib/db";
 import { formatInr, ownershipLabel } from "@/lib/college-display";
+import { CompareInsights } from "@/components/discover/compare-insights";
 
 export const metadata: Metadata = {
   title: "Compare colleges",
@@ -109,6 +110,10 @@ export default async function ComparePage({ searchParams }: Props) {
           in INR; missing figures stay unavailable.
         </p>
       </header>
+      <CompareInsights
+        key={values.map((college) => college.slug).join(",")}
+        slugs={values.map((college) => college.slug)}
+      />
       <div
         className="overflow-x-auto rounded-panel border border-line bg-white/55 shadow-glass-1"
         style={{ "--compare-columns": values.length } as React.CSSProperties}

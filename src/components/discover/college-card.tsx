@@ -33,7 +33,7 @@ export function CollegeCard({
         interactive={college.slug !== "specimen"}
         className="group/card relative flex h-full cursor-pointer flex-col overflow-hidden transition-shadow duration-(--duration-base) hover:shadow-glass-2"
       >
-        <div className="relative z-float mb-5 flex items-center justify-between gap-3">
+        <div className="mb-5 flex items-center justify-between gap-3">
           <span
             aria-hidden
             className="grid size-12 place-items-center rounded-tile bg-azure/10 text-azure-ink"

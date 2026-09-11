@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
-import { CompareCheck } from "@/components/ui/compare-check";
+import { Check, GitCompareArrows } from "lucide-react";
 
 export function CompareToggle({ slug, name }: { slug: string; name: string }) {
   const router = useRouter();
@@ -16,11 +16,30 @@ export function CompareToggle({ slug, name }: { slug: string; name: string }) {
     if (values.length)
       copy.set("compare", [...new Set(values)].slice(0, 4).join(","));
     else copy.delete("compare");
-    copy.delete("page");
     router.replace(`/discover?${copy.toString()}`, { scroll: false });
   }
   return (
-    <CompareCheck itemName={name} checked={checked} onCheckedChange={update} />
+    <button
+      type="button"
+      aria-label={`Compare ${name}`}
+      aria-pressed={checked}
+      disabled={!checked && selected.length >= 4}
+      title={
+        checked
+          ? "Remove from comparison"
+          : selected.length >= 4
+            ? "Four colleges selected; remove one first"
+            : "Add to comparison"
+      }
+      onClick={() => update(!checked)}
+      className={`relative z-float grid size-11 shrink-0 place-items-center rounded-full ring-1 transition-colors focus-visible:outline-2 focus-visible:outline-focus disabled:cursor-not-allowed disabled:opacity-45 ${checked ? "bg-ink text-white ring-ink" : "bg-surface text-ink-secondary ring-line hover:bg-azure/10 hover:text-azure-ink hover:ring-azure"}`}
+    >
+      {checked ? (
+        <Check aria-hidden className="size-4" />
+      ) : (
+        <GitCompareArrows aria-hidden className="size-4" />
+      )}
+    </button>
   );
 }
 
