@@ -243,9 +243,8 @@ export default async function DiscoverPage({
                 <div>Class 12: {profile.data.twelfth === null ? "Not entered" : `${profile.data.twelfth}%`}</div>
                 {profile.data.stream === "Engineering" && <div>JEE percentile: {profile.data.jeePercentile ?? "Not entered"}</div>}
                 {profile.data.stream === "Medical" && <div>NEET marks: {profile.data.neetScore ?? "Not entered"}</div>}
-                {profile.data.budget !== null && <div>Budget: ₹{profile.data.budget.toLocaleString("en-IN")} / year</div>}
               </div>
-              <p className="mt-4 text-label text-ink-secondary">{academic ? "Showing colleges meeting demo academic criteria and your budget. Missing scores cannot establish a match." : "Your profile is saved. Browse without academic restrictions."} Demo rules are illustrative, not real admission eligibility.</p>
+              <p className="mt-4 text-label text-ink-secondary">{academic ? "Showing colleges meeting demo academic criteria. Missing scores cannot establish a match." : "Your profile is saved. Browse without academic restrictions."} Demo rules are illustrative, not real admission eligibility.</p>
               <ButtonLink href={href("academic", academic ? "off" : "on")} variant="secondary" className="mt-4 w-full">{academic ? "Clear academic filter" : "Apply academic filter"}</ButtonLink>
               <Link href="/account" className="mt-3 block text-center text-label text-azure-ink underline">Edit academic details</Link>
             </Card>}
