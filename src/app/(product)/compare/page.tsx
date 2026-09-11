@@ -113,9 +113,8 @@ export default async function ComparePage({ searchParams }: Props) {
           in INR; missing figures stay unavailable.
         </p>
       </header>
-      <SaveComparison key={slugs.join(",")} slugs={values.map(college => college.slug)} />
+      <SaveComparison slugs={values.map((college) => college.slug)} />
       <CompareInsights
-        key={values.map((college) => college.slug).join(",")}
         slugs={values.map((college) => college.slug)}
       />
       <div
