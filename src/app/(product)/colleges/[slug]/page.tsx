@@ -83,7 +83,7 @@ export default async function CollegePage({ params, searchParams }: Props) {
         <p className="mt-5 flex flex-wrap items-center gap-2 text-body text-ink-secondary">
           <MapPin aria-hidden className="size-4" />
           {college.city}, {college.state}
-          {college.established !== null && <><span aria-hidden>·</span>Established {college.established}</>}
+          <span aria-hidden>·</span>Established {college.established}
         </p>
         {college.isDemo && (
           <p className="mt-6 max-w-xl border-l-2 border-azure pl-4 text-label leading-relaxed text-ink-secondary">
@@ -137,7 +137,6 @@ export default async function CollegePage({ params, searchParams }: Props) {
         ))}
       </nav>
       <section id="overview" className="mb-16 scroll-mt-32">
-        {safeWebsite(college.sourceUrl) && <a href={safeWebsite(college.sourceUrl)!} target="_blank" rel="noopener noreferrer" className="mb-5 inline-block text-label text-azure-ink underline">Institution directory source · Checked {college.sourceCheckedAt?.toISOString().slice(0, 10)}</a>}
         <p className="eyebrow mb-3 text-azure-ink">The institution</p>
         <h2 className="mb-5 text-2xl font-medium">Overview</h2>
         <p className="max-w-3xl text-body leading-relaxed text-ink-secondary">

@@ -26,10 +26,7 @@ model College {
   city        String
   state       String
   ownership   Ownership
-  established Int?
-  sourceUrl   String?
-  sourceCheckedAt DateTime?
-  institutionGroup String?
+  established Int
   overview    String
   websiteUrl  String?
   imageUrl    String?
@@ -56,7 +53,7 @@ model Course {
   degreeLevel    DegreeLevel
   durationMonths Int
   // INR for one academic year, excluding hostel and living expenses.
-  annualFeeInr   Int?
+  annualFeeInr   Int
   eligibility    String
   college        College     @relation(fields: [collegeId], references: [id], onDelete: Cascade)
 

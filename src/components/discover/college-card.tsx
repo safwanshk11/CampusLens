@@ -93,7 +93,7 @@ export function CollegeCard({
           </div>
         </dl>
         <div className="mt-4 flex flex-wrap justify-between gap-2 text-label text-ink-tertiary">
-          <span>{college.matchingCourseCount ? `${college.matchingCourseCount} matching programmes` : "Course details pending"}</span>
+          <span>{college.matchingCourseCount} matching programmes</span>
           <span>
             {college.placementYear
               ? `${college.placementYear} placements`

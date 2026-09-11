@@ -51,7 +51,7 @@ export async function searchColleges(query: CollegeQuery, academic?: StudentProf
   if (query.discipline || query.degreeLevel || query.minFee !== undefined || query.maxFee !== undefined) filters.push(Prisma.sql`f."matchingCourseCount" > 0`);
   if (query.q) {
     const pattern = contains(query.q);
-    filters.push(Prisma.sql`(c.name ILIKE ${pattern} OR c.city ILIKE ${pattern} OR c."institutionGroup" ILIKE ${pattern} OR EXISTS (
+    filters.push(Prisma.sql`(c.name ILIKE ${pattern} OR c.city ILIKE ${pattern} OR EXISTS (
       SELECT 1 FROM "Course" co WHERE ${Prisma.join(courseConditions, " AND ")} AND co.name ILIKE ${pattern}
     ))`);
   }
@@ -82,7 +82,7 @@ export async function searchColleges(query: CollegeQuery, academic?: StudentProf
   };
   const [counts, data] = await getDb().$transaction([
     getDb().$queryRaw<{ total: number }[]>(Prisma.sql`${filtered} SELECT count(*)::int AS total FROM filtered`),
-    getDb().$queryRaw<CollegeSearchItem[]>(Prisma.sql`${filtered} SELECT * FROM filtered ORDER BY "isDemo" ASC, ${orders[query.sort]} LIMIT ${query.pageSize} OFFSET ${(query.page - 1) * query.pageSize}`),
+    getDb().$queryRaw<CollegeSearchItem[]>(Prisma.sql`${filtered} SELECT * FROM filtered ORDER BY ${orders[query.sort]} LIMIT ${query.pageSize} OFFSET ${(query.page - 1) * query.pageSize}`),
   ], { isolationLevel: Prisma.TransactionIsolationLevel.RepeatableRead });
   const total = counts[0].total;
   const totalPages = Math.ceil(total / query.pageSize);
