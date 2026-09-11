@@ -311,8 +311,8 @@ export default async function DiscoverPage({
             )}
             {results?.meta.demoDataNotice && (
               <p className="mb-6 border-l-2 border-azure pl-3 text-label text-ink-secondary">
-                Illustrative catalogue · These colleges and figures are
-                fictional. Use them to explore the experience.
+                Illustrative catalogue · Profiles include demo figures,
+                not verified admissions information. Use them to explore the experience.
               </p>
             )}
             {!parsed.success ? (

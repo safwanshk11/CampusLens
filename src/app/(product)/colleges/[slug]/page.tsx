@@ -77,7 +77,7 @@ export default async function CollegePage({ params, searchParams }: Props) {
         <p className="eyebrow mb-6 text-azure-ink">CampusLens / Campus profile</p>
         <div className="mb-5 flex flex-wrap gap-2">
           <Badge tone="neutral">{ownershipLabel[college.ownership]}</Badge>
-          {college.isDemo && <Badge tone="accent">Illustrative college</Badge>}
+          {college.isDemo && <Badge tone="accent">Illustrative data</Badge>}
         </div>
         <h1 className="max-w-3xl text-display-page text-balance tracking-tight leading-[1.08]">{college.name}</h1>
         <p className="mt-5 flex flex-wrap items-center gap-2 text-body text-ink-secondary">
@@ -87,8 +87,8 @@ export default async function CollegePage({ params, searchParams }: Props) {
         </p>
         {college.isDemo && (
           <p className="mt-6 max-w-xl border-l-2 border-azure pl-4 text-label leading-relaxed text-ink-secondary">
-            This is a fictional college. All courses, fees, placement figures
-            and reviews are illustrative, not verified admissions information.
+            This profile uses illustrative courses, fees, placement figures
+            and reviews. These are not verified admissions information.
           </p>
         )}
         {college.isDemo && <a href="https://unsplash.com/photos/Ucr4Yp-t364" target="_blank" rel="noopener noreferrer" className="mt-8 inline-block rounded-full bg-white/80 px-3 py-2 text-xs text-ink-secondary backdrop-blur-sm hover:text-ink">Illustrative campus photo · Unsplash ↗</a>}

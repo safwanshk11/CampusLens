@@ -86,7 +86,7 @@ export function explainComparison(colleges: Candidate[]): ComparisonInsights {
         );
   return {
     notice: colleges.some((college) => college.isDemo)
-      ? "Illustrative analysis of fictional college data. This is not a real-world recommendation."
+      ? "Illustrative analysis of demo figures. This is not a real-world recommendation."
       : "A comparison of the stored figures, not an overall quality ranking. Confirm current fees and outcomes with each institution.",
     insights: [
       metric(
