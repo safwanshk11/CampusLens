@@ -1,25 +1,32 @@
 import { NextResponse } from "next/server";
 import { isDatabaseConfigured } from "@/lib/env";
+import { getDb } from "@/lib/db";
 
 export const dynamic = "force-dynamic";
 
 export type HealthResponse = {
-  status: "ok";
+  status: "ok" | "unavailable";
   service: "campuslens";
-  phase: 0;
-  /** Whether a valid DATABASE_URL is configured. No connection is attempted in Phase 0. */
-  database: "configured" | "not_configured";
+  database: "connected" | "unavailable" | "not_configured";
   timestamp: string;
 };
 
-export function GET() {
+export async function GET() {
+  let database: HealthResponse["database"] = "not_configured";
+  if (isDatabaseConfigured()) {
+    try {
+      await getDb().$queryRaw`SELECT 1`;
+      database = "connected";
+    } catch {
+      database = "unavailable";
+    }
+  }
   const body: HealthResponse = {
-    status: "ok",
+    status: database === "connected" ? "ok" : "unavailable",
     service: "campuslens",
-    phase: 0,
-    database: isDatabaseConfigured() ? "configured" : "not_configured",
+    database,
     timestamp: new Date().toISOString(),
   };
 
-  return NextResponse.json(body, { headers: { "Cache-Control": "no-store" } });
+  return NextResponse.json(body, { status: body.status === "ok" ? 200 : 503, headers: { "Cache-Control": "no-store" } });
 }

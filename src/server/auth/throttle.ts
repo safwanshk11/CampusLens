@@ -6,14 +6,15 @@ import { HttpError } from "./http";
 async function consume(key: string, limit: number, seconds: number) {
   const db = getDb();
   const now = new Date();
-  const existing = await db.authThrottle.findUnique({ where: { key } });
-  const expired = !existing || existing.expiresAt <= now;
-  const count = expired ? 1 : existing.count + 1;
-  await db.authThrottle.upsert({
-    where: { key },
-    create: { key, count: 1, expiresAt: new Date(now.getTime() + seconds * 1000) },
-    update: { count, ...(expired ? { expiresAt: new Date(now.getTime() + seconds * 1000) } : {}) },
-  });
+  const expiresAt = new Date(now.getTime() + seconds * 1000);
+  // PostgreSQL locks the conflicting row so concurrent attempts cannot lose increments.
+  const [{ count }] = await db.$queryRaw<{ count: number }[]>`
+    INSERT INTO "AuthThrottle" (key, count, "expiresAt") VALUES (${key}, 1, ${expiresAt})
+    ON CONFLICT (key) DO UPDATE SET
+      count = CASE WHEN "AuthThrottle"."expiresAt" <= ${now} THEN 1 ELSE "AuthThrottle".count + 1 END,
+      "expiresAt" = CASE WHEN "AuthThrottle"."expiresAt" <= ${now} THEN ${expiresAt} ELSE "AuthThrottle"."expiresAt" END
+    RETURNING count
+  `;
   if (count > limit) throw new HttpError(429, "Too many attempts. Please try again later.");
 }
 export async function throttleAuth(email: string) {
