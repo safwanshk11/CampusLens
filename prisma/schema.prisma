@@ -30,7 +30,6 @@ model College {
   sourceUrl   String?
   sourceCheckedAt DateTime?
   institutionGroup String?
-  aiEnrichment Json?
   overview    String
   websiteUrl  String?
   imageUrl    String?

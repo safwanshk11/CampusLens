@@ -24,8 +24,7 @@ export const getCollegeDetail = cache(async (slug: string) => {
           overview: true,
           isDemo: true,
       websiteUrl: true,
-          imageUrl: true,
-          aiEnrichment: true,
+      imageUrl: true,
           courses: {
             orderBy: [{ annualFeeInr: "asc" }, { id: "asc" }],
             select: {
