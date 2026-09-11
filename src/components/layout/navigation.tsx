@@ -13,7 +13,7 @@ export async function Navigation() {
     <NavFrame
       primary={siteConfig.primaryNav}
       saved={siteConfig.accountNav.saved}
-      signIn={user ? { href: "/saved", label: "My account" } : siteConfig.accountNav.signIn}
+      signIn={user ? { href: "/account", label: "My account" } : siteConfig.accountNav.signIn}
     />
   );
 }
