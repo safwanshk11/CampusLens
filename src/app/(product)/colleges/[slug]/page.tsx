@@ -14,6 +14,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink, buttonClassName } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
+import { CollegeEnrichment } from "@/components/discover/college-enrichment";
 
 export const dynamic = "force-dynamic";
 type Props = {
@@ -93,6 +94,7 @@ export default async function CollegePage({ params, searchParams }: Props) {
         )}
         {college.isDemo && <a href="https://unsplash.com/photos/Ucr4Yp-t364" target="_blank" rel="noopener noreferrer" className="mt-8 inline-block rounded-full bg-white/80 px-3 py-2 text-xs text-ink-secondary backdrop-blur-sm hover:text-ink">Illustrative campus photo · Unsplash ↗</a>}
       </header>
+      <CollegeEnrichment slug={college.slug} cached={college.aiEnrichment} />
       <dl className="my-10 grid gap-6 border-y border-line py-8 sm:grid-cols-3">
         {[
           [
