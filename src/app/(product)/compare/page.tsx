@@ -8,6 +8,7 @@ import { EmptyState } from "@/components/ui/empty-state";
 import { getDb } from "@/lib/db";
 import { formatInr, ownershipLabel } from "@/lib/college-display";
 import { CompareInsights } from "@/components/discover/compare-insights";
+import { SaveComparison } from "@/components/account/saved-controls";
 
 export const metadata: Metadata = {
   title: "Compare colleges",
@@ -15,10 +16,11 @@ export const metadata: Metadata = {
     "Compare college fees, courses, ratings and placements side by side.",
 };
 export const dynamic = "force-dynamic";
-type Props = { searchParams: Promise<{ colleges?: string }> };
+type Props = { searchParams: Promise<{ colleges?: string | string[] }> };
 
 export default async function ComparePage({ searchParams }: Props) {
-  const raw = (await searchParams).colleges || "";
+  const param = (await searchParams).colleges;
+  const raw = typeof param === "string" ? param : "";
   const slugs = [
     ...new Set(
       raw.split(",").filter((slug) => /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)),
@@ -78,6 +80,7 @@ export default async function ComparePage({ searchParams }: Props) {
       : null,
     placement: college.placements[0]?.medianSalaryInr ?? null,
   }));
+  values.sort((a, b) => slugs.indexOf(a.slug) - slugs.indexOf(b.slug));
   const row = (
     label: string,
     get: (college: (typeof values)[number]) => React.ReactNode,
@@ -110,6 +113,7 @@ export default async function ComparePage({ searchParams }: Props) {
           in INR; missing figures stay unavailable.
         </p>
       </header>
+      <SaveComparison key={slugs.join(",")} slugs={values.map(college => college.slug)} />
       <CompareInsights
         key={values.map((college) => college.slug).join(",")}
         slugs={values.map((college) => college.slug)}

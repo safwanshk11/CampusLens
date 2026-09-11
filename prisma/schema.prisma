@@ -83,11 +83,32 @@ model User {
   // Authentication must trim and lowercase email before writes and lookups.
   email            String            @unique
   name             String?
+  passwordHash     String?
+  sessions         Session[]
   createdAt        DateTime          @default(now())
   updatedAt        DateTime          @updatedAt
   reviews          Review[]
   savedColleges    SavedCollege[]
   savedComparisons SavedComparison[]
+}
+
+model Session {
+  tokenHash String   @id
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model AuthThrottle {
+  key       String   @id
+  count     Int
+  expiresAt DateTime
+
+  @@index([expiresAt])
 }
 
 model Review {

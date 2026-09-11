@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import type { CollegeSearchItem } from "@/server/colleges/search";
 import { CompareToggle } from "./compare-toggle";
+import { BookmarkToggle } from "@/components/account/saved-controls";
 
 const ownership = {
   PUBLIC: "Public",
@@ -22,9 +23,11 @@ const money = (value: number | null) =>
 export function CollegeCard({
   college,
   returnTo,
+  saved = false,
 }: {
   college: CollegeSearchItem;
   returnTo?: string;
+  saved?: boolean;
 }) {
   return (
     <article aria-labelledby={`college-${college.id}`}>
@@ -45,6 +48,7 @@ export function CollegeCard({
             {college.slug !== "specimen" && (
               <CompareToggle slug={college.slug} name={college.name} />
             )}
+            {college.slug !== "specimen" && <BookmarkToggle key={`${college.id}-${saved}`} collegeId={college.id} name={college.name} initialSaved={saved} />}
           </div>
         </div>
         <h3

@@ -10,6 +10,7 @@ import { FilterPanel } from "@/components/discover/filter-panel";
 import { SearchForm } from "@/components/discover/search-form";
 import { CollegeCard } from "@/components/discover/college-card";
 import { CompareTray } from "@/components/discover/compare-toggle";
+import { savedCollegeIds } from "@/server/saved/items";
 import { parseCollegeQuery } from "@/server/colleges/query";
 import {
   searchColleges,
@@ -26,6 +27,7 @@ export default async function DiscoverPage({
   searchParams,
 }: PageProps<"/discover">) {
   const raw = await searchParams;
+  const savedIds = await savedCollegeIds().catch(() => [] as string[]);
   const params = new URLSearchParams();
   for (const [key, value] of Object.entries(raw)) {
     for (const item of Array.isArray(value)
@@ -342,7 +344,8 @@ export default async function DiscoverPage({
                 {results?.data.map((college) => (
                   <CollegeCard
                     key={college.id}
-                    college={college}
+                      college={college}
+                      saved={savedIds.includes(college.id)}
                     returnTo={`/discover?${params.toString()}`}
                   />
                 ))}
