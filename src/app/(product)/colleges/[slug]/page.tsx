@@ -62,29 +62,36 @@ export default async function CollegePage({ params, searchParams }: Props) {
   if (!college) notFound();
   const latest = college.placements[0];
   const website = safeWebsite(college.websiteUrl);
+  const campusPhoto = college.isDemo
+    ? "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?auto=format&fit=crop&w=2000&q=85"
+    : safeWebsite(college.imageUrl);
   return (
     <Container className="pt-32 pb-20 sm:pt-40">
       <ButtonLink href={back} variant="ghost" className="mb-8">
         <ArrowLeft aria-hidden className="size-4" />
         Back to results
       </ButtonLink>
-      <header className="max-w-4xl">
+      <header className="relative isolate overflow-hidden rounded-panel border border-line bg-surface p-6 shadow-glass-1 sm:p-10 lg:p-12">
+        {campusPhoto && <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-cover bg-center" style={{ backgroundImage: `url(${JSON.stringify(campusPhoto)})` }} />}
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(248,250,252,0.98)_0%,rgba(248,250,252,0.93)_40%,rgba(248,250,252,0.55)_100%)]" />
+        <p className="eyebrow mb-6 text-azure-ink">CampusLens / Campus profile</p>
         <div className="mb-5 flex flex-wrap gap-2">
           <Badge tone="neutral">{ownershipLabel[college.ownership]}</Badge>
           {college.isDemo && <Badge tone="accent">Illustrative college</Badge>}
         </div>
-        <h1 className="text-display-page text-balance">{college.name}</h1>
+        <h1 className="max-w-3xl text-display-page text-balance tracking-tight leading-[1.08]">{college.name}</h1>
         <p className="mt-5 flex flex-wrap items-center gap-2 text-body text-ink-secondary">
           <MapPin aria-hidden className="size-4" />
           {college.city}, {college.state}
           <span aria-hidden>·</span>Established {college.established}
         </p>
         {college.isDemo && (
-          <p className="mt-6 border-l-2 border-azure pl-4 text-label text-ink-secondary">
+          <p className="mt-6 max-w-xl border-l-2 border-azure pl-4 text-label leading-relaxed text-ink-secondary">
             This is a fictional college. All courses, fees, placement figures
             and reviews are illustrative, not verified admissions information.
           </p>
         )}
+        {college.isDemo && <a href="https://unsplash.com/photos/Ucr4Yp-t364" target="_blank" rel="noopener noreferrer" className="mt-8 inline-block rounded-full bg-white/80 px-3 py-2 text-xs text-ink-secondary backdrop-blur-sm hover:text-ink">Illustrative campus photo · Unsplash ↗</a>}
       </header>
       <dl className="my-10 grid gap-6 border-y border-line py-8 sm:grid-cols-3">
         {[
