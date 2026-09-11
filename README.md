@@ -16,30 +16,42 @@ The four features are:
 3. Compare colleges
 4. Authentication and saved items
 
-## Status: Phase 0 — foundation
+## Current status
 
-Phase 0 delivers the architecture, the **PRISM** design system, liquid-glass primitives, the motion
-architecture, a homepage visual prototype, the `/design-system` lab, and the Prisma and environment
-foundation.
+Phases 0–7 are implemented: PRISM, discovery, details, comparison, authentication,
+saved items and optional academic profiles. Phase 8 code preparation is ready;
+public deployment is pending. Phase 9 documentation is prepared; recording and
+final submission are pending.
 
-College data, search, detail, compare, authentication and saving come in later phases. The pages
-`/discover`, `/compare`, `/saved` and `/sign-in` are honest placeholders.
+The catalogue contains 12 fictional demo colleges and 45 IIT/AIIMS profiles with
+illustrative courses, fees, establishment years and placement figures. Academic
+matching uses invented thresholds, not actual eligibility. Seeded reviews are
+examples; Google reviews are not integrated. Gemini explains supplied comparison
+data and does not verify it.
 
 ## Quick start
 
 Requires Node.js ≥ 20.12.
 
 ```bash
-npm install          # also runs `prisma generate`
+npm ci               # also runs `prisma generate`
 cp .env.example .env.local
-npm run dev
+# Set DATABASE_URL in .env.local before the following commands
+npm run db:deploy
+npm run db:seed
+npm run db:seed-national
+npm run dev -- --port 3210
 ```
 
-- Homepage: <http://localhost:3000>
-- Design lab: <http://localhost:3000/design-system>
-- Health check: <http://localhost:3000/api/health>
+- Homepage: <http://localhost:3210>
+- Design lab: <http://localhost:3210/design-system>
+- Health check: <http://localhost:3210/api/health>
 
-`DATABASE_URL` is not required in Phase 0.
+PostgreSQL is required for product features. See [database setup](docs/database.md).
+For the existing local setup, start Docker Desktop then run
+`docker start campuslens-phase1-db`. Seeds overwrite their own sample records;
+use a dedicated prototype database. Register at `/sign-up`; no shared demo password
+is configured.
 
 ## Scripts
 
@@ -70,6 +82,8 @@ Lenis · Framer Motion · Radix Dialog · Zod 4 · Prisma 7 (pg adapter) · Post
 
 ## Deploying to Vercel
 
+Public deployment has not been verified. Follow [the deployment runbook](docs/deployment.md).
+
 1. Import the repository. Framework preset: Next.js.
 2. Optional: set `NEXT_PUBLIC_SITE_URL` to the production origin.
 3. From the data phase onward, set `DATABASE_URL` to Neon's **pooled** connection string.
@@ -96,3 +110,32 @@ result cards. See [the discovery guide](docs/discovery-ui.md) for behaviour and 
 
 Discovery cards now open `/colleges/<slug>` for overview, courses, fees, placements and
 reviews. See [the detail guide](docs/college-detail.md) for data semantics and checks.
+
+## Phases 5–7
+
+Comparison supports two to four colleges and optional Gemini explanations.
+Accounts use scrypt passwords, hashed sessions, HttpOnly cookies, origin checks
+and database-backed atomic throttling. Saved items are scoped to the signed-in
+user. Academic profiles are optional, editable and use explicitly demo criteria.
+
+Run against the local seeded app:
+
+```bash
+npm test
+npm run test:api
+npm run test:detail
+npm run test:account
+npm run test:throttle
+npm run lint
+npm run typecheck
+npm run build
+```
+
+Account tests create and clean up temporary users. See [reliability](docs/reliability.md)
+for coverage and limits. The health endpoint now checks database connectivity.
+
+## Phase 9 — Submission preparation
+
+See [the Loom script and checklist](docs/submission.md). Add the verified deployment
+and recording links before submission. Earlier phase documents describe their
+scope at the time; this status section reflects the current implementation.
