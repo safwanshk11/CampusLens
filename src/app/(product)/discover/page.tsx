@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import Link from "next/link";
 import { Search, ArrowRight, ScanSearch, CircleAlert } from "lucide-react";
 import { Container } from "@/components/layout/container";
@@ -30,8 +31,15 @@ export default async function DiscoverPage({
   searchParams,
 }: PageProps<"/discover">) {
   const raw = await searchParams;
-  const savedIds = await savedCollegeIds().catch(() => [] as string[]);
   const user = await currentUser().catch(() => null);
+  if (!user) {
+    const query = new URLSearchParams();
+    for (const [key, value] of Object.entries(raw)) {
+      for (const item of Array.isArray(value) ? value : value === undefined ? [] : [value]) query.append(key, item);
+    }
+    redirect(`/sign-in?next=${encodeURIComponent(`/discover${query.toString() ? `?${query}` : ""}`)}`);
+  }
+  const savedIds = await savedCollegeIds().catch(() => [] as string[]);
   const record = user ? await getDb().user.findUnique({ where: { id: user.id }, select: { studentProfile: true } }).catch(() => null) : null;
   const profile = studentProfileSchema.safeParse(record?.studentProfile);
   const academic = profile.success && raw.academic !== "off" ? profile.data : undefined;

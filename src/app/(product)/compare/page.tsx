@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, GitCompareArrows, MapPin } from "lucide-react";
 import { Container } from "@/components/layout/container";
@@ -9,6 +10,7 @@ import { getDb } from "@/lib/db";
 import { formatInr, ownershipLabel } from "@/lib/college-display";
 import { CompareInsights } from "@/components/discover/compare-insights";
 import { SaveComparison } from "@/components/account/saved-controls";
+import { currentUser } from "@/server/auth/session";
 
 export const metadata: Metadata = {
   title: "Compare colleges",
@@ -19,6 +21,11 @@ export const dynamic = "force-dynamic";
 type Props = { searchParams: Promise<{ colleges?: string | string[] }> };
 
 export default async function ComparePage({ searchParams }: Props) {
+  if (!(await currentUser().catch(() => null))) {
+    const raw = await searchParams;
+    const query = typeof raw.colleges === "string" && raw.colleges ? `?colleges=${encodeURIComponent(raw.colleges)}` : "";
+    redirect(`/sign-in?next=${encodeURIComponent(`/compare${query}`)}`);
+  }
   const param = (await searchParams).colleges;
   const raw = typeof param === "string" ? param : "";
   const slugs = [

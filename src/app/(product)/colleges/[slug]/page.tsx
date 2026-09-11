@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, MapPin, CircleAlert } from "lucide-react";
 import { getCollegeDetail } from "@/server/colleges/detail";
 import {
@@ -14,6 +14,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink, buttonClassName } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
+import { currentUser } from "@/server/auth/session";
 
 export const dynamic = "force-dynamic";
 type Props = {
@@ -36,7 +37,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 export default async function CollegePage({ params, searchParams }: Props) {
   const { slug } = await params;
-  const back = discoveryReturn((await searchParams).from);
+  const incoming = await searchParams;
+  if (!(await currentUser().catch(() => null))) {
+    redirect(`/sign-in?next=${encodeURIComponent(`/colleges/${slug}${incoming.from ? `?from=${encodeURIComponent(Array.isArray(incoming.from) ? incoming.from[0] : incoming.from)}` : ""}`)}`);
+  }
+  const back = discoveryReturn(incoming.from);
   let college;
   try {
     college = await getCollegeDetail(slug);

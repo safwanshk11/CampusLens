@@ -25,6 +25,7 @@
     "test:detail": "tsx tests/college-detail-api.ts",
     "test:account": "tsx tests/account-api.ts",
     "test:throttle": "node --conditions=react-server --import tsx tests/throttle.integration.ts",
+    "test:auth-gate": "tsx tests/auth-gate.ts",
     "test:gemini": "node --conditions=react-server --import tsx --test tests/gemini.integration.ts"
   },
   "dependencies": {
