@@ -42,7 +42,9 @@ export async function searchColleges(query: CollegeQuery, academic?: StudentProf
   if (academic) {
     courseConditions.push(Prisma.sql`co.discipline = ${academic.stream} AND co."degreeLevel"::text = 'UNDERGRADUATE'`);
     const match = matchDemoCourse({ ...academic, budget: null }, { discipline: academic.stream, degreeLevel: "UNDERGRADUATE", annualFeeInr: 0 }, true);
-    filters.push(match?.status === "Meets demo criteria" ? Prisma.sql`c."isDemo" = TRUE AND f."matchingCourseCount" > 0` : Prisma.sql`FALSE`);
+    const groups = academic.stream === "Engineering" ? ["IIT", "NIT"] : academic.stream === "Medical" ? ["AIIMS"] : ["Independent university"];
+    const demoMatch = match?.status === "Meets demo criteria" ? Prisma.sql`c."isDemo" = TRUE AND f."matchingCourseCount" > 0` : Prisma.sql`FALSE`;
+    filters.push(Prisma.sql`(${demoMatch} OR (c."isDemo" = FALSE AND (c."institutionGroup" IN (${Prisma.join(groups)}) OR f."matchingCourseCount" > 0)))`);
   }
   if (query.city) filters.push(Prisma.sql`lower(c.city) = lower(${query.city})`);
   if (query.state) filters.push(Prisma.sql`lower(c.state) = lower(${query.state})`);

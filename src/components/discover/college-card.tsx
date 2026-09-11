@@ -24,10 +24,12 @@ export function CollegeCard({
   college,
   returnTo,
   saved = false,
+  academic = false,
 }: {
   college: CollegeSearchItem;
   returnTo?: string;
   saved?: boolean;
+  academic?: boolean;
 }) {
   return (
     <article aria-labelledby={`college-${college.id}`}>
@@ -61,6 +63,7 @@ export function CollegeCard({
           <MapPin aria-hidden className="size-3.5 shrink-0" />
           {college.city}, {college.state}
         </p>
+        {academic && !college.isDemo && <p className="mt-3 text-label text-azure-ink">Eligibility not yet verified · Explore this institution</p>}
         <div className="mt-5 flex flex-wrap items-center gap-3 text-label">
           <span className="flex items-center gap-1.5 text-ink">
             <Star aria-hidden className="size-3.5 text-warning-ink" />
