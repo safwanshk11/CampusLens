@@ -393,12 +393,13 @@ export default async function DiscoverPage({
                 }
               />
             ) : (
-              <div className={view === "list" ? "grid gap-4 sm:grid-cols-2 xl:grid-cols-3" : "grid gap-5 md:grid-cols-2"}>
+              <div className={view === "list" ? "grid gap-3" : "grid gap-5 md:grid-cols-2"}>
                 {results?.data.map((college) => (
                   <CollegeCard
                     key={college.id}
                       college={college}
-                      saved={savedIds.includes(college.id)}
+                    saved={savedIds.includes(college.id)}
+                    layout={view}
                     returnTo={`/discover?${params.toString()}`}
                   />
                 ))}

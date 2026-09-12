@@ -25,15 +25,34 @@ export function CollegeCard({
   college,
   returnTo,
   saved = false,
+  layout = "cards",
 }: {
   college: CollegeSearchItem;
   returnTo?: string;
   saved?: boolean;
+  layout?: "cards" | "list";
 }) {
   const facts = catalogueFacts(college.catalogueFacts);
   const annualFee = college.minAnnualFeeInr;
   const feeLabel = annualFee !== null ? (facts ? annualFeeLabel(facts.annualFeeBasis) : "Annual tuition from") : facts?.feeInr ? "Listed total course fee" : "Annual tuition from";
   const salary = college.medianSalaryInr ?? facts?.averageSalaryInr ?? null;
+  if (layout === "list") {
+    return (
+      <article aria-labelledby={`college-${college.id}`}>
+        <Card surface="solid" interactive={college.slug !== "specimen"} className="group/card relative flex items-center gap-4 overflow-hidden bg-gradient-to-br from-white via-white/95 to-azure/5 p-4 transition-shadow duration-(--duration-base) hover:shadow-glass-2 sm:gap-6 sm:p-5">
+          <span aria-hidden className="grid size-11 shrink-0 place-items-center rounded-tile bg-azure/10 text-azure-ink ring-1 ring-inset ring-azure/10"><GraduationCap className="size-5" strokeWidth={1.75} /></span>
+          <div className="min-w-0 flex-1">
+            <div className="mb-1 flex flex-wrap items-center gap-2"><Badge tone="neutral">{ownership[college.ownership]}</Badge>{college.isDemo && <Badge tone="accent">Illustrative</Badge>}</div>
+            <h3 id={`college-${college.id}`} className="truncate text-lg font-medium tracking-heading text-ink transition-colors group-hover/card:text-azure-ink">{college.name}</h3>
+            <p className="mt-1 flex items-center gap-1.5 text-label text-ink-secondary"><MapPin aria-hidden className="size-3.5 shrink-0" />{college.city}, {college.state}</p>
+          </div>
+          <div className="hidden shrink-0 items-center gap-1.5 text-label text-ink sm:flex"><Star aria-hidden className="size-3.5 text-warning-ink" />{college.averageRating === null ? "—" : college.averageRating.toFixed(1)}<span className="text-ink-tertiary">({college.reviewCount})</span></div>
+          <div className="hidden shrink-0 text-right sm:block"><p className="text-label text-ink-secondary">{feeLabel}</p><p className="mt-1 text-lg font-medium tabular-nums">{money(annualFee ?? facts?.feeInr ?? null)}</p></div>
+          {college.slug !== "specimen" && <><CompareToggle slug={college.slug} name={college.name} /><BookmarkToggle key={`${college.id}-${saved}`} collegeId={college.id} name={college.name} initialSaved={saved} /><Link className="absolute inset-0 rounded-card focus-visible:outline-2 focus-visible:outline-offset-[-3px] focus-visible:outline-focus" href={`/colleges/${college.slug}${returnTo ? `?from=${encodeURIComponent(returnTo)}` : ""}`} aria-labelledby={`college-${college.id}`} /></>}
+        </Card>
+      </article>
+    );
+  }
   return (
     <article aria-labelledby={`college-${college.id}`}>
       <Card
