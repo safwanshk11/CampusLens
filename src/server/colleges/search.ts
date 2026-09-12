@@ -96,6 +96,6 @@ export async function searchColleges(query: CollegeQuery, academic?: StudentProf
     data,
     pagination: { page: query.page, pageSize: query.pageSize, total, totalPages, hasNextPage: query.page < totalPages, hasPreviousPage: total > 0 && query.page > 1 },
     query,
-    meta: { feeBasis: "annual_tuition_inr_matching_courses", demoDataNotice: data.some((college) => college.isDemo) ? "Illustrative college data; not verified admissions information." : null },
+    meta: { feeBasis: "annual_tuition_inr_matching_courses", demoDataNotice: null },
   };
 }
