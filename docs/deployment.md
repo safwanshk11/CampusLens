@@ -35,8 +35,8 @@ The app is usable without Gemini; its comparison feature has deterministic insig
 ## Release verification
 
 After deployment, require `/api/health` to return HTTP 200 with database `connected`.
-The current deployment passes this check and `/api/colleges?pageSize=1` returns the
-57-profile catalogue.
+The deployment seed command imports the 280-state catalogue after the national
+profiles; `/api/colleges?pageSize=1` should return 337 profiles in total.
 Check discovery, a college detail, comparison, new-account registration, optional
 academic profile, clear-filter action, saving and logout over HTTPS. Check the
 session cookie is Secure and HttpOnly. Check narrow-screen layouts and keyboard

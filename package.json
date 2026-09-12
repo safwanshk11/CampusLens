@@ -17,7 +17,7 @@
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
     "db:seed": "prisma db seed",
-    "db:seed-national": "tsx prisma/seed-national.ts",
+    "db:seed-national": "tsx prisma/seed-national.ts && npm run db:seed-states",
     "db:seed-sourced": "tsx prisma/seed-sourced.ts",
     "db:seed-states": "tsx prisma/seed-states.ts",
     "db:studio": "prisma studio",
