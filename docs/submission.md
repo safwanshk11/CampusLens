@@ -1,140 +1,78 @@
-# Phase 9 — Walkthrough and submission
+# Loom walkthrough script
 
-Status: script prepared. Recording, public deployment and final submission pending.
+**Target length:** 4–5 minutes  
+**Recording setup:** share the browser and keep a temporary account ready. Never show `.env.local`, keys, passwords, cookies or database URLs.
 
-## Five-minute Loom script
+## 0:00–0:25 — Opening
 
-Read this naturally while sharing your browser. Keep the live app open at
-`https://campuslens-tan.vercel.app` and use a temporary account for the recording.
+“Hi, this is CampusLens, a college discovery platform built for the Full Stack Engineer Track A assignment. It helps a student go from a broad catalogue to a shortlist they understand. I’ll show the product flow first, then the architecture behind it.”
 
-### 0:00–0:30 — Opening
+Show the homepage and briefly point to **Discover**, **Compare** and **Saved**. Mention that signed-out product actions lead to sign-in so saved data stays private.
 
-“Hi, this is CampusLens. It is a college discovery platform built for the Full
-Stack Engineer Track A assignment. The goal is to help a student move from a
-large list of options to a shortlist they understand. I’ll show discovery,
-college details, comparison, and saved items, then briefly explain the architecture.”
+## 0:25–1:20 — Discover
 
-Show the landing page. Point out that signed-out product actions intentionally go
-to sign-in first.
+“I’ll start with Discover. I can search by college, course or city, then refine by state, discipline, ownership, degree level, fees and rating. Results are paginated so the page stays quick as the catalogue grows.”
 
-### 0:30–1:15 — Sign-in and discovery
+Sign in, open Discover, and show:
 
-“I’ll start by signing in, because the product experience is account-based.”
+1. Search for a college or city.
+2. Open **Refine your search** and apply one filter.
+3. Switch between **Cards** and **List**. Explain that List is a compact, responsive row layout.
+4. Change sorting and move to the next page.
 
-Register or sign in with the temporary account. Return to Discover and say:
+“The left filter column stays available while I browse. College names, locations, ratings and fees are visible at a glance, and missing values remain clearly unavailable.”
 
-“Discover gives me a searchable catalogue. I can search by college, course, or
-city, refine by discipline, ownership and fees, sort the results, and move through
-stable pages. The filter panel starts closed so the catalogue remains the focus.”
+## 1:20–2:00 — College detail
 
-Search for **Aurora**, open and close the filter panel, apply one filter, and show
-the result count and pagination.
+“Every college card is clickable, so the user can open the detail page without hunting for another button.”
 
-“The current catalogue is prototype data. Fees, placements, and academic rules
-are labelled illustrative and should not be used as admissions advice.”
+Open a college and scroll through the page.
 
-### 1:15–2:00 — College details
+“This page brings the decision context together: a campus image, overview, courses and fees, placements, ratings and reviews. The page keeps source and availability details close to the numbers instead of implying false precision.”
 
-Open a college card.
+Point out the back-to-results path and the Save control.
 
-“Cards are clickable, so the action is simple: select the college you want to
-understand. This page keeps the information in one place: overview, courses and
-fees, placement history, rating, and reviews. When a figure is unavailable, the
-interface says that instead of inventing a value.”
+## 2:00–2:45 — Compare
 
-Scroll through each section and point out the campus image and illustrative-data
-label.
+“From Discover I can select two to four colleges and open Compare. The same fields are aligned side by side, which makes tradeoffs easy to read.”
 
-### 2:00–2:45 — Compare
+Select two colleges and show the comparison table.
 
-Return to Discover, select two colleges for comparison, and open Compare.
+“The optional insight panel explains the supplied figures. It is deliberately constrained: it does not invent rankings, browse for unsupported claims, or pretend that one college is universally best.”
 
-“Compare lines up two to four colleges field by field. The insights explain
-tradeoffs such as tuition, ratings, and placement figures. Gemini is optional here:
-it only explains the supplied database facts and does not browse for rankings or
-claim that one college is universally best.”
+## 2:45–3:30 — Account and shortlist
 
-Point out a missing-data state or a tied result if visible.
+“CampusLens also supports a private account. The academic profile is optional: a student can enter their stream, marks, exam scores, budget and interests, or skip it and browse normally.”
 
-### 2:45–3:45 — Account, academic profile, and saved items
+Open **My account**, show the form, then return to Discover.
 
-Open My account.
+“When the profile is saved, the student can apply or clear the academic filter from Discover. Saving a college or comparison stores it for this account, and another user cannot see it.”
 
-“The academic profile is optional. A student can enter their stream, marks, exam
-scores, budget, state, and interests, or skip it and browse normally. The profile
-is stored on the account and can be edited later.”
+Open **Saved** and show the saved item.
 
-Enter safe demo values, save them, return to Discover, and show the academic filter.
+## 3:30–4:25 — Architecture
 
-“When the academic filter is on, matching is explicitly labelled as a demo rule.
-The clear-filter action immediately returns me to the full catalogue.”
+Switch to the repository or VS Code.
 
-Save a college and a comparison, then open Saved.
+“Technically, this is a modular Next.js App Router application. Server-rendered pages and route handlers define the request boundary. Domain services handle search, authentication, saved items and comparison logic. Prisma is the only database access layer, backed by PostgreSQL or Neon.”
 
-“Saved colleges and comparisons belong to this user. A different account cannot
-see them, and signing out removes access from the browser session.”
+Show these files briefly:
 
-### 3:45–4:30 — Engineering walkthrough
+- `prisma/schema.prisma` — users, colleges, courses, placements, reviews and saved items.
+- `src/server/colleges/search.ts` — SQL filtering, aggregates and pagination.
+- `src/server/auth/` — scrypt password hashing, hashed sessions, origin checks and throttling.
+- `src/components/` — shared PRISM design-system primitives and responsive UI.
 
-Open the repository or VS Code.
+“Client components are limited to interactions such as filters, compare toggles, saves and motion. Secrets stay server-side.”
 
-“The application uses Next.js App Router, TypeScript, Tailwind, Prisma, and
-PostgreSQL. Search performs filtering and aggregation in SQL before pagination.
-The server keeps credentials out of the client, hashes passwords with scrypt,
-stores only hashed session tokens, checks request origins, and throttles auth
-attempts atomically in PostgreSQL.”
+## 4:25–4:50 — Close
 
-Show `prisma/schema.prisma`, `src/server/colleges/search.ts`, and the shared PRISM
-components briefly.
+“I validated the build, linting, type checks, API and detail flows, account isolation and authentication throttling. The live app is available at campuslens-tan.vercel.app. The next data-quality step would be replacing prototype catalogue figures with verified institutional sources. Thanks for watching.”
 
-### 4:30–5:00 — Validation and close
+## Recording checklist
 
-“I verified the production health endpoint, the live college API, the build,
-linting, type checking, search and detail tests, account isolation, academic
-filtering, and concurrent auth throttling. The live deployment is available at
-campuslens-tan.vercel.app. The remaining product limitation is that the catalogue
-figures are illustrative; verified institutional data would be the next data
-quality phase. Thanks for watching.”
-
-Do not show `.env.local`, API keys, passwords, cookies, or database connection
-strings at any point.
-
-1. **0:00–0:30 — Product.** Show the homepage: CampusLens helps students explore,
-   compare and save college options. Explain the four core features.
-2. **0:30–1:30 — Discovery.** Search Aurora, apply an engineering/fee filter,
-   clear it and show pagination. Open a card directly. Explain that the catalogue
-   contains illustrative figures and must not guide actual admissions.
-3. **1:30–2:15 — Details.** Show courses, fees, placement years and demo reviews.
-   Contrast a college with missing reports. Missing information stays unreported.
-4. **2:15–3:00 — Compare.** Select Aurora and Bluehaven. Explain cost/outcome
-   tradeoffs. Gemini is optional and explains supplied facts, not live research.
-5. **3:00–4:00 — Account.** Register a temporary account. Show optional academic
-   onboarding, save-and-see-matches, clear the academic filter, save a college and
-   comparison, then revisit Saved. Open My account to edit scores.
-6. **4:00–5:00 — Engineering.** Show Prisma schema, aggregation before pagination,
-   shared PRISM components and test results. Explain hashed sessions, user
-   ownership checks and atomic attempt counting. State the remaining need for
-   verified institution data.
-
-Keep environment files, passwords, cookies and tokens out of the recording.
-Use the original demo colleges for the main walkthrough; national profiles have
-fewer populated sections and no imported reviews.
-
-## Before submitting
-
-- Add the verified HTTPS deployment link to README.
-- Complete hosted verification in `docs/deployment.md`.
-- Record and review the Loom, then add its share link to README.
-- Confirm reviewer access to the repository, deployed site and recording.
-- Check the original assignment for the exact submission destination and fields;
-  its complete source document is not present in this repository.
-- Keep the data limitations explicit in the submitted description.
-
-## Suggested description
-
-CampusLens is a Next.js/TypeScript/PostgreSQL college discovery prototype with
-search, detail pages, comparison, authentication and saved shortlists. Optional
-academic profiles support illustrative matching. PRISM provides a consistent
-design system. Automated checks cover validation, search, account isolation and
-rate limiting. College statistics and admission thresholds are demo data, not
-verified admissions guidance.
+- Use a temporary account and safe, fictional profile values.
+- Keep the browser at 100% zoom and close unrelated tabs.
+- Show the live app before the code walkthrough.
+- Do not show secrets, personal data, payment details or private database screens.
+- Pause briefly on the Cards/List toggle, comparison table and architecture files.
