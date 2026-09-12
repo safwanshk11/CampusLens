@@ -2,141 +2,128 @@
 
 > **See your options clearly.**
 
-A college discovery platform built for the AI Software Engineer Internship technical assignment
-(**Full Stack Engineer · Track A — College Discovery Platform**).
+CampusLens is a college discovery app for exploring colleges, reviewing key facts, comparing options, and saving a shortlist. It was built for the AI Software Engineer internship assignment (Full Stack Engineer · Track A).
 
-```text
-DISCOVER → UNDERSTAND → COMPARE → SHORTLIST
+**Flow:** `DISCOVER → UNDERSTAND → COMPARE → SHORTLIST`
+
+## See it running
+
+- [Live app](https://campuslens-tan.vercel.app/)
+- [Discover colleges](https://campuslens-tan.vercel.app/discover?pageSize=12)
+- [Compare colleges](https://campuslens-tan.vercel.app/compare)
+- [Design system lab](https://campuslens-tan.vercel.app/design-system)
+- [Health check](https://campuslens-tan.vercel.app/api/health)
+
+### Screenshots
+
+Open the links above to view the responsive screens. The main views are:
+
+| Screen | What to look for |
+|---|---|
+| Homepage | Liquid-glass landing experience and product flow |
+| Discover | Search, filters, academic profile, Cards/List toggle and pagination |
+| College detail | Courses, fees, placements and reviews for one college |
+| Compare | Side-by-side facts and optional comparison insights |
+| Account | Profile editing and saved colleges/comparisons |
+
+## Features
+
+- Search colleges by name, course, city, state, discipline, ownership, degree level, fee and rating.
+- Switch Discover between card and compact list layouts; the list adapts to viewport width.
+- Open a college by clicking its card to see courses, fees, placements and reviews.
+- Compare two to four colleges with consistent metrics and clear missing-data handling.
+- Create an account, edit an optional academic profile, save colleges and save comparisons.
+- Server-side validation, origin checks, secure password hashing, HttpOnly sessions and database-backed throttling.
+
+## Architecture
+
+```mermaid
+flowchart LR
+  Browser[Next.js App Router] --> Pages[Server-rendered pages]
+  Browser --> Client[Client interactions]
+  Pages --> API[Next.js route handlers]
+  Client --> API
+  API --> Services[Search · auth · saved · comparison services]
+  Services --> Prisma[Prisma 7]
+  Prisma --> DB[(PostgreSQL / Neon)]
+  Services --> Gemini[Optional Gemini comparison explanations]
 ```
 
-The four features are:
+The project is a modular monolith. Pages and route handlers own request boundaries; service modules own database and domain logic; Prisma is the only database access layer. Client components are used for interactive controls such as filters, compare toggles, saves and motion. Secrets stay server-side in environment variables.
 
-1. College listing and search
-2. College detail page
-3. Compare colleges
-4. Authentication and saved items
+## Local setup
 
-## Current status
-
-Phases 0–8 are implemented: PRISM, discovery, details, comparison, authentication,
-saved items and optional academic profiles. Phase 8 code preparation is ready;
-public deployment is live. Phase 9 documentation is prepared; recording and
-final submission are pending.
-
-The catalogue contains 12 fictional demo colleges and 45 IIT/AIIMS profiles with
-illustrative courses, fees, establishment years and placement figures. Academic
-matching uses invented thresholds, not actual eligibility. Seeded reviews are
-examples; Google reviews are not integrated. Gemini explains supplied comparison
-data and does not verify it.
-
-## Quick start
-
-Requires Node.js ≥ 20.12.
+Requires Node.js **20.12+** and PostgreSQL.
 
 ```bash
-npm ci               # also runs `prisma generate`
+npm ci
 cp .env.example .env.local
-# Set DATABASE_URL in .env.local before the following commands
+# Set DATABASE_URL in .env.local
 npm run db:deploy
 npm run db:seed
 npm run db:seed-national
 npm run dev -- --port 3210
 ```
 
-- Homepage: <http://localhost:3210>
-- Design lab: <http://localhost:3210/design-system>
-- Health check: <http://localhost:3210/api/health>
+Open <http://localhost:3210>. Register at `/sign-up`; there is no shared demo password.
 
-PostgreSQL is required for product features. See [database setup](docs/database.md).
-For the existing local setup, start Docker Desktop then run
-`docker start campuslens-phase1-db`. Seeds overwrite their own sample records;
-use a dedicated prototype database. Register at `/sign-up`; no shared demo password
-is configured.
+For the existing Docker database:
 
-## Scripts
+```bash
+docker start campuslens-phase1-db
+```
 
-| Script | Purpose |
+Use a dedicated prototype database because seed scripts replace their own sample records.
+
+## Useful commands
+
+| Command | Purpose |
 |---|---|
-| `npm run dev` | Development server (Turbopack) |
-| `npm run build` | Production build |
+| `npm run dev` | Start the Turbopack development server |
+| `npm run build` | Create a production build |
 | `npm run start` | Serve the production build |
-| `npm run lint` | ESLint (Next core-web-vitals, TypeScript, React Compiler hook rules) |
-| `npm run typecheck` | `tsc --noEmit` (run `npx next typegen` first on a fresh clone) |
-| `npm run db:generate` | Regenerate the Prisma client |
+| `npm run lint` | Run ESLint |
+| `npm run typecheck` | Run TypeScript checks |
+| `npm test` | Run the test suite |
+| `npm run test:api` | Test the college API |
+| `npm run db:generate` | Regenerate Prisma Client |
 
 ## Stack
 
-Next.js 16 (App Router) · React 19 · TypeScript (strict) · Tailwind CSS 4 · GSAP + ScrollTrigger ·
-Lenis · Framer Motion · Radix Dialog · Zod 4 · Prisma 7 (pg adapter) · PostgreSQL on Neon · Vercel
+Next.js 16 · React 19 · TypeScript strict mode · Tailwind CSS 4 · Prisma 7 · PostgreSQL/Neon · GSAP · ScrollTrigger · Lenis · Framer Motion · Zod · Vercel
+
+## Project map
+
+```text
+src/app/                 Routes, pages and API handlers
+src/components/          Reusable UI and interactive components
+src/server/              Auth, search, saved-item and comparison services
+src/lib/                 Validation, database and shared domain helpers
+prisma/                  Schema, migrations and seed entrypoints
+data/                    Catalogue seed data
+scripts/                 Repeatable data and verification scripts
+docs/                     Product, design, architecture and deployment guides
+```
 
 ## Documentation
 
-| Doc | Contents |
-|---|---|
-| [docs/product-scope.md](docs/product-scope.md) | Journey, the four features, exclusions, data-honesty rules |
-| [docs/architecture.md](docs/architecture.md) | Modular monolith, server/client boundaries, env and database foundation |
-| [docs/design-system.md](docs/design-system.md) | PRISM: regimes, lighting, colour, glass, bezels, type, depth, components |
-| [docs/motion-system.md](docs/motion-system.md) | Library ownership, easing vocabulary, animation inventory, reduced motion, performance |
-| [docs/decisions.md](docs/decisions.md) | ADR-001 to ADR-007 |
-| [docs/visual-reference.md](docs/visual-reference.md) | Inspiration and what is original |
+- [Product scope](docs/product-scope.md)
+- [Architecture details](docs/architecture.md)
+- [Database setup](docs/database.md)
+- [Search API](docs/search-api.md)
+- [Discovery UI](docs/discovery-ui.md)
+- [College detail](docs/college-detail.md)
+- [PRISM design system](docs/design-system.md)
+- [Motion system](docs/motion-system.md)
+- [Deployment runbook](docs/deployment.md)
+- [Reliability and tests](docs/reliability.md)
+- [Loom walkthrough script](docs/submission.md)
 
 ## Deploying to Vercel
 
-The verified public deployment is [campuslens-tan.vercel.app](https://campuslens-tan.vercel.app).
-Follow [the deployment runbook](docs/deployment.md).
+1. Import `safwanshk11/CampusLens` as a Next.js project.
+2. Set `DATABASE_URL` to Neon’s pooled connection string.
+3. Set `NEXT_PUBLIC_SITE_URL` to the production origin.
+4. Deploy from the `main` branch.
 
-1. Import the repository. Framework preset: Next.js.
-2. Optional: set `NEXT_PUBLIC_SITE_URL` to the production origin.
-3. From the data phase onward, set `DATABASE_URL` to Neon's **pooled** connection string.
-
-`postinstall` generates the Prisma client during install, before `next build`.
-
-## Phase 1 — Database
-
-The database schema, migration and repeatable illustrative seed are implemented.
-See [the database guide](docs/database.md) for setup, model explanations and verification.
-The existing homepage remains unchanged; database-backed discovery UI begins in Phase 3.
-
-## Phase 2 — Search API
-
-`GET /api/colleges` supports validated search, filters, aggregate sorting and pagination.
-See [the API guide](docs/search-api.md) for parameters, examples and test commands.
-
-## Phase 3 — Discovery UI
-
-Open `/discover` for working college search, filters and pagination with the PRISM
-result cards. See [the discovery guide](docs/discovery-ui.md) for behaviour and phase boundaries.
-
-## Phase 4 — College details
-
-Discovery cards now open `/colleges/<slug>` for overview, courses, fees, placements and
-reviews. See [the detail guide](docs/college-detail.md) for data semantics and checks.
-
-## Phases 5–7
-
-Comparison supports two to four colleges and optional Gemini explanations.
-Accounts use scrypt passwords, hashed sessions, HttpOnly cookies, origin checks
-and database-backed atomic throttling. Saved items are scoped to the signed-in
-user. Academic profiles are optional, editable and use explicitly demo criteria.
-
-Run against the local seeded app:
-
-```bash
-npm test
-npm run test:api
-npm run test:detail
-npm run test:account
-npm run test:throttle
-npm run lint
-npm run typecheck
-npm run build
-```
-
-Account tests create and clean up temporary users. See [reliability](docs/reliability.md)
-for coverage and limits. The health endpoint now checks database connectivity.
-
-## Phase 9 — Submission preparation
-
-See [the Loom script and checklist](docs/submission.md). Add the verified deployment
-and recording links before submission. Earlier phase documents describe their
-scope at the time; this status section reflects the current implementation.
+`postinstall` generates Prisma Client before `next build`. See [docs/deployment.md](docs/deployment.md) for environment and migration details.
