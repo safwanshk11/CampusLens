@@ -18,6 +18,7 @@
     "db:deploy": "prisma migrate deploy",
     "db:seed": "prisma db seed",
     "db:seed-national": "tsx prisma/seed-national.ts",
+    "db:seed-sourced": "tsx prisma/seed-sourced.ts",
     "db:studio": "prisma studio",
     "db:verify": "tsx prisma/verify.ts",
     "test": "tsx --test tests/*.test.ts",

@@ -197,6 +197,9 @@ export default async function DiscoverPage({
                     ["UNDERGRADUATE", "Undergraduate"],
                     ["POSTGRADUATE", "Postgraduate"],
                     ["DIPLOMA", "Diploma"],
+                    ["DOCTORAL", "Doctoral"],
+                    ["CERTIFICATE", "Certificate"],
+                    ["INTEGRATED", "Integrated"],
                   ])}
                   <fieldset>
                     <legend className="mb-3 text-label font-medium">

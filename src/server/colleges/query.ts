@@ -8,7 +8,7 @@ export const collegeQuerySchema = z.object({
   state: text,
   ownership: z.enum(["PUBLIC", "PRIVATE", "DEEMED"]).optional(),
   discipline: text,
-  degreeLevel: z.enum(["UNDERGRADUATE", "POSTGRADUATE", "DIPLOMA"]).optional(),
+  degreeLevel: z.enum(["UNDERGRADUATE", "POSTGRADUATE", "DIPLOMA", "DOCTORAL", "CERTIFICATE", "INTEGRATED"]).optional(),
   minFee: integer(0, 2147483647).optional(),
   maxFee: integer(0, 2147483647).optional(),
   minRating: z.string().regex(/^(?:[0-4](?:\.\d{1,2})?|5(?:\.0{1,2})?)$/, "Use a rating from 0 to 5").transform(Number).optional(),

@@ -1,0 +1,4865 @@
+{
+  "checkedAt": "2026-09-12",
+  "status": "research-only",
+  "methodology": "Round-robin category leaders from NIRF 2025; not a combined ranking. Gaps require additional research.",
+  "states": {
+    "Andhra Pradesh": {
+      "selected": [
+        {
+          "name": "Koneru Lakshmaiah Education Foundation University (K L College of Engineering)",
+          "city": "Vaddeswaram",
+          "state": "Andhra Pradesh",
+          "nirfId": "U-0020",
+          "candidateId": "konerulakshmaiaheducationfoundationuniversityklcollegeofengineering|Andhra Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 46,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 26,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 35,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 70,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Andhra University, Visakhapatnam",
+          "city": "Visakhapatnam",
+          "state": "Andhra Pradesh",
+          "nirfId": "U-0006",
+          "candidateId": "andhrauniversityvisakhapatnam|Andhra Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 41,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 23,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Andhra Loyola College",
+          "city": "Vijayawada",
+          "state": "Andhra Pradesh",
+          "nirfId": null,
+          "candidateId": "andhraloyolacollege|Andhra Pradesh",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Visakhapatnam",
+          "city": "Visakhapatnam",
+          "state": "Andhra Pradesh",
+          "nirfId": "U-1007",
+          "candidateId": "indianinstituteofmanagementvisakhapatnam|Andhra Pradesh",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 29,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Dr. B. R. Ambedkar College of Law",
+          "city": "Visakhapatnam",
+          "state": "Andhra Pradesh",
+          "nirfId": "C-23907",
+          "candidateId": "drbrambedkarcollegeoflaw|Andhra Pradesh",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 16,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "AU College of Pharmaceutical Sciences, Andhra University",
+          "city": "Visakhapatnam",
+          "state": "Andhra Pradesh",
+          "nirfId": "I-1450",
+          "candidateId": "aucollegeofpharmaceuticalsciencesandhrauniversity|Andhra Pradesh",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 31,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Acharya NG Ranga Agricultural University, Guntur",
+          "city": "Guntur",
+          "state": "Andhra Pradesh",
+          "nirfId": null,
+          "candidateId": "acharyangrangaagriculturaluniversityguntur|Andhra Pradesh",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 31,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "School of Planning & Architecture, Vijayawada",
+          "city": "Vijayawada",
+          "state": "Andhra Pradesh",
+          "nirfId": "U-0627",
+          "candidateId": "schoolofplanningarchitecturevijayawada|Andhra Pradesh",
+          "rankings": [
+            {
+              "category": "Architecture",
+              "rank": 19,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Vignan's Foundation for Science, Technology and Research",
+          "city": "Guntur",
+          "state": "Andhra Pradesh",
+          "nirfId": null,
+          "candidateId": "vignansfoundationforsciencetechnologyandresearch|Andhra Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": 70,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 80,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": null,
+              "rankBand": "101-125",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "A.P Residential Degree College",
+          "city": "NAGARJUNASAGAR",
+          "state": "Andhra Pradesh",
+          "nirfId": null,
+          "candidateId": "apresidentialdegreecollege|Andhra Pradesh",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking300.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Arunachal Pradesh": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Arunachal Pradesh",
+          "city": "Itanagar",
+          "state": "Arunachal Pradesh",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologyarunachalpradesh|Arunachal Pradesh",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Rajiv Gandhi University",
+          "city": "Itanagar",
+          "state": "Arunachal Pradesh",
+          "nirfId": null,
+          "candidateId": "rajivgandhiuniversity|Arunachal Pradesh",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "North Eastern Regional Institute of Science & Technology",
+          "city": "Itanagar",
+          "state": "Arunachal Pradesh",
+          "nirfId": null,
+          "candidateId": "northeasternregionalinstituteofsciencetechnology|Arunachal Pradesh",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking200.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 7
+    },
+    "Assam": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Silchar",
+          "city": "Silchar",
+          "state": "Assam",
+          "nirfId": "U-0055",
+          "candidateId": "nationalinstituteoftechnologysilchar|Assam",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 97,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 50,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Gauhati University",
+          "city": "Guwahati",
+          "state": "Assam",
+          "nirfId": "U-0052",
+          "candidateId": "gauhatiuniversity|Assam",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 52,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 33,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "B. Borooah College",
+          "city": "Guwahati, Kamrup Metro",
+          "state": "Assam",
+          "nirfId": null,
+          "candidateId": "bborooahcollege|Assam",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking300.html"
+            }
+          ]
+        },
+        {
+          "name": "Tezpur University",
+          "city": "Tezpur",
+          "state": "Assam",
+          "nirfId": null,
+          "candidateId": "tezpuruniversity|Assam",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": 79,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking200.html"
+            },
+            {
+              "category": "Management",
+              "rank": null,
+              "rankBand": "101-125",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "National Law University and Judicial Academy",
+          "city": "Kamrup",
+          "state": "Assam",
+          "nirfId": "U-0677",
+          "candidateId": "nationallawuniversityandjudicialacademy|Assam",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 35,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute of Pharmaceutical Education and Research Guwahati",
+          "city": "Guwahati",
+          "state": "Assam",
+          "nirfId": "I-1073",
+          "candidateId": "nationalinstituteofpharmaceuticaleducationandresearchguwahati|Assam",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 12,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Assam Agricultural University, Jorhat",
+          "city": "Jorhat",
+          "state": "Assam",
+          "nirfId": "U-0048",
+          "candidateId": "assamagriculturaluniversityjorhat|Assam",
+          "rankings": [
+            {
+              "category": "Agriculture",
+              "rank": 18,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Nowgong College",
+          "city": "Nagaon",
+          "state": "Assam",
+          "nirfId": null,
+          "candidateId": "nowgongcollege|Assam",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking300.html"
+            }
+          ]
+        },
+        {
+          "name": "Dibrugarh University",
+          "city": "Dibrugarh",
+          "state": "Assam",
+          "nirfId": null,
+          "candidateId": "dibrugarhuniversity|Assam",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 53,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Information Technology Guwahati",
+          "city": "Guwahati",
+          "state": "Assam",
+          "nirfId": null,
+          "candidateId": "indianinstituteofinformationtechnologyguwahati|Assam",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking300.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Bihar": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Patna",
+          "city": "Patna",
+          "state": "Bihar",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologypatna|Bihar",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 53,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 13,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Dr Rajendra Prasad Central Agricultural University, Samastipur",
+          "city": "Samastipur",
+          "state": "Bihar",
+          "nirfId": null,
+          "candidateId": "drrajendraprasadcentralagriculturaluniversitysamastipur|Bihar",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 14,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Patna Women's College",
+          "city": "Patna",
+          "state": "Bihar",
+          "nirfId": null,
+          "candidateId": "patnawomenscollege|Bihar",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Bodh Gaya",
+          "city": "Gaya",
+          "state": "Bihar",
+          "nirfId": "U-1006",
+          "candidateId": "indianinstituteofmanagementbodhgaya|Bihar",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 31,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Chanakya National Law University",
+          "city": "Patna",
+          "state": "Bihar",
+          "nirfId": "U-0063",
+          "candidateId": "chanakyanationallawuniversity|Bihar",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 17,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute Of Pharmaceutical Education And Research Hajipur",
+          "city": "Hajipur",
+          "state": "Bihar",
+          "nirfId": "S-58036",
+          "candidateId": "nationalinstituteofpharmaceuticaleducationandresearchhajipur|Bihar",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 30,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Amity University Patna",
+          "city": "Patna",
+          "state": "Bihar",
+          "nirfId": null,
+          "candidateId": "amityuniversitypatna|Bihar",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking300.html"
+            },
+            {
+              "category": "Management",
+              "rank": null,
+              "rankBand": "101-125",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Central University of South Bihar",
+          "city": "Gaya",
+          "state": "Bihar",
+          "nirfId": null,
+          "candidateId": "centraluniversityofsouthbihar|Bihar",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            },
+            {
+              "category": "Law",
+              "rank": 23,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 63,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Bihar Agriculture University",
+          "city": "Bhagalpur",
+          "state": "Bihar",
+          "nirfId": "U-0060",
+          "candidateId": "biharagricultureuniversity|Bihar",
+          "rankings": [
+            {
+              "category": "Agriculture",
+              "rank": 36,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 1
+    },
+    "Chhattisgarh": {
+      "selected": [
+        {
+          "name": "National Institute of Technology, Raipur",
+          "city": "Raipur",
+          "state": "Chhattisgarh",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologyraipur|Chhattisgarh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 86,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 35,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Kalinga University, Raipur",
+          "city": "Raipur",
+          "state": "Chhattisgarh",
+          "nirfId": null,
+          "candidateId": "kalingauniversityraipur|Chhattisgarh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Raipur",
+          "city": "Raipur",
+          "state": "Chhattisgarh",
+          "nirfId": "S-8868",
+          "candidateId": "indianinstituteofmanagementraipur|Chhattisgarh",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 15,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Guru Ghasidas Vishwavidyalaya",
+          "city": "Bilaspur (Chhattisgarh)",
+          "state": "Chhattisgarh",
+          "nirfId": null,
+          "candidateId": "gurughasidasvishwavidyalaya|Chhattisgarh",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking200.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 47,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indira Gandhi Krishi Vishwavidyalaya, Raipur",
+          "city": "Raipur",
+          "state": "Chhattisgarh",
+          "nirfId": null,
+          "candidateId": "indiragandhikrishivishwavidyalayaraipur|Chhattisgarh",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 28,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "OP Jindal University",
+          "city": "Raigarh",
+          "state": "Chhattisgarh",
+          "nirfId": null,
+          "candidateId": "opjindaluniversity|Chhattisgarh",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": null,
+              "rankBand": "101-125",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Dr. Shyama Prasad Mukherjee International Institute of Information Technology, Naya Raipur",
+          "city": "Raipur",
+          "state": "Chhattisgarh",
+          "nirfId": null,
+          "candidateId": "drshyamaprasadmukherjeeinternationalinstituteofinformationtechnologynayaraipur|Chhattisgarh",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking300.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 3
+    },
+    "Goa": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Goa",
+          "city": "Cuncolim",
+          "state": "Goa",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologygoa|Goa",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Dempo Charities Trust Dhempe College of Arts & Science",
+          "city": "PANAJI",
+          "state": "Goa",
+          "nirfId": null,
+          "candidateId": "dempocharitiestrustdhempecollegeofartsscience|Goa",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "Goa Institute of Management",
+          "city": "Sanquelim",
+          "state": "Goa",
+          "nirfId": "S-87",
+          "candidateId": "goainstituteofmanagement|Goa",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 43,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Goa College of Pharmacy",
+          "city": "Panaji",
+          "state": "Goa",
+          "nirfId": "C-30858",
+          "candidateId": "goacollegeofpharmacy|Goa",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 89,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Parvatibai Chowgule College of Arts & Science (Autonomous)",
+          "city": "Margao",
+          "state": "Goa",
+          "nirfId": null,
+          "candidateId": "parvatibaichowgulecollegeofartsscienceautonomous|Goa",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking300.html"
+            }
+          ]
+        },
+        {
+          "name": "Ponda Education Society Shri Ravi S. Naik College of Arts and Science",
+          "city": "North Goa",
+          "state": "Goa",
+          "nirfId": null,
+          "candidateId": "pondaeducationsocietyshriravisnaikcollegeofartsandscience|Goa",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking300.html"
+            }
+          ]
+        },
+        {
+          "name": "St Xaviers College of Arts Science & Commerce Mapusa",
+          "city": "Mapusa",
+          "state": "Goa",
+          "nirfId": null,
+          "candidateId": "stxavierscollegeofartssciencecommercemapusa|Goa",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking300.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 3
+    },
+    "Gujarat": {
+      "selected": [
+        {
+          "name": "Sardar Vallabhbhai National Institute of Technology",
+          "city": "SURAT",
+          "state": "Gujarat",
+          "nirfId": "U-0149",
+          "candidateId": "sardarvallabhbhainationalinstituteoftechnology|Gujarat",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": 66,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Gujarat Cancer & Research Institute",
+          "city": "Ahmadabad",
+          "state": "Gujarat",
+          "nirfId": "C-5838",
+          "candidateId": "gujaratcancerresearchinstitute|Gujarat",
+          "rankings": [
+            {
+              "category": "Medical",
+              "rank": 44,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Gujarat University",
+          "city": "Ahmedabad",
+          "state": "Gujarat",
+          "nirfId": null,
+          "candidateId": "gujaratuniversity|Gujarat",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": 74,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "St. Xavier's College",
+          "city": "Ahmedabad",
+          "state": "Gujarat",
+          "nirfId": null,
+          "candidateId": "stxavierscollege|Gujarat",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Ahmedabad",
+          "city": "Ahmedabad",
+          "state": "Gujarat",
+          "nirfId": "S-8890",
+          "candidateId": "indianinstituteofmanagementahmedabad|Gujarat",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 1,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Gujarat National Law University",
+          "city": "Gandhinagar",
+          "state": "Gujarat",
+          "nirfId": "U-0134",
+          "candidateId": "gujaratnationallawuniversity|Gujarat",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 5,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute of Pharmaceutical Education and Research Ahmedabad",
+          "city": "Gandhinagar",
+          "state": "Gujarat",
+          "nirfId": "N-14",
+          "candidateId": "nationalinstituteofpharmaceuticaleducationandresearchahmedabad|Gujarat",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 21,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Anand Agricultural University",
+          "city": "Anand",
+          "state": "Gujarat",
+          "nirfId": "U-0123",
+          "candidateId": "anandagriculturaluniversity|Gujarat",
+          "rankings": [
+            {
+              "category": "Agriculture",
+              "rank": 27,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Centre for Environmental Planning and Technology University",
+          "city": "Ahmedabad",
+          "state": "Gujarat",
+          "nirfId": "U-0127",
+          "candidateId": "centreforenvironmentalplanningandtechnologyuniversity|Gujarat",
+          "rankings": [
+            {
+              "category": "Architecture",
+              "rank": 6,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Government Dental College",
+          "city": "Ahmedabad",
+          "state": "Gujarat",
+          "nirfId": "C-5910",
+          "candidateId": "governmentdentalcollege|Gujarat",
+          "rankings": [
+            {
+              "category": "Dental",
+              "rank": 37,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Haryana": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Kurukshetra",
+          "city": "Kurukshetra",
+          "state": "Haryana",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologykurukshetra|Haryana",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 85,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Maharishi Markandeshwar",
+          "city": "Ambala",
+          "state": "Haryana",
+          "nirfId": null,
+          "candidateId": "maharishimarkandeshwar|Haryana",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": 85,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking150.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 33,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 26,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "I.C. College of Community Science",
+          "city": "Hisar",
+          "state": "Haryana",
+          "nirfId": null,
+          "candidateId": "iccollegeofcommunityscience|Haryana",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "Management Development Institute",
+          "city": "Gurugram",
+          "state": "Haryana",
+          "nirfId": "I-1170",
+          "candidateId": "managementdevelopmentinstitute|Haryana",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 9,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Amity University Haryana, Gurgaon",
+          "city": "Gurugram, Haryana",
+          "state": "Haryana",
+          "nirfId": null,
+          "candidateId": "amityuniversityharyanagurgaon|Haryana",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking150.html"
+            },
+            {
+              "category": "Management",
+              "rank": null,
+              "rankBand": "101-125",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking150.html"
+            },
+            {
+              "category": "Law",
+              "rank": 39,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 62,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "ICAR - National Dairy Research Institute",
+          "city": "Karnal",
+          "state": "Haryana",
+          "nirfId": "U-0171",
+          "candidateId": "icarnationaldairyresearchinstitute|Haryana",
+          "rankings": [
+            {
+              "category": "Agriculture",
+              "rank": 2,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Postgraduate Institute of Dental Sciences",
+          "city": "Rohtak",
+          "state": "Haryana",
+          "nirfId": "C-30756",
+          "candidateId": "postgraduateinstituteofdentalsciences|Haryana",
+          "rankings": [
+            {
+              "category": "Dental",
+              "rank": 12,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Chaudhary Charan Singh Haryana Agricultural University",
+          "city": "Hisar",
+          "state": "Haryana",
+          "nirfId": null,
+          "candidateId": "chaudharycharansinghharyanaagriculturaluniversity|Haryana",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 10,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Manav Rachna International Institute of Research & Studies",
+          "city": "Faridabad",
+          "state": "Haryana",
+          "nirfId": null,
+          "candidateId": "manavrachnainternationalinstituteofresearchstudies|Haryana",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": 96,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking150.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 33,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Rohtak",
+          "city": "Rohtak",
+          "state": "Haryana",
+          "nirfId": "S-8895",
+          "candidateId": "indianinstituteofmanagementrohtak|Haryana",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 19,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Himachal Pradesh": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Hamirpur",
+          "city": "Hamirpur",
+          "state": "Himachal Pradesh",
+          "nirfId": "U-0189",
+          "candidateId": "nationalinstituteoftechnologyhamirpur|Himachal Pradesh",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": 97,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 30,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Shoolini University of Biotechnology and Management Sciences",
+          "city": "Solan",
+          "state": "Himachal Pradesh",
+          "nirfId": null,
+          "candidateId": "shooliniuniversityofbiotechnologyandmanagementsciences|Himachal Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": 69,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking150.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 44,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Sirmaur",
+          "city": "Sirmaur",
+          "state": "Himachal Pradesh",
+          "nirfId": "S-15911",
+          "candidateId": "indianinstituteofmanagementsirmaur|Himachal Pradesh",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 51,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Himachal Pradesh National Law University, Shimla",
+          "city": "Select City",
+          "state": "Himachal Pradesh",
+          "nirfId": "U-1035",
+          "candidateId": "himachalpradeshnationallawuniversityshimla|Himachal Pradesh",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 34,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Dr. Y.S. Parmar University of Horticulture and Forestry",
+          "city": "Solan",
+          "state": "Himachal Pradesh",
+          "nirfId": null,
+          "candidateId": "drysparmaruniversityofhorticultureandforestry|Himachal Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 20,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Chaudhary Sarwan Kumar Himachal Pardesh Krishi Vishvavidyalaya",
+          "city": "Kangra",
+          "state": "Himachal Pradesh",
+          "nirfId": "U-0179",
+          "candidateId": "chaudharysarwankumarhimachalpardeshkrishivishvavidyalaya|Himachal Pradesh",
+          "rankings": [
+            {
+              "category": "Agriculture",
+              "rank": 29,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Jaypee University of Information Technology",
+          "city": "Solan",
+          "state": "Himachal Pradesh",
+          "nirfId": null,
+          "candidateId": "jaypeeuniversityofinformationtechnology|Himachal Pradesh",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking300.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 3
+    },
+    "Jharkhand": {
+      "selected": [
+        {
+          "name": "Birla Institute of Technology",
+          "city": "Ranchi",
+          "state": "Jharkhand",
+          "nirfId": null,
+          "candidateId": "birlainstituteoftechnology|Jharkhand",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": 92,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 51,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 97,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 28,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 22,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "XLRI - Xavier School of Management",
+          "city": "Jamshedpur",
+          "state": "Jharkhand",
+          "nirfId": "S-132",
+          "candidateId": "xlrixavierschoolofmanagement|Jharkhand",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 10,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National University of Study & Research in Law, Ranchi",
+          "city": "Ranchi",
+          "state": "Jharkhand",
+          "nirfId": "U-0600",
+          "candidateId": "nationaluniversityofstudyresearchinlawranchi|Jharkhand",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 30,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute of Technology, Jamshedpur",
+          "city": "Jamshedpur",
+          "state": "Jharkhand",
+          "nirfId": "U-0207",
+          "candidateId": "nationalinstituteoftechnologyjamshedpur|Jharkhand",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": 82,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Ranchi",
+          "city": "Ranchi",
+          "state": "Jharkhand",
+          "nirfId": "S-8904",
+          "candidateId": "indianinstituteofmanagementranchi|Jharkhand",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 18,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Amity University, Jharkhand",
+          "city": "Ranchi",
+          "state": "Jharkhand",
+          "nirfId": null,
+          "candidateId": "amityuniversityjharkhand|Jharkhand",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking300.html"
+            }
+          ]
+        },
+        {
+          "name": "B I T SINDRI",
+          "city": "Dhanbad",
+          "state": "Jharkhand",
+          "nirfId": null,
+          "candidateId": "bitsindri|Jharkhand",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking300.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute of Advanced Manufacturing Technology, Ranchi",
+          "city": "Ranchi",
+          "state": "Jharkhand",
+          "nirfId": null,
+          "candidateId": "nationalinstituteofadvancedmanufacturingtechnologyranchi|Jharkhand",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking300.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 2
+    },
+    "Karnataka": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Karnataka, Surathkal",
+          "city": "Surathkal",
+          "state": "Karnataka",
+          "nirfId": "U-0237",
+          "candidateId": "nationalinstituteoftechnologykarnatakasurathkal|Karnataka",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 54,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 17,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute of Mental Health & Neuro Sciences, Bangalore",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "nirfId": "U-0236",
+          "candidateId": "nationalinstituteofmentalhealthneurosciencesbangalore|Karnataka",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 60,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 7,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Science",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "nirfId": "U-0220",
+          "candidateId": "indianinstituteofscience|Karnataka",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 2,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 1,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Kristu Jayanti College",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "nirfId": "C-20653",
+          "candidateId": "kristujayanticollege|Karnataka",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": 34,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Bangalore",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "nirfId": "S-8903",
+          "candidateId": "indianinstituteofmanagementbangalore|Karnataka",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 2,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Law School of India University",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "nirfId": "U-0238",
+          "candidateId": "nationallawschoolofindiauniversity|Karnataka",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 1,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "JSS College of Pharmacy",
+          "city": "Mysore",
+          "state": "Karnataka",
+          "nirfId": "C-35007",
+          "candidateId": "jsscollegeofpharmacy|Karnataka",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 7,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "University of Agricultural Sciences, Bangalore",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "nirfId": null,
+          "candidateId": "universityofagriculturalsciencesbangalore|Karnataka",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": 95,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 11,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "BMS College of Architecture",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "nirfId": "C-57952",
+          "candidateId": "bmscollegeofarchitecture|Karnataka",
+          "rankings": [
+            {
+              "category": "Architecture",
+              "rank": 20,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Manipal College of Dental Sciences, Manipal",
+          "city": "Manipal",
+          "state": "Karnataka",
+          "nirfId": "C-7254",
+          "candidateId": "manipalcollegeofdentalsciencesmanipal|Karnataka",
+          "rankings": [
+            {
+              "category": "Dental",
+              "rank": 5,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Kerala": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Calicut",
+          "city": "Kozhikode",
+          "state": "Kerala",
+          "nirfId": "U-0263",
+          "candidateId": "nationalinstituteoftechnologycalicut|Kerala",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 45,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 21,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 85,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 2,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Sree Chitra Tirunal Institute for Medical Sciences and Technology, Thiruvananthapuram",
+          "city": "Thiruvananthapuram",
+          "state": "Kerala",
+          "nirfId": "U-0266",
+          "candidateId": "sreechitratirunalinstituteformedicalsciencesandtechnologythiruvananthapuram|Kerala",
+          "rankings": [
+            {
+              "category": "Medical",
+              "rank": 17,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Kerala University",
+          "city": "Thiruvananthapuram",
+          "state": "Kerala",
+          "nirfId": "U-0260",
+          "candidateId": "keralauniversity|Kerala",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 42,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 25,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Rajagiri College of Social Sciences",
+          "city": "Ernakulam",
+          "state": "Kerala",
+          "nirfId": "C-11691",
+          "candidateId": "rajagiricollegeofsocialsciences|Kerala",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": 12,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Kozhikode",
+          "city": "Kozhikode",
+          "state": "Kerala",
+          "nirfId": "S-8909",
+          "candidateId": "indianinstituteofmanagementkozhikode|Kerala",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 3,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Cochin University of Science and Technology",
+          "city": "Cochin",
+          "state": "Kerala",
+          "nirfId": "U-0253",
+          "candidateId": "cochinuniversityofscienceandtechnology|Kerala",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 50,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 32,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 82,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 13,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Kerala Agricultural University, Thrissur",
+          "city": "Thrissur",
+          "state": "Kerala",
+          "nirfId": null,
+          "candidateId": "keralaagriculturaluniversitythrissur|Kerala",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 12,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Government Dental College",
+          "city": "Thiruvananthapuram",
+          "state": "Kerala",
+          "nirfId": "C-48122",
+          "candidateId": "governmentdentalcollege|Kerala",
+          "rankings": [
+            {
+              "category": "Dental",
+              "rank": 35,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 38,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Space Science and Technology",
+          "city": "Thiruvananthapuram",
+          "state": "Kerala",
+          "nirfId": null,
+          "candidateId": "indianinstituteofspacescienceandtechnology|Kerala",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 61,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "University College, Thiruvananthapuram",
+          "city": "Thiruvananthapuram",
+          "state": "Kerala",
+          "nirfId": "C-43671",
+          "candidateId": "universitycollegethiruvananthapuram|Kerala",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": 23,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Madhya Pradesh": {
+      "selected": [
+        {
+          "name": "Maulana Azad National Institute of Technology",
+          "city": "Bhopal",
+          "state": "Madhya Pradesh",
+          "nirfId": null,
+          "candidateId": "maulanaazadnationalinstituteoftechnology|Madhya Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 81,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 17,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Devi Ahilya Vishwavidyalaya",
+          "city": "Indore",
+          "state": "Madhya Pradesh",
+          "nirfId": null,
+          "candidateId": "deviahilyavishwavidyalaya|Madhya Pradesh",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "Institute for Excellence in Higher Education(IEHE),Bhopal(Autonomous) Kaliya sot bandh Kolar Road, Bhopal",
+          "city": "Bhopal",
+          "state": "Madhya Pradesh",
+          "nirfId": null,
+          "candidateId": "instituteforexcellenceinhighereducationiehebhopalautonomouskaliyasotbandhkolarroadbhopal|Madhya Pradesh",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking300.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Indore",
+          "city": "Indore",
+          "state": "Madhya Pradesh",
+          "nirfId": "S-8918",
+          "candidateId": "indianinstituteofmanagementindore|Madhya Pradesh",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 8,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Law Institute University, Bhopal",
+          "city": "Bhopal",
+          "state": "Madhya Pradesh",
+          "nirfId": "U-0285",
+          "candidateId": "nationallawinstituteuniversitybhopal|Madhya Pradesh",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 27,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "IES Institute of Pharmacy",
+          "city": "Bhopal",
+          "state": "Madhya Pradesh",
+          "nirfId": "C-58318",
+          "candidateId": "iesinstituteofpharmacy|Madhya Pradesh",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 95,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "School of Planning and Architecture Bhopal",
+          "city": "Bhopal",
+          "state": "Madhya Pradesh",
+          "nirfId": "U-0626",
+          "candidateId": "schoolofplanningandarchitecturebhopal|Madhya Pradesh",
+          "rankings": [
+            {
+              "category": "Architecture",
+              "rank": 11,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Science Education & Research Bhopal",
+          "city": "Bhopal",
+          "state": "Madhya Pradesh",
+          "nirfId": "U-0272",
+          "candidateId": "indianinstituteofscienceeducationresearchbhopal|Madhya Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 75,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management",
+          "city": "Gwalior",
+          "state": "Madhya Pradesh",
+          "nirfId": "U-0267",
+          "candidateId": "atalbiharivajpayeeindianinstituteofinformationtechnologyandmanagement|Madhya Pradesh",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": 96,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 93,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "LNCT University",
+          "city": "Bhopal",
+          "state": "Madhya Pradesh",
+          "nirfId": null,
+          "candidateId": "lnctuniversity|Madhya Pradesh",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Maharashtra": {
+      "selected": [
+        {
+          "name": "Institute of Chemical Technology",
+          "city": "Mumbai",
+          "state": "Maharashtra",
+          "nirfId": "U-0308",
+          "candidateId": "instituteofchemicaltechnology|Maharashtra",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 64,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 40,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 41,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 6,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Dr. D. Y. Patil Vidyapeeth",
+          "city": "Pune",
+          "state": "Maharashtra",
+          "nirfId": "I-1110",
+          "candidateId": "drdypatilvidyapeeth|Maharashtra",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 71,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 41,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 12,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 4,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Homi Bhabha National Institute",
+          "city": "Mumbai",
+          "state": "Maharashtra",
+          "nirfId": "U-0304",
+          "candidateId": "homibhabhanationalinstitute|Maharashtra",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 20,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 12,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Fergusson College (Autonomous)",
+          "city": "Pune",
+          "state": "Maharashtra",
+          "nirfId": "I-1385",
+          "candidateId": "fergussoncollegeautonomous|Maharashtra",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": 57,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management, Mumbai",
+          "city": "Mumbai",
+          "state": "Maharashtra",
+          "nirfId": "S-8931",
+          "candidateId": "indianinstituteofmanagementmumbai|Maharashtra",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 6,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Symbiosis Law School, Pune",
+          "city": "Pune",
+          "state": "Maharashtra",
+          "nirfId": "C-19328",
+          "candidateId": "symbiosislawschoolpune|Maharashtra",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 7,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Central Institute of Fisheries Education, Fisheries University",
+          "city": "Mumbai",
+          "state": "Maharashtra",
+          "nirfId": "U-0293",
+          "candidateId": "centralinstituteoffisherieseducationfisheriesuniversity|Maharashtra",
+          "rankings": [
+            {
+              "category": "Agriculture",
+              "rank": 8,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Visvesvaraya National Institute of Technology, Nagpur",
+          "city": "Nagpur",
+          "state": "Maharashtra",
+          "nirfId": "U-0334",
+          "candidateId": "visvesvarayanationalinstituteoftechnologynagpur|Maharashtra",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 86,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 44,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 10,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Datta Meghe Institute of Higher Education and Research",
+          "city": "Wardha",
+          "state": "Maharashtra",
+          "nirfId": "U-0295",
+          "candidateId": "dattamegheinstituteofhighereducationandresearch|Maharashtra",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 84,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 49,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 20,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 36,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Symbiosis International",
+          "city": "Pune",
+          "state": "Maharashtra",
+          "nirfId": "U-0329",
+          "candidateId": "symbiosisinternational|Maharashtra",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 40,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 24,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 46,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Manipur": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Manipur",
+          "city": "Imphal",
+          "state": "Manipur",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologymanipur|Manipur",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "Manipur University",
+          "city": "Imphal",
+          "state": "Manipur",
+          "nirfId": null,
+          "candidateId": "manipuruniversity|Manipur",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Central Agricultural University",
+          "city": "Imphal West",
+          "state": "Manipur",
+          "nirfId": null,
+          "candidateId": "centralagriculturaluniversity|Manipur",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 24,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 7
+    },
+    "Meghalaya": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Meghalaya",
+          "city": "Shillong",
+          "state": "Meghalaya",
+          "nirfId": "U-0619",
+          "candidateId": "nationalinstituteoftechnologymeghalaya|Meghalaya",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": 83,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "North Eastern Hill University",
+          "city": "Shillong",
+          "state": "Meghalaya",
+          "nirfId": null,
+          "candidateId": "northeasternhilluniversity|Meghalaya",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Shillong",
+          "city": "Shillong",
+          "state": "Meghalaya",
+          "nirfId": "S-8937",
+          "candidateId": "indianinstituteofmanagementshillong|Meghalaya",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 38,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "University of Science and Technology",
+          "city": "Ribhoi",
+          "state": "Meghalaya",
+          "nirfId": null,
+          "candidateId": "universityofscienceandtechnology|Meghalaya",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 6
+    },
+    "Mizoram": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Mizoram",
+          "city": "Aizawl",
+          "state": "Mizoram",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologymizoram|Mizoram",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Mizoram University",
+          "city": "Aizawl",
+          "state": "Mizoram",
+          "nirfId": null,
+          "candidateId": "mizoramuniversity|Mizoram",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": 82,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Pachhunga University College",
+          "city": "Aizawl",
+          "state": "Mizoram",
+          "nirfId": "C-8308",
+          "candidateId": "pachhungauniversitycollege|Mizoram",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": 49,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Govt. Zirtiri Residential Science College",
+          "city": "Aizawl",
+          "state": "Mizoram",
+          "nirfId": null,
+          "candidateId": "govtzirtiriresidentialsciencecollege|Mizoram",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking300.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 6
+    },
+    "Nagaland": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Nagaland",
+          "city": "Dimapur",
+          "state": "Nagaland",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologynagaland|Nagaland",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Nagaland University",
+          "city": "Zunheboto",
+          "state": "Nagaland",
+          "nirfId": null,
+          "candidateId": "nagalanduniversity|Nagaland",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 8
+    },
+    "Odisha": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Rourkela",
+          "city": "Rourkela",
+          "state": "Odisha",
+          "nirfId": "U-0357",
+          "candidateId": "nationalinstituteoftechnologyrourkela|Odisha",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 34,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 13,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 7,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Siksha `O` Anusandhan",
+          "city": "Bhubaneswar",
+          "state": "Odisha",
+          "nirfId": "U-0363",
+          "candidateId": "sikshaoanusandhan|Odisha",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 25,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 15,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 22,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 15,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 66,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 10,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 9,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Sambalpur",
+          "city": "Sambalpur",
+          "state": "Odisha",
+          "nirfId": "S-6",
+          "candidateId": "indianinstituteofmanagementsambalpur|Odisha",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 34,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Odisha University of Agriculture and Technology",
+          "city": "Khordha",
+          "state": "Odisha",
+          "nirfId": null,
+          "candidateId": "odishauniversityofagricultureandtechnology|Odisha",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 19,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Kalinga Institute of Industrial Technology",
+          "city": "Bhubaneswar",
+          "state": "Odisha",
+          "nirfId": "U-0356",
+          "candidateId": "kalingainstituteofindustrialtechnology|Odisha",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 27,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 17,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 36,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 24,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 68,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 14,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 26,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "XIM University",
+          "city": "Bhubaneswar",
+          "state": "Odisha",
+          "nirfId": "U-0715",
+          "candidateId": "ximuniversity|Odisha",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 45,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "C.V. Raman Global University, Odisha",
+          "city": "Bhubaneswar",
+          "state": "Odisha",
+          "nirfId": null,
+          "candidateId": "cvramanglobaluniversityodisha|Odisha",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 95,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Law University",
+          "city": "Cuttack",
+          "state": "Odisha",
+          "nirfId": "U-0358",
+          "candidateId": "nationallawuniversity|Odisha",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 15,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Veer Surendra Sai University of Technology",
+          "city": "Sambalpur",
+          "state": "Odisha",
+          "nirfId": null,
+          "candidateId": "veersurendrasaiuniversityoftechnology|Odisha",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "Utkal University",
+          "city": "Bhubaneswar",
+          "state": "Odisha",
+          "nirfId": null,
+          "candidateId": "utkaluniversity|Odisha",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Punjab": {
+      "selected": [
+        {
+          "name": "Thapar Institute of Engineering and Technology (Deemed-to-be-university)",
+          "city": "Patiala",
+          "state": "Punjab",
+          "nirfId": "I-1480",
+          "candidateId": "thaparinstituteofengineeringandtechnologydeemedtobeuniversity|Punjab",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 44,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 26,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 29,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 46,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Dayanand Medical College",
+          "city": "Ludhiana",
+          "state": "Punjab",
+          "nirfId": "C-29255",
+          "candidateId": "dayanandmedicalcollege|Punjab",
+          "rankings": [
+            {
+              "category": "Medical",
+              "rank": 36,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Chandigarh University",
+          "city": "Mohali",
+          "state": "Punjab",
+          "nirfId": "U-0747",
+          "candidateId": "chandigarhuniversity|Punjab",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 32,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 19,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 31,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 32,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 15,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 14,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Khalsa College",
+          "city": "Amritsar",
+          "state": "Punjab",
+          "nirfId": null,
+          "candidateId": "khalsacollege|Punjab",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Lovely Professional University",
+          "city": "Phagwara",
+          "state": "Punjab",
+          "nirfId": "U-0379",
+          "candidateId": "lovelyprofessionaluniversity|Punjab",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 49,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 31,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 48,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 44,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 26,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 13,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 24,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 17,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute of Pharmaceutical Education and Research, Mohali",
+          "city": "Mohali",
+          "state": "Punjab",
+          "nirfId": "U-0380",
+          "candidateId": "nationalinstituteofpharmaceuticaleducationandresearchmohali|Punjab",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 9,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Punjab Agricultural University",
+          "city": "Ludhiana",
+          "state": "Punjab",
+          "nirfId": "U-0381",
+          "candidateId": "punjabagriculturaluniversity|Punjab",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 81,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 64,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 3,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Christian Dental College",
+          "city": "Ludhiana",
+          "state": "Punjab",
+          "nirfId": "C-29150",
+          "candidateId": "christiandentalcollege|Punjab",
+          "rankings": [
+            {
+              "category": "Dental",
+              "rank": 24,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Christian Medical College, Brown Road, Ludhiana",
+          "city": "Ludhiana",
+          "state": "Punjab",
+          "nirfId": "C-29209",
+          "candidateId": "christianmedicalcollegebrownroadludhiana|Punjab",
+          "rankings": [
+            {
+              "category": "Medical",
+              "rank": 47,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Government Bikram College of Commerce, Patiala",
+          "city": "Patiala",
+          "state": "Punjab",
+          "nirfId": null,
+          "candidateId": "governmentbikramcollegeofcommercepatiala|Punjab",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking200.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Rajasthan": {
+      "selected": [
+        {
+          "name": "Birla Institute of Technology & Science -Pilani",
+          "city": "Pilani",
+          "state": "Rajasthan",
+          "nirfId": "U-0391",
+          "candidateId": "birlainstituteoftechnologysciencepilani|Rajasthan",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 16,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 7,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 11,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 2,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Sawai Man Singh Medical College",
+          "city": "Jaipur",
+          "state": "Rajasthan",
+          "nirfId": null,
+          "candidateId": "sawaimansinghmedicalcollege|Rajasthan",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 39,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Udaipur",
+          "city": "Udaipur",
+          "state": "Rajasthan",
+          "nirfId": "S-8942",
+          "candidateId": "indianinstituteofmanagementudaipur|Rajasthan",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 21,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Manipal University Jaipur",
+          "city": "Jaipur",
+          "state": "Rajasthan",
+          "nirfId": "U-0749",
+          "candidateId": "manipaluniversityjaipur|Rajasthan",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 98,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 58,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 58,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 81,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 32,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 21,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Malaviya National Institute of Technology",
+          "city": "Jaipur",
+          "state": "Rajasthan",
+          "nirfId": "U-0410",
+          "candidateId": "malaviyanationalinstituteoftechnology|Rajasthan",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 77,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 42,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 62,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 12,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Banasthali Vidyapith",
+          "city": "Banasthali",
+          "state": "Rajasthan",
+          "nirfId": null,
+          "candidateId": "banasthalividyapith|Rajasthan",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": 66,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 71,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 22,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Jaipuria Institute of Management",
+          "city": "Jaipur",
+          "state": "Rajasthan",
+          "nirfId": "S-309",
+          "candidateId": "jaipuriainstituteofmanagement|Rajasthan",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 74,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Central University of Rajasthan",
+          "city": "Kishangarh",
+          "state": "Rajasthan",
+          "nirfId": null,
+          "candidateId": "centraluniversityofrajasthan|Rajasthan",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": 89,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 27,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Suresh Gyan Vihar University",
+          "city": "Jaipur",
+          "state": "Rajasthan",
+          "nirfId": null,
+          "candidateId": "sureshgyanviharuniversity|Rajasthan",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 39,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Amity University Rajasthan,Jaipur",
+          "city": "Jaipur",
+          "state": "Rajasthan",
+          "nirfId": null,
+          "candidateId": "amityuniversityrajasthanjaipur|Rajasthan",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking200.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Sikkim": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Sikkim",
+          "city": "South Sikkim",
+          "state": "Sikkim",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologysikkim|Sikkim",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "Sikkim Manipal University",
+          "city": "Gangtok",
+          "state": "Sikkim",
+          "nirfId": null,
+          "candidateId": "sikkimmanipaluniversity|Sikkim",
+          "rankings": [
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "Sikkim Manipal Institute of Technology (SMIT)",
+          "city": "Rangpo",
+          "state": "Sikkim",
+          "nirfId": null,
+          "candidateId": "sikkimmanipalinstituteoftechnologysmit|Sikkim",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking300.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 7
+    },
+    "Tamil Nadu": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Tiruchirappalli",
+          "city": "Tiruchirappalli",
+          "state": "Tamil Nadu",
+          "nirfId": "U-0467",
+          "candidateId": "nationalinstituteoftechnologytiruchirappalli|Tamil Nadu",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 30,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 9,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 57,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 9,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Christian Medical College",
+          "city": "Vellore",
+          "state": "Tamil Nadu",
+          "nirfId": "C-45654",
+          "candidateId": "christianmedicalcollege|Tamil Nadu",
+          "rankings": [
+            {
+              "category": "Medical",
+              "rank": 3,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Amrita Vishwa Vidyapeetham",
+          "city": "Coimbatore",
+          "state": "Tamil Nadu",
+          "nirfId": "U-0436",
+          "candidateId": "amritavishwavidyapeetham|Tamil Nadu",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 17,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 8,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 23,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 9,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 26,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 14,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 14,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "PSGR Krishnammal College for Women",
+          "city": "Coimbatore",
+          "state": "Tamil Nadu",
+          "nirfId": "C-41046",
+          "candidateId": "psgrkrishnammalcollegeforwomen|Tamil Nadu",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": 9,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Tiruchirappalli",
+          "city": "Tiruchirappalli",
+          "state": "Tamil Nadu",
+          "nirfId": "S-8948",
+          "candidateId": "indianinstituteofmanagementtiruchirappalli|Tamil Nadu",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 16,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Shanmugha Arts Science Technology & Research Academy",
+          "city": "Thanjavur",
+          "state": "Tamil Nadu",
+          "nirfId": "U-0476",
+          "candidateId": "shanmughaartssciencetechnologyresearchacademy|Tamil Nadu",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 51,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 29,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 40,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 11,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "JSS College of Pharmacy",
+          "city": "Ooty",
+          "state": "Tamil Nadu",
+          "nirfId": "C-35006",
+          "candidateId": "jsscollegeofpharmacy|Tamil Nadu",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 4,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Tamil Nadu Agricultural University",
+          "city": "Coimbatore",
+          "state": "Tamil Nadu",
+          "nirfId": "U-0485",
+          "candidateId": "tamilnaduagriculturaluniversity|Tamil Nadu",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 88,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 73,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 6,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Saveetha Institute of Medical and Technical Sciences",
+          "city": "Chennai",
+          "state": "Tamil Nadu",
+          "nirfId": "I-1441",
+          "candidateId": "saveethainstituteofmedicalandtechnicalsciences|Tamil Nadu",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 23,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 13,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 45,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 11,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 63,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 19,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 2,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "S.R.M. Institute of Science and Technology",
+          "city": "Chennai",
+          "state": "Tamil Nadu",
+          "nirfId": "U-0473",
+          "candidateId": "srminstituteofscienceandtechnology|Tamil Nadu",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 22,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 11,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 14,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 18,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 56,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 25,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 10,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 18,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 33,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Telangana": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Warangal",
+          "city": "Warangal",
+          "state": "Telangana",
+          "nirfId": "U-0025",
+          "candidateId": "nationalinstituteoftechnologywarangal|Telangana",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 63,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 28,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Osmania Medical College",
+          "city": "HYDERABAD",
+          "state": "Telangana",
+          "nirfId": "C-30588",
+          "candidateId": "osmaniamedicalcollege|Telangana",
+          "rankings": [
+            {
+              "category": "Medical",
+              "rank": 48,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "University of Hyderabad",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "nirfId": "U-0042",
+          "candidateId": "universityofhyderabad|Telangana",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 26,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 18,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 74,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": null,
+              "rankBand": "101-125",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "Nizam College, Basheerbagh",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "nirfId": null,
+          "candidateId": "nizamcollegebasheerbagh|Telangana",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking150.html"
+            }
+          ]
+        },
+        {
+          "name": "ICFAI Foundation for Higher Education, Hyderabad",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "nirfId": "U-0012",
+          "candidateId": "icfaifoundationforhighereducationhyderabad|Telangana",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 46,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 31,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Nalsar University of Law",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "nirfId": "N-18",
+          "candidateId": "nalsaruniversityoflaw|Telangana",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 3,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute of Pharmaceutical Education and Research Hyderabad",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "nirfId": "I-1077",
+          "candidateId": "nationalinstituteofpharmaceuticaleducationandresearchhyderabad|Telangana",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 5,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Professor Jayashankar Telangana Agricultural University (PJTAU)",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "nirfId": "U-0784",
+          "candidateId": "professorjayashankartelanganaagriculturaluniversitypjtau|Telangana",
+          "rankings": [
+            {
+              "category": "Agriculture",
+              "rank": 24,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "International Institute of Information Technology Hyderabad",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "nirfId": "U-0014",
+          "candidateId": "internationalinstituteofinformationtechnologyhyderabad|Telangana",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 89,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 55,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 38,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Osmania University",
+          "city": "Hyderabad",
+          "state": "Telangana",
+          "nirfId": "U-0027",
+          "candidateId": "osmaniauniversity|Telangana",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 53,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 30,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Tripura": {
+      "selected": [
+        {
+          "name": "National Institute of Technology Agartala",
+          "city": "Agratala",
+          "state": "Tripura",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologyagartala|Tripura",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking150.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 9
+    },
+    "Uttar Pradesh": {
+      "selected": [
+        {
+          "name": "Aligarh Muslim University",
+          "city": "Aligarh",
+          "state": "Uttar Pradesh",
+          "nirfId": "U-0496",
+          "candidateId": "aligarhmuslimuniversity|Uttar Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 19,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 10,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 34,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 29,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 69,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 9,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 28,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 26,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Sanjay Gandhi Postgraduate Institute of Medical Sciences",
+          "city": "Lucknow",
+          "state": "Uttar Pradesh",
+          "nirfId": "N-33",
+          "candidateId": "sanjaygandhipostgraduateinstituteofmedicalsciences|Uttar Pradesh",
+          "rankings": [
+            {
+              "category": "Medical",
+              "rank": 5,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Banaras Hindu University",
+          "city": "Varanasi",
+          "state": "Uttar Pradesh",
+          "nirfId": "U-0500",
+          "candidateId": "banarashinduuniversity|Uttar Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 10,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 6,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 6,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 60,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 15,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 4,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Lucknow",
+          "city": "Lucknow",
+          "state": "Uttar Pradesh",
+          "nirfId": "S-8959",
+          "candidateId": "indianinstituteofmanagementlucknow|Uttar Pradesh",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 5,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute of Pharmaceutical Education and Research Raebareli",
+          "city": "Lucknow",
+          "state": "Uttar Pradesh",
+          "nirfId": "N-26",
+          "candidateId": "nationalinstituteofpharmaceuticaleducationandresearchraebareli|Uttar Pradesh",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 17,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "King George`s Medical University",
+          "city": "Lucknow",
+          "state": "Uttar Pradesh",
+          "nirfId": "U-0523",
+          "candidateId": "kinggeorgesmedicaluniversity|Uttar Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 83,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 50,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Medical",
+              "rank": 8,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            },
+            {
+              "category": "Dental",
+              "rank": 7,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/DentalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Amity University",
+          "city": "Gautam Budh Nagar",
+          "state": "Uttar Pradesh",
+          "nirfId": "U-0497",
+          "candidateId": "amityuniversity|Uttar Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 37,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 22,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 37,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 49,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 18,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 15,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Institute of Management Technology",
+          "city": "Ghaziabad",
+          "state": "Uttar Pradesh",
+          "nirfId": "S-394",
+          "candidateId": "instituteofmanagementtechnology|Uttar Pradesh",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 30,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Babasheb Bhimrao Ambedkar University",
+          "city": "Lucknow",
+          "state": "Uttar Pradesh",
+          "nirfId": "U-0498",
+          "candidateId": "babashebbhimraoambedkaruniversity|Uttar Pradesh",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 69,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 37,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 79,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 12,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 23,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 21,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Veterinary Research Institute, Izatnagar",
+          "city": "Bareilly",
+          "state": "Uttar Pradesh",
+          "nirfId": "U-0518",
+          "candidateId": "indianveterinaryresearchinstituteizatnagar|Uttar Pradesh",
+          "rankings": [
+            {
+              "category": "Agriculture",
+              "rank": 5,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    },
+    "Uttarakhand": {
+      "selected": [
+        {
+          "name": "UPES",
+          "city": "Dehradun",
+          "state": "Uttarakhand",
+          "nirfId": "U-0564",
+          "candidateId": "upes|Uttarakhand",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 64,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 45,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 43,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 36,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            },
+            {
+              "category": "Law",
+              "rank": 18,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Kashipur",
+          "city": "Kashipur",
+          "state": "Uttarakhand",
+          "nirfId": "S-8967",
+          "candidateId": "indianinstituteofmanagementkashipur|Uttarakhand",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 23,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Kumaun University, Nainital",
+          "city": "Nainital",
+          "state": "Uttarakhand",
+          "nirfId": "U-0562",
+          "candidateId": "kumaununiversitynainital|Uttarakhand",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 73,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "G.B. Pant Universtiy of Agriculture and Technology, Pantnagar",
+          "city": "Pantnagar",
+          "state": "Uttarakhand",
+          "nirfId": null,
+          "candidateId": "gbpantuniverstiyofagricultureandtechnologypantnagar|Uttarakhand",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            },
+            {
+              "category": "Agriculture",
+              "rank": 9,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Graphic Era University",
+          "city": "Dehradun",
+          "state": "Uttarakhand",
+          "nirfId": "U-0555",
+          "candidateId": "graphicerauniversity|Uttarakhand",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 72,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 48,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 52,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Management",
+              "rank": 52,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Uttaranchal University",
+          "city": "Dehradun",
+          "state": "Uttarakhand",
+          "nirfId": null,
+          "candidateId": "uttaranchaluniversity|Uttarakhand",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "201-300",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking300.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 75,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute of Technology Uttarakhand",
+          "city": "Srinagar (Garhwal)",
+          "state": "Uttarakhand",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologyuttarakhand|Uttarakhand",
+          "rankings": [
+            {
+              "category": "Engineering",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking200.html"
+            }
+          ]
+        },
+        {
+          "name": "DIT University",
+          "city": "Dehradun",
+          "state": "Uttarakhand",
+          "nirfId": "U-0774",
+          "candidateId": "dituniversity|Uttarakhand",
+          "rankings": [
+            {
+              "category": "Pharmacy",
+              "rank": 83,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Swami Rama Himalayan University",
+          "city": "Dehradun",
+          "state": "Uttarakhand",
+          "nirfId": null,
+          "candidateId": "swamiramahimalayanuniversity|Uttarakhand",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "151-200",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking200.html"
+            },
+            {
+              "category": "University",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking150.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 1
+    },
+    "West Bengal": {
+      "selected": [
+        {
+          "name": "Jadavpur University",
+          "city": "Kolkata",
+          "state": "West Bengal",
+          "nirfId": "U-0575",
+          "candidateId": "jadavpuruniversity|West Bengal",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 18,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 9,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 18,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Pharmacy",
+              "rank": 24,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/PharmacyRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 16,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Institute of Post Graduate Medical Education & Research",
+          "city": "Kolkata",
+          "state": "West Bengal",
+          "nirfId": "C-16428",
+          "candidateId": "instituteofpostgraduatemedicaleducationresearch|West Bengal",
+          "rankings": [
+            {
+              "category": "Medical",
+              "rank": 23,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Rama Krishna Mission Vivekananda Centenary College",
+          "city": "Kolkata",
+          "state": "West Bengal",
+          "nirfId": "I-1317",
+          "candidateId": "ramakrishnamissionvivekanandacentenarycollege|West Bengal",
+          "rankings": [
+            {
+              "category": "College",
+              "rank": 6,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/CollegeRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Management Calcutta",
+          "city": "Kolkata",
+          "state": "West Bengal",
+          "nirfId": "S-8972",
+          "candidateId": "indianinstituteofmanagementcalcutta|West Bengal",
+          "rankings": [
+            {
+              "category": "Management",
+              "rank": 7,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ManagementRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "The West Bengal National University of Juridical Sciences",
+          "city": "Kolkata",
+          "state": "West Bengal",
+          "nirfId": "U-0585",
+          "candidateId": "thewestbengalnationaluniversityofjuridicalsciences|West Bengal",
+          "rankings": [
+            {
+              "category": "Law",
+              "rank": 4,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/LawRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Bidhan Chandra Krishi Vishwavidyalaya",
+          "city": "Nadia",
+          "state": "West Bengal",
+          "nirfId": "U-0568",
+          "candidateId": "bidhanchandrakrishivishwavidyalaya|West Bengal",
+          "rankings": [
+            {
+              "category": "Agriculture",
+              "rank": 16,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/AgricultureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Indian Institute of Engineering Science and Technology, Shibpur",
+          "city": "Howrah",
+          "state": "West Bengal",
+          "nirfId": null,
+          "candidateId": "indianinstituteofengineeringscienceandtechnologyshibpur|West Bengal",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 54,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            },
+            {
+              "category": "Architecture",
+              "rank": 4,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/ArchitectureRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "National Institute of Technology Durgapur",
+          "city": "Durgapur",
+          "state": "West Bengal",
+          "nirfId": null,
+          "candidateId": "nationalinstituteoftechnologydurgapur|West Bengal",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": null,
+              "rankBand": "101-150",
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking150.html"
+            },
+            {
+              "category": "Engineering",
+              "rank": 49,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/EngineeringRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Medical College",
+          "city": "Kolkata",
+          "state": "West Bengal",
+          "nirfId": "C-16424",
+          "candidateId": "medicalcollege|West Bengal",
+          "rankings": [
+            {
+              "category": "Medical",
+              "rank": 41,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/MedicalRanking.html"
+            }
+          ]
+        },
+        {
+          "name": "Calcutta University",
+          "city": "Kolkata",
+          "state": "West Bengal",
+          "nirfId": "U-0570",
+          "candidateId": "calcuttauniversity|West Bengal",
+          "rankings": [
+            {
+              "category": "Overall",
+              "rank": 47,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/OverallRanking.html"
+            },
+            {
+              "category": "University",
+              "rank": 39,
+              "year": 2025,
+              "sourceUrl": "https://www.nirfindia.org/Rankings/2025/UniversityRanking.html"
+            }
+          ]
+        }
+      ],
+      "remaining": 0
+    }
+  }
+}

@@ -20,6 +20,10 @@ export const getCollegeDetail = cache(async (slug: string) => {
           established: true,
           overview: true,
           isDemo: true,
+          sourceUrl: true,
+          verifiedAt: true,
+          courseCoverage: true,
+          externalReviews: { select: { id: true, provider: true, author: true, rating: true, summary: true, sourceUrl: true, publishedLabel: true, observedAt: true }, orderBy: { observedAt: "desc" } },
       websiteUrl: true,
       imageUrl: true,
           courses: {
@@ -32,6 +36,8 @@ export const getCollegeDetail = cache(async (slug: string) => {
               durationMonths: true,
               annualFeeInr: true,
               eligibility: true,
+              sourceUrl: true,
+              verifiedAt: true,
             },
           },
           placements: {

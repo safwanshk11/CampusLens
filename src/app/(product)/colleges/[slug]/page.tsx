@@ -88,7 +88,7 @@ export default async function CollegePage({ params, searchParams }: Props) {
         <p className="mt-5 flex flex-wrap items-center gap-2 text-body text-ink-secondary">
           <MapPin aria-hidden className="size-4" />
           {college.city}, {college.state}
-          <span aria-hidden>·</span>Established {college.established}
+          {college.established !== null && <><span aria-hidden>·</span>Established {college.established}</>}
         </p>
         {college.isDemo && (
           <p className="mt-6 max-w-xl border-l-2 border-azure pl-4 text-label leading-relaxed text-ink-secondary">
@@ -164,7 +164,7 @@ export default async function CollegePage({ params, searchParams }: Props) {
         <h2 className="text-2xl font-medium">Courses & fees</h2>
         <p className="mt-3 mb-6 text-body text-ink-secondary">
           Annual tuition in INR. Hostel, meals and living expenses are excluded.
-          All offered programmes are shown here.
+          {college.courseCoverage || "Available programme records are shown here."}
         </p>
         {college.courses.length ? (
           <div className="grid gap-5 md:grid-cols-2">
@@ -178,7 +178,7 @@ export default async function CollegePage({ params, searchParams }: Props) {
                   <div>
                     <dt className="text-label text-ink-secondary">Duration</dt>
                     <dd className="mt-2 font-medium">
-                      {course.durationMonths % 12 === 0
+                      {course.durationMonths === null ? "Unavailable" : course.durationMonths % 12 === 0
                         ? `${course.durationMonths / 12} years`
                         : `${course.durationMonths} months`}
                     </dd>
@@ -196,6 +196,7 @@ export default async function CollegePage({ params, searchParams }: Props) {
                   <span className="font-medium text-ink">Eligibility: </span>
                   {course.eligibility}
                 </p>
+                {safeWebsite(course.sourceUrl) && <a href={safeWebsite(course.sourceUrl)!} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-label text-azure-ink underline">Official programme source</a>}
               </Card>
             ))}
           </div>
@@ -298,9 +299,21 @@ export default async function CollegePage({ params, searchParams }: Props) {
           </>
         ) : (
           <p className="text-body text-ink-secondary">
-            No reviews yet. This college has not been rated.
+            No CampusLens reviews yet.
           </p>
         )}
+        {college.externalReviews.length > 0 && <div className="mt-8">
+          <h3 className="text-xl font-medium">From Google Maps</h3>
+          <p className="mt-2 text-label text-ink-secondary">Selected public review summaries, not verified student testimonials. Ratings below belong to individual Google reviewers and are separate from CampusLens ratings.</p>
+          <div className="mt-5 grid gap-5 md:grid-cols-2">
+            {college.externalReviews.map(review => <Card key={review.id} className="p-6">
+              <p className="font-medium">{review.author} · {review.rating}/5</p>
+              <p className="mt-3 text-body text-ink-secondary">{review.summary}</p>
+              <p className="mt-3 text-label text-ink-tertiary">Google displayed: {review.publishedLabel} · Checked {review.observedAt.toISOString().slice(0,10)}</p>
+              <a href={safeWebsite(review.sourceUrl) ?? undefined} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-label text-azure-ink underline">Read reviews on Google Maps</a>
+            </Card>)}
+          </div>
+        </div>}
       </section>
     </Container>
   );
