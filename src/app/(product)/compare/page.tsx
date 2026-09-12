@@ -11,6 +11,7 @@ import { formatInr, ownershipLabel } from "@/lib/college-display";
 import { CompareInsights } from "@/components/discover/compare-insights";
 import { SaveComparison } from "@/components/account/saved-controls";
 import { currentUser } from "@/server/auth/session";
+import { catalogueFacts, annualFeeLabel } from "@/lib/catalogue-facts";
 
 export const metadata: Metadata = {
   title: "Compare colleges",
@@ -55,6 +56,7 @@ export default async function ComparePage({ searchParams }: Props) {
       state: true,
       ownership: true,
       isDemo: true,
+      catalogueFacts: true,
       courses: {
         orderBy: { annualFeeInr: "asc" },
         select: { name: true, annualFeeInr: true },
@@ -80,11 +82,12 @@ export default async function ComparePage({ searchParams }: Props) {
     );
   const values = colleges.map((college) => ({
     ...college,
+    facts: catalogueFacts(college.catalogueFacts),
     minFee: college.courses[0]?.annualFeeInr ?? null,
     rating: college.reviews.length
       ? college.reviews.reduce((sum, review) => sum + review.rating, 0) /
         college.reviews.length
-      : null,
+      : catalogueFacts(college.catalogueFacts)?.rating ?? null,
     placement: college.placements[0]?.medianSalaryInr ?? null,
   }));
   values.sort((a, b) => slugs.indexOf(a.slug) - slugs.indexOf(b.slug));
@@ -116,8 +119,8 @@ export default async function ComparePage({ searchParams }: Props) {
         <p className="eyebrow mb-4 text-azure-ink">CampusLens / Compare</p>
         <h1 className="max-w-3xl text-display-page leading-[1.08] tracking-tight text-balance">See the differences <span className="text-azure-ink">clearly.</span></h1>
         <p className="mt-4 max-w-2xl text-body text-ink-secondary">
-          Aligned facts for the colleges you selected. Fees are annual tuition
-          in INR; missing figures stay unavailable.
+          Published facts for the colleges you selected. Check the fee basis and
+          placement cohort below; missing figures stay unavailable.
         </p>
       </header>
       <SaveComparison slugs={values.map((college) => college.slug)} />
@@ -153,22 +156,28 @@ export default async function ComparePage({ searchParams }: Props) {
             </div>
           ))}
         </div>
-        {row("Starting annual tuition", (college) => formatInr(college.minFee))}
+        {row("Annual fee reference", (college) => formatInr(college.minFee))}
+        {row("Fee basis", (college) => college.facts ? annualFeeLabel(college.facts.annualFeeBasis) : "Annual tuition")}
+        {row("Listed total course fee", (college) => formatInr(college.facts?.feeBasis === "Total Fees" ? college.facts.feeInr : null))}
         {row("College rating", (college) =>
           college.rating === null
             ? "Not yet rated"
             : `${college.rating.toFixed(1)} / 5`,
         )}
+        {row("Rating source", (college) => college.reviews.length ? "CampusLens" : college.facts?.ratingProvider ?? "Unavailable")}
         {row("Latest median salary", (college) => formatInr(college.placement))}
+        {row("Median cohort", (college) => college.facts?.medianCohort ?? "See report")}
+        {row("Reported average salary", (college) => formatInr(college.facts?.averageSalaryInr ?? null))}
         {row(
           "Latest placement report",
           (college) => college.placements[0]?.year ?? "Unavailable",
         )}
-        {row("Programmes", (college) => `${college.courses.length} offered`)}
+        {row("Programme records", (college) => `${college.courses.length} listed`)}
+        {row("Sources", (college) => college.facts ? <a href={college.facts.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-azure-ink underline">Published college figures</a> : "See college profile")}
         <div className="min-w-[44rem] border-t border-line bg-azure/5 px-4 py-4 text-label text-ink-secondary">
-          Comparison uses each college’s lowest offered annual tuition and
-          latest available placement report. Verify current details with the
-          institution.
+          Programme coverage and fee inclusions differ. Annualised figures are total fees
+          divided by listed duration. Average salaries are separate from medians and may
+          lack a reporting year. Verify current details with the institution.
         </div>
       </div>
     </Container>

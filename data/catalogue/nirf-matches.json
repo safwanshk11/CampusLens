@@ -1,0 +1,758 @@
+[
+  {
+    "index": 1,
+    "name": "Andhra University, Visakhapatnam",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0006.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 2,
+    "name": "Indian Institute of Management Visakhapatnam",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-U-1007.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 4,
+    "name": "Gandhi Institute of Technology And Management (GITAM)",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0011.pdf",
+    "category": "University"
+  },
+  {
+    "index": 5,
+    "name": "Koneru Lakshmaiah Education Foundation University (K L College of Engineering)",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0020.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 8,
+    "name": "School of Planning & Architecture, Vijayawada",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Architecture/IR-A-U-0627.pdf",
+    "category": "Architecture"
+  },
+  {
+    "index": 20,
+    "name": "National Institute of Technology Silchar",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0055.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 21,
+    "name": "National Law University and Judicial Academy",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-U-0677.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 24,
+    "name": "Tezpur University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0056.pdf",
+    "category": "University"
+  },
+  {
+    "index": 25,
+    "name": "Gauhati University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0052.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 27,
+    "name": "Assam University-Silchar",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0050.pdf",
+    "category": "University"
+  },
+  {
+    "index": 30,
+    "name": "National Institute of Technology Patna",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0072.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 31,
+    "name": "Chanakya National Law University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-U-0063.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 33,
+    "name": "Central University of South Bihar",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-U-0062.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 34,
+    "name": "Indian Institute of Management Bodh Gaya",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-U-1006.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 40,
+    "name": "Indian Institute of Management Raipur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8868.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 41,
+    "name": "National Institute of Technology, Raipur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0092.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 43,
+    "name": "Guru Ghasidas Vishwavidyalaya",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Pharmacy/IR-P-U-0085.pdf",
+    "category": "Pharmacy"
+  },
+  {
+    "index": 51,
+    "name": "Goa Institute of Management",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-87.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 60,
+    "name": "Indian Institute of Management Ahmedabad",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8890.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 61,
+    "name": "Gujarat National Law University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-U-0134.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 63,
+    "name": "B. J. Medical College",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Medical/IR-D-C-6051.pdf",
+    "category": "Medical"
+  },
+  {
+    "index": 64,
+    "name": "Nirma University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-U-0146.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 66,
+    "name": "MICA",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-14875.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 68,
+    "name": "Sardar Vallabhbhai National Institute of Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0149.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 69,
+    "name": "Maharaja Sayajirao University of Baroda",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Pharmacy/IR-P-U-0143.pdf",
+    "category": "Pharmacy"
+  },
+  {
+    "index": 72,
+    "name": "National Institute of Technology Kurukshetra",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0172.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 73,
+    "name": "Indian Institute of Management Rohtak",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8895.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 74,
+    "name": "Maharishi Markandeshwar",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0168.pdf",
+    "category": "University"
+  },
+  {
+    "index": 80,
+    "name": "National Institute of Technology Hamirpur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Architecture/IR-A-U-0189.pdf",
+    "category": "Architecture"
+  },
+  {
+    "index": 85,
+    "name": "Shoolini University of Biotechnology and Management Sciences",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0190.pdf",
+    "category": "University"
+  },
+  {
+    "index": 87,
+    "name": "Chaudhary Sarwan Kumar Himachal Pardesh Krishi Vishvavidyalaya",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Agriculture/IR-G-U-0179.pdf",
+    "category": "Agriculture"
+  },
+  {
+    "index": 90,
+    "name": "XLRI - Xavier School of Management",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-132.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 91,
+    "name": "Birla Institute of Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0202.pdf",
+    "category": "University"
+  },
+  {
+    "index": 92,
+    "name": "Indian Institute of Management Ranchi",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8904.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 93,
+    "name": "National Institute of Technology, Jamshedpur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0207.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 95,
+    "name": "National University of Study & Research in Law, Ranchi",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-U-0600.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 100,
+    "name": "National Law School of India University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-U-0238.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 101,
+    "name": "Indian Institute of Management Bangalore",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8903.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 102,
+    "name": "St. Joseph`s College of Commerce",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-20830.pdf",
+    "category": "College"
+  },
+  {
+    "index": 103,
+    "name": "National Institute of Technology Karnataka, Surathkal",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0237.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 104,
+    "name": "Indian Institute of Science",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0220.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 105,
+    "name": "Christ University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0217.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 108,
+    "name": "Manipal Academy of Higher Education-Manipal",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0234.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 109,
+    "name": "M. S. Ramaiah Institute of Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-C-1331.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 110,
+    "name": "Indian Institute of Management Kozhikode",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8909.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 111,
+    "name": "National Institute of Technology Calicut",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0263.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 112,
+    "name": "Rajagiri College of Social Sciences",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-11691.pdf",
+    "category": "College"
+  },
+  {
+    "index": 113,
+    "name": "St. Teresa's College, Ernakulam",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-11582.pdf",
+    "category": "College"
+  },
+  {
+    "index": 114,
+    "name": "Sacred Heart College",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-11708.pdf",
+    "category": "College"
+  },
+  {
+    "index": 115,
+    "name": "College of Engineering Trivandrum",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Architecture/IR-A-C-43708.pdf",
+    "category": "Architecture"
+  },
+  {
+    "index": 117,
+    "name": "Maharaja's College, Ernakulam",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-11697.pdf",
+    "category": "College"
+  },
+  {
+    "index": 118,
+    "name": "Cochin University of Science and Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0253.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 120,
+    "name": "Indian Institute of Management Indore",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8918.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 121,
+    "name": "School of Planning and Architecture Bhopal",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Architecture/IR-A-U-0626.pdf",
+    "category": "Architecture"
+  },
+  {
+    "index": 122,
+    "name": "National Law Institute University, Bhopal",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-U-0285.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 123,
+    "name": "Maulana Azad National Institute of Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0284.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 124,
+    "name": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0267.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 130,
+    "name": "S. P. Jain Institute of Management and Research",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-I-1044.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 131,
+    "name": "Tata Institute of Social Sciences",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0331.pdf",
+    "category": "University"
+  },
+  {
+    "index": 132,
+    "name": "Indian Institute of Management, Mumbai",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8931.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 133,
+    "name": "St. Xavier`s College",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-33555.pdf",
+    "category": "College"
+  },
+  {
+    "index": 135,
+    "name": "Visvesvaraya National Institute of Technology, Nagpur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0334.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 138,
+    "name": "COEP Technological University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-1257.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 139,
+    "name": "Fergusson College (Autonomous)",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-I-1385.pdf",
+    "category": "College"
+  },
+  {
+    "index": 146,
+    "name": "Central Agricultural University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Agriculture/IR-G-U-0336.pdf",
+    "category": "Agriculture"
+  },
+  {
+    "index": 150,
+    "name": "Indian Institute of Management Shillong",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8937.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 151,
+    "name": "National Institute of Technology Meghalaya",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0619.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 160,
+    "name": "Mizoram University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0345.pdf",
+    "category": "University"
+  },
+  {
+    "index": 163,
+    "name": "Pachhunga University College",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-8308.pdf",
+    "category": "College"
+  },
+  {
+    "index": 180,
+    "name": "Siksha `O` Anusandhan",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0363.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 181,
+    "name": "National Institute of Technology Rourkela",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0357.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 182,
+    "name": "Kalinga Institute of Industrial Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0356.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 183,
+    "name": "National Law University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-U-0358.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 184,
+    "name": "XIM University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-U-0715.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 185,
+    "name": "Indian Institute of Management Sambalpur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-6.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 190,
+    "name": "Chandigarh University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0747.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 191,
+    "name": "Lovely Professional University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0379.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 192,
+    "name": "Army Institute of Law",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-C-22215.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 194,
+    "name": "Indian Institute of Management, Amritsar",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-16881.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 196,
+    "name": "Thapar Institute of Engineering and Technology (Deemed-to-be-university)",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-I-1480.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 197,
+    "name": "Dr. B R Ambedkar National Institute of Technology, Jalandhar",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0374.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 201,
+    "name": "Malaviya National Institute of Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0410.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 202,
+    "name": "Sawai Man Singh Medical College",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Medical/IR-D-N-17.pdf",
+    "category": "Medical"
+  },
+  {
+    "index": 203,
+    "name": "Indian Institute of Management Udaipur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8942.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 205,
+    "name": "Manipal University Jaipur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0749.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 208,
+    "name": "Banasthali Vidyapith",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0389.pdf",
+    "category": "University"
+  },
+  {
+    "index": 209,
+    "name": "Central University of Rajasthan",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0392.pdf",
+    "category": "University"
+  },
+  {
+    "index": 220,
+    "name": "National Institute of Technology Tiruchirappalli",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0467.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 221,
+    "name": "Loyola College",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-44006.pdf",
+    "category": "College"
+  },
+  {
+    "index": 222,
+    "name": "Christian Medical College",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Medical/IR-D-C-45654.pdf",
+    "category": "Medical"
+  },
+  {
+    "index": 223,
+    "name": "PSGR Krishnammal College for Women",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-41046.pdf",
+    "category": "College"
+  },
+  {
+    "index": 224,
+    "name": "S.R.M. Institute of Science and Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0473.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 225,
+    "name": "Madras Christian College",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-43965.pdf",
+    "category": "College"
+  },
+  {
+    "index": 226,
+    "name": "Shanmugha Arts Science Technology & Research Academy",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0476.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 227,
+    "name": "Indian Institute of Management Tiruchirappalli",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8948.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 228,
+    "name": "Anna University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0439.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 229,
+    "name": "Vellore Institute of Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0490.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 230,
+    "name": "Nalsar University of Law",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-N-18.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 232,
+    "name": "International Institute of Information Technology Hyderabad",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0014.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 233,
+    "name": "National Institute of Technology Warangal",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0025.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 237,
+    "name": "University of Hyderabad",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0042.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 239,
+    "name": "National Institute of Agricultural Extension Management",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-14553.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 250,
+    "name": "Indian Institute of Management Lucknow",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8959.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 251,
+    "name": "Babasheb Bhimrao Ambedkar University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0498.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 252,
+    "name": "Aligarh Muslim University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0496.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 254,
+    "name": "Banaras Hindu University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0500.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 255,
+    "name": "Dr. Ram Manohar Lohiya National Law University, Lucknow",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-U-0511.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 256,
+    "name": "Motilal Nehru National Institute of Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0530.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 257,
+    "name": "Institute of Management Technology",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-394.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 258,
+    "name": "King George`s Medical University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0523.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 259,
+    "name": "University of Lucknow",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/University/IR-O-U-0524.pdf",
+    "category": "University"
+  },
+  {
+    "index": 260,
+    "name": "Indian Institute of Management Kashipur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8967.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 261,
+    "name": "UPES",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0564.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 262,
+    "name": "Uttaranchal University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Pharmacy/IR-P-U-0750.pdf",
+    "category": "Pharmacy"
+  },
+  {
+    "index": 265,
+    "name": "DIT University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Pharmacy/IR-P-U-0774.pdf",
+    "category": "Pharmacy"
+  },
+  {
+    "index": 267,
+    "name": "Graphic Era University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0555.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 268,
+    "name": "Kumaun University, Nainital",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Pharmacy/IR-P-U-0562.pdf",
+    "category": "Pharmacy"
+  },
+  {
+    "index": 270,
+    "name": "Indian Institute of Management Calcutta",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Management/IR-M-S-8972.pdf",
+    "category": "Management"
+  },
+  {
+    "index": 271,
+    "name": "The West Bengal National University of Juridical Sciences",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Law/IR-L-U-0585.pdf",
+    "category": "Law"
+  },
+  {
+    "index": 272,
+    "name": "St. Xavier`s College",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-11881.pdf",
+    "category": "College"
+  },
+  {
+    "index": 273,
+    "name": "Ramakrishna Mission Vidyamandira",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/College/IR-C-C-11926.pdf",
+    "category": "College"
+  },
+  {
+    "index": 274,
+    "name": "Indian Institute of Engineering Science and Technology, Shibpur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0584.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 275,
+    "name": "Jadavpur University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0575.pdf",
+    "category": "Overall"
+  },
+  {
+    "index": 276,
+    "name": "Medical College",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Medical/IR-D-C-16424.pdf",
+    "category": "Medical"
+  },
+  {
+    "index": 277,
+    "name": "National Institute of Technology Durgapur",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Engineering/IR-E-U-0577.pdf",
+    "category": "Engineering"
+  },
+  {
+    "index": 278,
+    "name": "Calcutta University",
+    "url": "https://www.nirfindia.org/nirfpdfcdn/2025/pdf/Overall/IR-O-U-0570.pdf",
+    "category": "Overall"
+  }
+]

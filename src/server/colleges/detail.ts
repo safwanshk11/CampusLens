@@ -1,6 +1,7 @@
 import "server-only";
 import { cache } from "react";
 import { getDb } from "@/lib/db";
+import { catalogueFacts } from "@/lib/catalogue-facts";
 
 /** Shared by metadata, the page and the API. Never select private user fields. */
 export const getCollegeDetail = cache(async (slug: string) => {
@@ -23,6 +24,7 @@ export const getCollegeDetail = cache(async (slug: string) => {
           sourceUrl: true,
           verifiedAt: true,
           courseCoverage: true,
+          catalogueFacts: true,
           externalReviews: { select: { id: true, provider: true, author: true, rating: true, summary: true, sourceUrl: true, publishedLabel: true, observedAt: true }, orderBy: { observedAt: "desc" } },
       websiteUrl: true,
       imageUrl: true,
@@ -35,6 +37,8 @@ export const getCollegeDetail = cache(async (slug: string) => {
               degreeLevel: true,
               durationMonths: true,
               annualFeeInr: true,
+              feeBasis: true,
+              totalFeeInr: true,
               eligibility: true,
               sourceUrl: true,
               verifiedAt: true,
@@ -72,10 +76,12 @@ export const getCollegeDetail = cache(async (slug: string) => {
         _avg: { rating: true },
         _count: true,
       });
+      const facts = catalogueFacts(college.catalogueFacts);
       return {
         ...college,
-        averageRating: ratings._avg.rating,
-        reviewCount: ratings._count,
+        averageRating: ratings._avg.rating ?? facts?.rating ?? null,
+        reviewCount: ratings._avg.rating === null ? (facts?.ratingCount ?? 0) : ratings._count,
+        ratingProvider: ratings._avg.rating === null && facts?.rating != null ? facts.ratingProvider : "CampusLens",
       };
     },
     { isolationLevel: "RepeatableRead" },

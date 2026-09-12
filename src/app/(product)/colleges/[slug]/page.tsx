@@ -15,6 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { ButtonLink, buttonClassName } from "@/components/ui/button";
 import { EmptyState } from "@/components/ui/empty-state";
 import { currentUser } from "@/server/auth/session";
+import { catalogueFacts, annualFeeLabel } from "@/lib/catalogue-facts";
 
 export const dynamic = "force-dynamic";
 type Props = {
@@ -66,6 +67,8 @@ export default async function CollegePage({ params, searchParams }: Props) {
   }
   if (!college) notFound();
   const latest = college.placements[0];
+  const facts = catalogueFacts(college.catalogueFacts);
+  const annualFee = college.courses.find(course => course.annualFeeInr !== null)?.annualFeeInr ?? null;
   const website = safeWebsite(college.websiteUrl);
   const campusPhoto = college.isDemo
     ? "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?auto=format&fit=crop&w=2000&q=85"
@@ -101,17 +104,17 @@ export default async function CollegePage({ params, searchParams }: Props) {
       <dl className="my-10 grid gap-6 border-y border-line py-8 sm:grid-cols-3">
         {[
           [
-            "Annual tuition from",
-            formatInr(college.courses[0]?.annualFeeInr ?? null),
+            annualFee !== null ? (facts ? annualFeeLabel(facts.annualFeeBasis) : "Annual tuition from") : facts?.feeInr ? "Listed total course fee" : "Annual tuition from",
+            formatInr(annualFee ?? facts?.feeInr ?? null),
           ],
           [
             latest
               ? `${latest.year} median annual salary`
-              : "Median annual salary",
-            formatInr(latest?.medianSalaryInr ?? null),
+              : facts?.averageSalaryInr ? "Reported average annual salary" : "Median annual salary",
+            formatInr(latest?.medianSalaryInr ?? facts?.averageSalaryInr ?? null),
           ],
           [
-            "College rating",
+            `${college.ratingProvider} rating`,
             college.averageRating === null
               ? "Not yet rated"
               : `${college.averageRating.toFixed(1)} / 5 · ${college.reviewCount} ${college.reviewCount === 1 ? "review" : "reviews"}`,
@@ -125,6 +128,11 @@ export default async function CollegePage({ params, searchParams }: Props) {
           </div>
         ))}
       </dl>
+      {facts && <p className="mb-8 max-w-3xl text-label leading-relaxed text-ink-secondary">
+        Fee reference: {facts.course || "see source"}. {facts.annualFeeBasis === "ANNUALISED_TOTAL" ? "Annualised fees divide the published total by the listed course duration; actual yearly instalments and inclusions can differ. " : "Fees vary by programme and admission category. "}
+        {facts.medianCohort ? `Median salary covers ${facts.medianCohort}. ` : ""}
+        <a href={facts.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-azure-ink underline">Published figures · checked {facts.checkedAt}</a>
+      </p>}
       <nav aria-label="College sections" className="mb-12 flex flex-wrap gap-2">
         {[
           ["overview", "Overview"],
@@ -163,7 +171,7 @@ export default async function CollegePage({ params, searchParams }: Props) {
         <p className="eyebrow mb-3 text-azure-ink">What you can study</p>
         <h2 className="text-2xl font-medium">Courses & fees</h2>
         <p className="mt-3 mb-6 text-body text-ink-secondary">
-          Annual tuition in INR. Hostel, meals and living expenses are excluded.
+          {facts ? "Published fees in INR; check each source for inclusions and the applicable year. " : "Annual tuition in INR. Hostel, meals and living expenses are excluded. "}
           {college.courseCoverage || "Available programme records are shown here."}
         </p>
         {college.courses.length ? (
@@ -185,10 +193,10 @@ export default async function CollegePage({ params, searchParams }: Props) {
                   </div>
                   <div>
                     <dt className="text-label text-ink-secondary">
-                      Annual tuition
+                      {course.annualFeeInr === null && course.totalFeeInr !== null ? "Total course fee" : annualFeeLabel(course.feeBasis)}
                     </dt>
                     <dd className="mt-2 font-medium tabular-nums">
-                      {formatInr(course.annualFeeInr)}
+                      {formatInr(course.annualFeeInr ?? course.totalFeeInr)}
                     </dd>
                   </div>
                 </dl>
@@ -196,7 +204,7 @@ export default async function CollegePage({ params, searchParams }: Props) {
                   <span className="font-medium text-ink">Eligibility: </span>
                   {course.eligibility}
                 </p>
-                {safeWebsite(course.sourceUrl) && <a href={safeWebsite(course.sourceUrl)!} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-label text-azure-ink underline">Official programme source</a>}
+                {safeWebsite(course.sourceUrl) && <a href={safeWebsite(course.sourceUrl)!} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-label text-azure-ink underline">Programme and fee source</a>}
               </Card>
             ))}
           </div>
@@ -210,9 +218,11 @@ export default async function CollegePage({ params, searchParams }: Props) {
         <p className="eyebrow mb-3 text-azure-ink">After graduation</p>
         <h2 className="text-2xl font-medium">Placement history</h2>
         <p className="mt-3 mb-6 text-body text-ink-secondary">
-          College-wide reports, newest first. Salaries are annual INR;
+          Published reports, newest first. Salaries are annual INR;
           unavailable figures stay unreported.
+          {facts?.medianCohort ? ` The median shown covers ${facts.medianCohort}, not every course.` : ""}
         </p>
+        {facts?.averageSalaryInr != null && <p className="mb-5 text-body text-ink-secondary">Published average package: <strong className="font-medium text-ink">{formatInr(facts.averageSalaryInr)}</strong> per year. Reporting year and programme coverage are not specified in the listing. <a href={facts.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-azure-ink underline">Source</a></p>}
         {college.placements.length ? (
           <div className="grid gap-5 md:grid-cols-2">
             {college.placements.map((report) => (
@@ -266,6 +276,11 @@ export default async function CollegePage({ params, searchParams }: Props) {
       <section id="reviews" className="scroll-mt-32">
         <p className="eyebrow mb-3 text-azure-ink">Campus perspectives</p>
         <h2 className="mb-3 text-2xl font-medium">Reviews</h2>
+        {facts?.rating != null && <Card surface="solid" className="mb-6">
+          <h3 className="text-xl font-medium">{facts.rating.toFixed(1)} / 5 · {facts.ratingProvider}</h3>
+          <p className="mt-3 text-body text-ink-secondary">Based on {facts.ratingCount} reader ratings on {facts.ratingProvider}. This is the publisher&apos;s aggregate, separate from CampusLens and Google Maps reviews.</p>
+          <a href={facts.sourceUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-label text-azure-ink underline">Read ratings at the source</a>
+        </Card>}
         {college.reviews.length ? (
           <>
             <p className="mb-6 text-label text-ink-secondary">

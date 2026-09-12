@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import type { CollegeSearchItem } from "@/server/colleges/search";
 import { CompareToggle } from "./compare-toggle";
 import { BookmarkToggle } from "@/components/account/saved-controls";
+import { catalogueFacts, annualFeeLabel } from "@/lib/catalogue-facts";
 
 const ownership = {
   PUBLIC: "Public",
@@ -29,6 +30,10 @@ export function CollegeCard({
   returnTo?: string;
   saved?: boolean;
 }) {
+  const facts = catalogueFacts(college.catalogueFacts);
+  const annualFee = college.minAnnualFeeInr;
+  const feeLabel = annualFee !== null ? (facts ? annualFeeLabel(facts.annualFeeBasis) : "Annual tuition from") : facts?.feeInr ? "Listed total course fee" : "Annual tuition from";
+  const salary = college.medianSalaryInr ?? facts?.averageSalaryInr ?? null;
   return (
     <article aria-labelledby={`college-${college.id}`}>
       <Card
@@ -73,31 +78,32 @@ export function CollegeCard({
             </span>
           </span>
           {college.isDemo && <Badge tone="accent">Illustrative</Badge>}
+          {facts && <span className="text-xs text-ink-tertiary">{college.ratingProvider || facts.ratingProvider} rating</span>}
         </div>
         <dl className="mt-6 grid grid-cols-2 gap-4 rounded-tile border border-line bg-azure/[0.025] p-4">
           <div>
             <dt className="text-label text-ink-secondary">
-              Annual tuition from
+              {feeLabel}
             </dt>
             <dd className="mt-2 text-xl font-medium tabular-nums tracking-heading">
-              {money(college.minAnnualFeeInr)}
+              {money(annualFee ?? facts?.feeInr ?? null)}
             </dd>
           </div>
           <div>
             <dt className="text-label text-ink-secondary">
-              Median annual salary
+              {college.medianSalaryInr !== null || facts?.averageSalaryInr == null ? "Median annual salary" : "Reported average salary"}
             </dt>
             <dd className="mt-2 text-xl font-medium tabular-nums tracking-heading">
-              {money(college.medianSalaryInr)}
+              {money(salary)}
             </dd>
           </div>
         </dl>
         <div className="mt-4 flex flex-wrap justify-between gap-2 text-label text-ink-tertiary">
-          <span>{college.matchingCourseCount} matching programmes</span>
+          <span>{college.matchingCourseCount} {facts && college.matchingCourseCount === 1 ? "programme fee reference" : "matching programmes"}</span>
           <span>
             {college.placementYear
               ? `${college.placementYear} placements`
-              : "No placement report"}
+              : facts?.averageSalaryInr ? "Year not specified by source" : "No placement report"}
           </span>
         </div>
         {college.slug !== "specimen" && (

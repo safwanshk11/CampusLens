@@ -255,7 +255,7 @@ export default async function DiscoverPage({
                 {profile.data.stream === "Engineering" && <div>JEE percentile: {profile.data.jeePercentile ?? "Not entered"}</div>}
                 {profile.data.stream === "Medical" && <div>NEET marks: {profile.data.neetScore ?? "Not entered"}</div>}
               </div>
-              <p className="mt-4 text-label text-ink-secondary">{academic ? "Showing colleges meeting demo academic criteria. Missing scores cannot establish a match." : "Your profile is saved. Browse without academic restrictions."} Demo rules are illustrative, not real admission eligibility.</p>
+              <p className="mt-4 text-label text-ink-secondary">{academic ? "Showing published programmes in your stream alongside illustrative academic matches. Real-college eligibility must be checked with the institution." : "Your profile is saved. Browse without academic restrictions."} Demo rules are illustrative, not real admission eligibility.</p>
               <ButtonLink href={href("academic", academic ? "off" : "on")} variant="secondary" className="mt-4 w-full">{academic ? "Clear academic filter" : "Apply academic filter"}</ButtonLink>
               <Link href="/account" className="mt-3 block text-center text-label text-azure-ink underline">Edit academic details</Link>
             </Card>}
@@ -360,7 +360,7 @@ export default async function DiscoverPage({
                 description={
                   results.pagination.total
                     ? "There are no results on this page. Return to the first page to see your matches."
-                    : academic ? "No colleges meet the demo criteria and these filters. Check your scores, or clear the academic filter to explore all colleges." : "Try a different city, widen your fee range, or remove a filter."
+                    : academic ? "No listed programmes match your stream and these filters. Clear the academic filter to explore every college." : "Try a different city, widen your fee range, or remove a filter."
                 }
                 action={
                   <ButtonLink

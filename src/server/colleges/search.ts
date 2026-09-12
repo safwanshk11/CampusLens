@@ -20,6 +20,8 @@ export type CollegeSearchItem = {
   reviewCount: number;
   placementYear: number | null;
   medianSalaryInr: number | null;
+  catalogueFacts?: unknown;
+  ratingProvider?: string;
 };
 
 export type CollegeSearchResponse = {
@@ -42,12 +44,12 @@ export async function searchColleges(query: CollegeQuery, academic?: StudentProf
   if (academic) {
     courseConditions.push(Prisma.sql`co.discipline = ${academic.stream} AND co."degreeLevel"::text = 'UNDERGRADUATE'`);
     const match = matchDemoCourse({ ...academic, budget: null }, { discipline: academic.stream, degreeLevel: "UNDERGRADUATE", annualFeeInr: 0 }, true);
-    filters.push(match?.status === "Meets demo criteria" ? Prisma.sql`c."isDemo" = TRUE AND f."matchingCourseCount" > 0` : Prisma.sql`FALSE`);
+    filters.push(match?.status === "Meets demo criteria" ? Prisma.sql`f."matchingCourseCount" > 0` : Prisma.sql`c."isDemo" = FALSE AND f."matchingCourseCount" > 0`);
   }
   if (query.city) filters.push(Prisma.sql`lower(c.city) = lower(${query.city})`);
   if (query.state) filters.push(Prisma.sql`lower(c.state) = lower(${query.state})`);
   if (query.ownership) filters.push(Prisma.sql`c.ownership::text = ${query.ownership}`);
-  if (query.minRating !== undefined) filters.push(Prisma.sql`r."averageRating" >= ${query.minRating}`);
+  if (query.minRating !== undefined) filters.push(Prisma.sql`COALESCE(r."averageRating", (c."catalogueFacts"->>'rating')::float8) >= ${query.minRating}`);
   if (query.discipline || query.degreeLevel || query.minFee !== undefined || query.maxFee !== undefined) filters.push(Prisma.sql`f."matchingCourseCount" > 0`);
   if (query.q) {
     const pattern = contains(query.q);
@@ -59,7 +61,11 @@ export async function searchColleges(query: CollegeQuery, academic?: StudentProf
   // no per-result database calls, and no join multiplication of review counts.
   const filtered = Prisma.sql`WITH filtered AS (
     SELECT c.id, c.slug, c.name, c.city, c.state, c.ownership, c."isDemo", c."imageUrl",
-      f.*, r.*, p.year AS "placementYear", p."medianSalaryInr"
+      c."catalogueFacts", f.*,
+      COALESCE(r."averageRating", (c."catalogueFacts"->>'rating')::float8) AS "averageRating",
+      CASE WHEN r."averageRating" IS NOT NULL THEN r."reviewCount" ELSE COALESCE((c."catalogueFacts"->>'ratingCount')::int, 0) END AS "reviewCount",
+      CASE WHEN r."averageRating" IS NOT NULL THEN 'CampusLens' ELSE COALESCE(c."catalogueFacts"->>'ratingProvider', 'CampusLens') END AS "ratingProvider",
+      p.year AS "placementYear", p."medianSalaryInr"
     FROM "College" c
     CROSS JOIN LATERAL (
       SELECT min(co."annualFeeInr") AS "minAnnualFeeInr", max(co."annualFeeInr") AS "maxAnnualFeeInr", count(*)::int AS "matchingCourseCount"

@@ -37,6 +37,7 @@ model College {
   sourceUrl   String?
   verifiedAt  DateTime?
   courseCoverage String?
+  catalogueFacts Json?
   createdAt   DateTime            @default(now())
   updatedAt   DateTime            @updatedAt
   courses     Course[]
@@ -59,8 +60,10 @@ model Course {
   discipline     String
   degreeLevel    DegreeLevel
   durationMonths Int?
-  // INR for one academic year, excluding hostel and living expenses.
+  // Annual INR; feeBasis distinguishes tuition from published/annualised course fees.
   annualFeeInr   Int?
+  feeBasis       String      @default("ANNUAL_TUITION")
+  totalFeeInr    Int?
   sourceUrl      String?
   verifiedAt     DateTime?
   eligibility    String
