@@ -257,7 +257,6 @@ export default async function DiscoverPage({
                 {profile.data.stream === "Engineering" && <div>JEE percentile: {profile.data.jeePercentile ?? "Not entered"}</div>}
                 {profile.data.stream === "Medical" && <div>NEET marks: {profile.data.neetScore ?? "Not entered"}</div>}
               </div>
-              <p className="mt-4 text-label text-ink-secondary">{academic ? "Showing published programmes in your stream alongside illustrative academic matches. Real-college eligibility must be checked with the institution." : "Your profile is saved. Browse without academic restrictions."} Demo rules are illustrative, not real admission eligibility.</p>
               <ButtonLink href={href("academic", academic ? "off" : "on")} variant="secondary" className="mt-4 w-full">{academic ? "Clear academic filter" : "Apply academic filter"}</ButtonLink>
               <Link href="/account" className="mt-3 block text-center text-label text-azure-ink underline">Edit academic details</Link>
             </Card>}
@@ -339,12 +338,6 @@ export default async function DiscoverPage({
                   </Link>
                 ))}
               </div>
-            )}
-            {results?.meta.demoDataNotice && (
-              <p className="mb-6 border-l-2 border-azure pl-3 text-label text-ink-secondary">
-                Illustrative catalogue · Profiles include demo figures,
-                not verified admissions information. Use them to explore the experience.
-              </p>
             )}
             {!parsed.success ? (
               <EmptyState

@@ -42,7 +42,7 @@ export function CollegeCard({
         <Card surface="solid" interactive={college.slug !== "specimen"} className="group/card relative flex items-center gap-4 overflow-hidden bg-gradient-to-br from-white via-white/95 to-azure/5 p-4 transition-shadow duration-(--duration-base) hover:shadow-glass-2 sm:gap-6 sm:p-5">
           <span aria-hidden className="grid size-11 shrink-0 place-items-center rounded-tile bg-azure/10 text-azure-ink ring-1 ring-inset ring-azure/10"><GraduationCap className="size-5" strokeWidth={1.75} /></span>
           <div className="min-w-0 flex-1">
-            <div className="mb-1 flex flex-wrap items-center gap-2"><Badge tone="neutral">{ownership[college.ownership]}</Badge>{college.isDemo && <Badge tone="accent">Illustrative</Badge>}</div>
+            <div className="mb-1 flex flex-wrap items-center gap-2"><Badge tone="neutral">{ownership[college.ownership]}</Badge></div>
             <h3 id={`college-${college.id}`} className="truncate text-lg font-medium tracking-heading text-ink transition-colors group-hover/card:text-azure-ink">{college.name}</h3>
             <p className="mt-1 flex items-center gap-1.5 text-label text-ink-secondary"><MapPin aria-hidden className="size-3.5 shrink-0" />{college.city}, {college.state}</p>
           </div>
@@ -96,7 +96,6 @@ export function CollegeCard({
               {college.reviewCount === 1 ? "review" : "reviews"})
             </span>
           </span>
-          {college.isDemo && <Badge tone="accent">Illustrative</Badge>}
           {facts && <span className="text-xs text-ink-tertiary">{college.ratingProvider || facts.ratingProvider} rating</span>}
         </div>
         <dl className="mt-6 grid grid-cols-2 gap-4 rounded-tile border border-line bg-azure/[0.025] p-4">
