@@ -43,6 +43,7 @@ export default async function DiscoverPage({
   const record = user ? await getDb().user.findUnique({ where: { id: user.id }, select: { studentProfile: true } }).catch(() => null) : null;
   const profile = studentProfileSchema.safeParse(record?.studentProfile);
   const academic = profile.success && raw.academic !== "off" ? profile.data : undefined;
+  const view = raw.view === "list" ? "list" : "cards";
   const params = new URLSearchParams();
   for (const [key, value] of Object.entries(raw)) {
     for (const item of Array.isArray(value)
@@ -54,10 +55,11 @@ export default async function DiscoverPage({
       if (item.trim()) params.append(key, item);
     }
   }
-  if (!params.has("pageSize")) params.set("pageSize", "6");
+  if (!params.has("pageSize")) params.set("pageSize", "12");
   const searchParamsOnly = new URLSearchParams(params);
   searchParamsOnly.delete("compare");
   searchParamsOnly.delete("academic");
+  searchParamsOnly.delete("view");
   const parsed = parseCollegeQuery(searchParamsOnly);
   let results: CollegeSearchResponse | undefined;
   let unavailable = false;
@@ -89,7 +91,7 @@ export default async function DiscoverPage({
     minRating: "Min rating",
   };
   const active = [...params].filter(
-    ([key]) => !["page", "pageSize", "sort", "compare", "academic"].includes(key),
+    ([key]) => !["page", "pageSize", "sort", "compare", "academic", "view"].includes(key),
   );
   const select = (
     name: string,
@@ -279,7 +281,24 @@ export default async function DiscoverPage({
                     : "College results"}
                 </h2>
               </div>
-              <div className="flex items-end gap-2">
+              <div className="flex flex-wrap items-end justify-end gap-3">
+                <div className="flex items-center rounded-full border border-line bg-surface/70 p-1 shadow-control" aria-label="Results layout">
+                  <Link
+                    href={href("view", "cards")}
+                    aria-current={view === "cards" ? "page" : undefined}
+                    className={`rounded-full px-3 py-2 text-label transition-colors ${view === "cards" ? "bg-ink text-white" : "text-ink-secondary hover:bg-azure/10 hover:text-ink"}`}
+                  >
+                    Cards
+                  </Link>
+                  <Link
+                    href={href("view", "list")}
+                    aria-current={view === "list" ? "page" : undefined}
+                    className={`rounded-full px-3 py-2 text-label transition-colors ${view === "list" ? "bg-ink text-white" : "text-ink-secondary hover:bg-azure/10 hover:text-ink"}`}
+                  >
+                    List
+                  </Link>
+                </div>
+                <div className="flex items-end gap-2">
                 {select(
                   "sort",
                   "Sort results",
@@ -294,6 +313,7 @@ export default async function DiscoverPage({
                 <Button type="submit" variant="secondary">
                   Sort
                 </Button>
+                </div>
               </div>
             </div>
             {value("pageSize") && (
@@ -373,7 +393,7 @@ export default async function DiscoverPage({
                 }
               />
             ) : (
-              <div className="grid gap-5 md:grid-cols-2">
+              <div className={view === "list" ? "grid gap-4 sm:grid-cols-2 xl:grid-cols-3" : "grid gap-5 md:grid-cols-2"}>
                 {results?.data.map((college) => (
                   <CollegeCard
                     key={college.id}
