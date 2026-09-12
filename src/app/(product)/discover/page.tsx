@@ -162,7 +162,7 @@ export default async function DiscoverPage({
           </Button>
         </div>
         <div className="grid items-start gap-8 lg:grid-cols-12">
-          <aside className="lg:col-span-3">
+          <aside className="lg:sticky lg:top-28 lg:col-span-3 lg:self-start">
             <Card surface="quiet" padding="sm">
               <FilterPanel>
                 <div className="mt-5 grid gap-5">
